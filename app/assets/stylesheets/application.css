@@ -1,0 +1,88 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+
+/*Round Body*/
+.svg {
+  enable-background:  new 0 0 300 300;
+}
+
+.body-round {
+  fill: orange;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+/*Open Eyes*/
+.open-eye-lg {
+  fill: #FFFFFF;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+.open-eye-md {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+.open-eye-sm {
+  fill: #FFFFFF;
+  stroke: #FFFFFF;
+  stroke-miterlimit:  10;
+}
+
+/*Closed Eyes*/
+.closed-eye {
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+/*Freckles*/
+.freckles { 
+  fill: #EEE810;
+  stroke: #FEC255;
+  stroke-miterlimit:  10;
+}
+
+/*Hair-Leaf*/
+.hair-leaf {
+  fill: green;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+/*Legs*/
+.legs {
+  fill: orange;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+/*Arms*/
+.arms {
+  fill: orange;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+/*Mouth-Sad*/
+.mouth-sad {
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+/*Mouth-Happy*/
+.mouth-happy {
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+/*Mouth-Open*/
+.mouth-open {
+  fill: #FFFFFF;
+}
