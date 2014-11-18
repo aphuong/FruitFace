@@ -14,7 +14,7 @@ $(document).ready(function(){
                     .attr("ry", 67.3)
                     .attr("class", "body-round");
   };
-  // bodyRound();
+  bodyRound();
 
   window.eyesOpen = function(){
     d3.select("svg").append("circle")
@@ -75,7 +75,7 @@ $(document).ready(function(){
                     .attr("d", "M187.5 129.5c0.3 1.6-2.7 3.8-4.5 3.5")
                     .attr("class", "closed-eye");
   };
-  // eyesClosed();
+  eyesClosed();
 
 
   window.freckles = function(){
@@ -128,7 +128,7 @@ $(document).ready(function(){
                     .attr("ry", 1.2)
                     .attr("class", "freckles");
   };
-  // freckles();
+  freckles();
 
 
   window.hairLeaf = function(){
@@ -139,7 +139,7 @@ $(document).ready(function(){
                     .attr("d", "M188.6 15.8c0 0-13.2-4.3-24.3 3.7s-11.6 25.8-11.6 25.8 s1.3-2.4 2.6-3.2s7.1-1 7.1-1s9 0.1 13.2-3.7s5.9-10.8 6.5-15.4S188.6 15.8 188.6 15.8z")
                     .attr("class", "hair-leaf")  
   };
-  // hairLeaf();
+  hairLeaf();
 
 
   window.legs = function(){
@@ -150,7 +150,7 @@ $(document).ready(function(){
                     .attr("d", "M135 235c0 2.2-1.6 4-3.5 4l0 0c-1.9 0-3.5-1.8-3.5-4v-54.5 c0-2.2 1.6-4 3.5-4l0 0c1.9 0 3.5 1.8 3.5 4V235z")
                     .attr("class", "legs");
   };
-  // legs();
+  legs();
 
 
   window.arms = function(){
@@ -161,7 +161,7 @@ $(document).ready(function(){
                     .attr("d", "M89.6 137.2c0 1.6-1.3 2.8-2.8 2.8H64.4c-1.6 0-2.8-1.3-2.8-2.8 l0 0c0-1.6 1.3-2.8 2.8-2.8h22.3C88.3 134.3 89.6 135.6 89.6 137.2L89.6 137.2z")
                     .attr("class", "arms");
   };
-  // arms();
+  arms();
 
   window.mouthSad = function(){
     d3.select("svg").append("path")
@@ -187,7 +187,7 @@ $(document).ready(function(){
                     .attr("y2", 154.8)
                     .attr("class", "mouth-happy");
   };
-  // mouthHappy();
+  mouthHappy();
 
 
   window.mouthOpen = function(){
