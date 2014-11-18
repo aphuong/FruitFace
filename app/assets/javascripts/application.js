@@ -307,12 +307,73 @@ $(document).ready(function(){
   freckles();
 
 
-  // Function to choose components
 
+
+// Function to choose components, find the thing that was clicked
+// clear body class and append the thing that was clicked
   $("#body-round").click(function() {
-    // clear body and append the new
     container = ".preview"
     bodyRound();
+  });
+
+  $("#body-pear").click(function() {
+    container = ".preview"
+    bodyPear();
+  });
+
+  $("#eyes-open").click(function(){
+    container = ".preview"
+    eyesOpen();
+  });
+
+  $("#eyes-closed").click(function(){
+    container = ".preview"
+    eyesClosed();
+  });
+
+  $("#legs").click(function(){
+    container = ".preview"
+    legs();
+  });
+
+  $("#arms").click(function(){
+    container = ".preview"
+    arms();
+  });
+
+  $("#mouth-happy").click(function(){
+    container = ".preview"
+    mouthHappy();
+  });
+
+  $("#mouth-sad").click(function(){
+    container = ".preview"
+    mouthSad();
+  });
+
+  $("#mouth-open").click(function(){
+    container = ".preview"
+    mouthOpen();
+  });
+
+  $("#hair-leaf").click(function(){
+    container = ".preview"
+    hairLeaf();
+  });
+
+  $("#hair-double-leaf").click(function(){
+    container = ".preview"
+    hairDoubleLeaf();
+  });
+
+  $("#hair-shaggy").click(function(){
+    container = ".preview"
+    hairShaggy();
+  });
+
+  $("#freckles").click(function(){
+    container = ".preview"
+    freckles();
   });
 
 });
