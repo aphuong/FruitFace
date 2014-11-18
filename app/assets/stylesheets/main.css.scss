@@ -1,4 +1,40 @@
 body {
-  color: green;
+  color: #444;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.half-page-container {
+  min-height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.left-page {
+  width: 33%;
+  min-height: 100%;
+  position: fixed;
+  left: -1px;
+  background-color: #E4FFF1;
+}
+
+.right-page {
+  width: 67.2%;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #FFEFC3;
+}
+
+.parts {
+  width: 243px;
+  height: 300px;
 }
 
