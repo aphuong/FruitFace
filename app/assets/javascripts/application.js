@@ -248,54 +248,72 @@ $(document).ready(function(){
 
 
   // To make sample FruitFace
-  container = ".svg"
+  container = ".sample-orange"
   bodyRound();
-  hairDoubleLeaf();
+  hairShaggy();
   eyesClosed();
   arms();
   legs();
   freckles();
   mouthHappy();
 
-  // To make components - should this be a JS loop?
-  container = ".parts-body-round"
-  bodyRound();
-
-  container = ".parts-body-pear"
-  bodyPear();
-
-  container = ".parts-eyes-open"
-  eyesOpen();
-
-  container = ".parts-eyes-closed"
-  eyesClosed();
-
-  container = ".parts-legs"
+  container = ".sample-pear"
   legs();
-
-  container = ".parts-arms"
+  bodyPear();
+  hairDoubleLeaf();
+  eyesOpen();
   arms();
-
-  container = ".parts-mouth-happy"
-  mouthHappy();
-
-  container = ".parts-mouth-sad"
-  mouthSad();
-
-  container = ".parts-mouth-open"
+  freckles();
   mouthOpen();
 
-  container = ".parts-hair-leaf"
+  // To make components - should this be a JS loop?
+  container = "#body-round"
+  bodyRound();
+
+  container = "#body-pear"
+  bodyPear();
+
+  container = "#eyes-open"
+  eyesOpen();
+
+  container = "#eyes-closed"
+  eyesClosed();
+
+  container = "#legs"
+  legs();
+
+  container = "#arms"
+  arms();
+
+  container = "#mouth-happy"
+  mouthHappy();
+
+  container = "#mouth-sad"
+  mouthSad();
+
+  container = "#mouth-open"
+  mouthOpen();
+
+  container = "#hair-leaf"
   hairLeaf();
 
-  container = ".parts-hair-double-leaf"
+  container = "#hair-double-leaf"
   hairDoubleLeaf();
 
-  container = ".parts-hair-shaggy"
+  container = "#hair-shaggy"
   hairShaggy();
 
-  container = ".parts-freckles"
+  container = "#freckles"
   freckles();
+
+
+  // Function to choose components
+
+  $("#body-round").click(function() {
+    // clear body and append the new
+    container = ".preview"
+    bodyRound();
+  });
 
 });
 
