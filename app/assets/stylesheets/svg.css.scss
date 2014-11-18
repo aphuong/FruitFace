@@ -1,4 +1,4 @@
-/*Round Body*/
+//Round Body
 .svg {
   enable-background:  new 0 0 300 300;
   background: steelblue;
@@ -10,7 +10,13 @@
   stroke-miterlimit:  10;
 }
 
-/*Open Eyes*/
+.body-pear {
+  fill: #58C823;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+//Open Eyes
 .open-eye-lg {
   fill: #FFFFFF;
   stroke: #000000;
@@ -28,56 +34,76 @@
   stroke-miterlimit:  10;
 }
 
-/*Closed Eyes*/
+//Closed Eyes
 .closed-eye {
   fill: none;
   stroke: #000000;
   stroke-miterlimit:  10;
 }
 
-/*Freckles*/
+//Freckles
 .freckles { 
   fill: #EEE810;
   stroke: #FEC255;
   stroke-miterlimit:  10;
 }
 
-/*Hair-Leaf*/
+//Hair-Leaf
 .hair-leaf {
   fill: green;
   stroke: #000000;
   stroke-miterlimit:  10;
 }
 
-/*Legs*/
+// Hair-Double-Leaf
+.hair-double-leaf {
+  fill: green;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+// Hair-Shaggy
+.hair-shaggy {
+  fill: #54A547;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+.hair-shaggy-outline {
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+//Legs
 .legs {
   fill: orange;
   stroke: #000000;
   stroke-miterlimit:  10;
 }
 
-/*Arms*/
+//Arms
 .arms {
   fill: orange;
   stroke: #000000;
   stroke-miterlimit:  10;
 }
 
-/*Mouth-Sad*/
+//Mouth-Sad
 .mouth-sad {
   fill: none;
   stroke: #000000;
   stroke-miterlimit:  10;
 }
 
-/*Mouth-Happy*/
+//Mouth-Happy
 .mouth-happy {
   fill: none;
   stroke: #000000;
   stroke-miterlimit:  10;
 }
 
-/*Mouth-Open*/
+//Mouth-Open
 .mouth-open {
   fill: #FFFFFF;
 }
