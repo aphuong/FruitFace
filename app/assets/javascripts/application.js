@@ -15,16 +15,17 @@ $(document).ready(function(){
                     .attr("cy", 120.3)
                     .attr("rx", 69.7)
                     .attr("ry", 67.3)
-                    .attr("class", "body-round");
+                    .attr("class", "bodyRound")
+                    .attr("data-part", "body");
   };
-  // bodyRound();
+
 
   window.bodyPear = function(container){
     d3.select(container).append("path")
                     .attr("d", "M207.3 115.3c13.3 15.5 9.2 44.6 2.7 56 c-11.6 20.1-40.2 27.9-59.7 28c-27.3 0.1-65.5-11.1-66.2-59.7c-0.2-11.3 4.9-20.4 8.5-24.7c7.6-9 3.7-4 12.3-13.3 c0.4-0.4 4.3-2.7 8-12c3.3-8.3 10-40.7 39.3-40.7c32.7 0 27.2 17.9 39.7 46C194 99.4 202.3 109.4 207.3 115.3z")
-                    .attr("class", "body-pear");
+                    .attr("class", "bodyPear")
+                    .attr("data-part", "body");
   };
-  // bodyPear();
 
 
   window.eyesOpen = function(container){
@@ -32,38 +33,43 @@ $(document).ready(function(){
                     .attr("cx", 125.7)
                     .attr("cy", 129)
                     .attr("r", 12)
-                    .attr("class", "open-eye-lg");
+                    .attr("class", "open-eye-lg")
+                    .attr("data-part", "eyes");
     d3.select(container).append("circle")
                     .attr("cx", 173)
                     .attr("cy", 128)
                     .attr("r", 12)
-                    .attr("class", "open-eye-lg");
+                    .attr("class", "open-eye-lg")
+                    .attr("data-part", "eyes");
     d3.select(container).append("ellipse")
                     .attr("cx", 119.7)
                     .attr("cy", 130.7)
                     .attr("rx", 5.7)
                     .attr("ry", 5.3)
-                    .attr("class", "open-eye-md");
+                    .attr("class", "open-eye-md")
+                    .attr("data-part", "eyes");
     d3.select(container).append("ellipse")
                     .attr("cx", 166.7)
                     .attr("cy", 129.8)
                     .attr("rx", 5.7)
                     .attr("ry", 5.3)
-                    .attr("class", "open-eye-md");
+                    .attr("class", "open-eye-md")
+                    .attr("data-part", "eyes");
     d3.select(container).append("ellipse")
                     .attr("cx", 115.7)
                     .attr("cy", 130.4)
                     .attr("rx", 1.8)
                     .attr("ry", 3.2)
-                    .attr("class", "open-eye-sm");
+                    .attr("class", "open-eye-sm")
+                    .attr("data-part", "eyes");
     d3.select(container).append("ellipse")
                     .attr("cx", 162.8)
                     .attr("cy", 128.9)
                     .attr("rx", 1.8)
                     .attr("ry", 3.2)
-                    .attr("class", "open-eye-sm");
+                    .attr("class", "open-eye-sm")
+                    .attr("data-part", "eyes");
   };
-  // eyesOpen();
 
 
   window.eyesClosed = function(container){
@@ -86,7 +92,6 @@ $(document).ready(function(){
                     .attr("d", "M187.5 129.5c0.3 1.6-2.7 3.8-4.5 3.5")
                     .attr("class", "closed-eye");
   };
-  // eyesClosed();
 
 
   window.freckles = function(container){
@@ -139,7 +144,6 @@ $(document).ready(function(){
                     .attr("ry", 1.2)
                     .attr("class", "freckles");
   };
-  // freckles();
 
 
   window.hairLeaf = function(container){
@@ -150,7 +154,6 @@ $(document).ready(function(){
                     .attr("d", "M188.6 15.8c0 0-13.2-4.3-24.3 3.7s-11.6 25.8-11.6 25.8 s1.3-2.4 2.6-3.2s7.1-1 7.1-1s9 0.1 13.2-3.7s5.9-10.8 6.5-15.4S188.6 15.8 188.6 15.8z")
                     .attr("class", "hair-leaf")  
   };
-  // hairLeaf();
 
 
   window.hairDoubleLeaf = function(container){
@@ -167,7 +170,6 @@ $(document).ready(function(){
                     .attr("d", "M148 37.7c-0.9-10.4-12.7-16.4-21.2-10.3 c-4.6 3.3-7 8.4-10.4 12.7c-1.6 2.1-5.6 6.1-6 8.6c3.3 0.2 7 0.8 10.3 0.4c4.3-0.5 8-2.6 11.7-4.5c6-3.1 8.8-7.2 15.9-7.5 c0.1-0.5 0.1-1.1 0.1-1.6")
                     .attr("class", "hair-double-leaf");
   }
-  // hairDoubleLeaf();
 
 
   window.hairShaggy = function(container){
@@ -184,7 +186,6 @@ $(document).ready(function(){
                     .attr("d", "M129.6 36.6c5.6 0 10.3 1 13.2-4.2")
                     .attr("class", "hair-shaggy-outline");
   }
-  // hairShaggy();
 
 
   window.legs = function(container){
@@ -195,7 +196,6 @@ $(document).ready(function(){
                     .attr("d", "M135 235c0 2.2-1.6 4-3.5 4l0 0c-1.9 0-3.5-1.8-3.5-4v-54.5 c0-2.2 1.6-4 3.5-4l0 0c1.9 0 3.5 1.8 3.5 4V235z")
                     .attr("class", "legs");
   };
-  // legs();
 
 
   window.arms = function(container){
@@ -206,14 +206,14 @@ $(document).ready(function(){
                     .attr("d", "M89.6 137.2c0 1.6-1.3 2.8-2.8 2.8H64.4c-1.6 0-2.8-1.3-2.8-2.8 l0 0c0-1.6 1.3-2.8 2.8-2.8h22.3C88.3 134.3 89.6 135.6 89.6 137.2L89.6 137.2z")
                     .attr("class", "arms");
   };
-  // arms();
+
 
   window.mouthSad = function(container){
     d3.select(container).append("path")
                     .attr("d", "M141.5 161.6c0-4.8 4-8.6 9-8.6s9 3.9 9 8.6")
                     .attr("class", "mouth-sad");
   }
-  // mouthSad();
+
 
   window.mouthHappy = function(container){
     d3.select(container).append("g").append("path")
@@ -232,7 +232,6 @@ $(document).ready(function(){
                     .attr("y2", 154.8)
                     .attr("class", "mouth-happy");
   };
-  // mouthHappy();
 
 
   window.mouthOpen = function(container){
@@ -242,7 +241,6 @@ $(document).ready(function(){
                     .attr("d", "M159.5 167.9c-3.2-4.3-4-4.9-10.2-4.9s-5.8 0-9.7 4.1c0 0 2.7 2.4 4.3 3c1.6 0.6 4.5 1.3 5.9 1.3 c1.3 0 4.5-0.5 6-1.1C157.2 169.7 159.5 167.9 159.5 167.9z")
                     .attr("class", "mouth-open");
   };
-  // mouthOpen();
 
 
   // To make sample FruitFace
@@ -264,21 +262,54 @@ $(document).ready(function(){
   freckles(pear_container);
   mouthOpen(pear_container);
 
-
+  // Function to append parts to svg
   // Make sure that the name of the function and the id of the element match
   $(".parts").each(function() {
     window[this.id]("#" + this.id);
   });
 
 
-  // Function to choose components, find the thing that was clicked
-  // clear body class and append the thing that was clicked
-
+  // Function to choose components 
+  // Check to see if that data-part exists in the preview. If it does remove it first.
   $(".parts").each(function(){
     $("#" + this.id).click(function() {
+
+// This deletes all the parts
+    //   parts = $(".parts")
+    //   for (i = 0; i < parts.length; i++) {
+    //   part = parts[i]
+    //   part_name = $(".parts").data('body')
+
+    //   // loop through and replace with updated content
+    //   part_type = $(".preview[data-type=" + part_name + "]")
+    //   $(part).text(part_type.text());
+    // }
+
+// This deletes the preview
+    // preview = $(".preview")
+    // part_name = d3.select("#" + this.id).attr("data-part")
+    // target = $(".preview [data-part=' + part_name + ']").html()
+    // preview.remove(target)
+
+      // gets the data attribute of each part
+      // var part = d3.selectAll("" + this.class + "").attr("data-part")
+    
+      // var part = this.getAttribute("data-part")
+      // console.log(part);
+      // console.log("***");
+      // console.log(this);
+
+// This is just wrong
+      // var preview = $(".preview")["data-part"]
+      // gets the data attribute in preview
+      // var preview = ".preview" "[data-part]" + "part"
+      // $(data).remove(this);
+
       window[this.id](".preview");
     });
   });
+
+
 
 
 });
