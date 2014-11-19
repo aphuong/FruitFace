@@ -15,7 +15,7 @@ $(document).ready(function(){
                     .attr("cy", 120.3)
                     .attr("rx", 69.7)
                     .attr("ry", 67.3)
-                    .attr("class", "bodyRound")
+                    .attr("class", "body-round")
                     .attr("data-part", "body");
   };
 
@@ -23,8 +23,16 @@ $(document).ready(function(){
   window.bodyPear = function(container){
     d3.select(container).append("path")
                     .attr("d", "M207.3 115.3c13.3 15.5 9.2 44.6 2.7 56 c-11.6 20.1-40.2 27.9-59.7 28c-27.3 0.1-65.5-11.1-66.2-59.7c-0.2-11.3 4.9-20.4 8.5-24.7c7.6-9 3.7-4 12.3-13.3 c0.4-0.4 4.3-2.7 8-12c3.3-8.3 10-40.7 39.3-40.7c32.7 0 27.2 17.9 39.7 46C194 99.4 202.3 109.4 207.3 115.3z")
-                    .attr("class", "bodyPear")
+                    .attr("class", "body-pear")
                     .attr("data-part", "body");
+  };
+
+
+  window.bodyStrawberry = function(container) {
+    d3.select(container).append("g").append("path")
+                        .attr("d", "M220.3 112.3c2.7-46.7-48.1-60-70-60c-21.9 0-71.3 10.7-67.3 57.3 c4 47.3 44.8 104.7 66.7 104.7C171.6 214.3 217.7 159 220.3 112.3z")
+                        .attr("class", "body-strawberry")
+                        .attr("data-part", "body");
   };
 
 
@@ -91,6 +99,20 @@ $(document).ready(function(){
     d3.select(container).append("path")
                     .attr("d", "M187.5 129.5c0.3 1.6-2.7 3.8-4.5 3.5")
                     .attr("class", "closed-eye");
+  };
+
+
+  window.glasses = function(container) {
+    d3.select(container).append("g").append("g").append("g").append("path")
+                        .attr("d", "M145.2 130.5c-0.4 12.8-11.5 20.9-23.8 20.6c-11.1-0.3-20.8-8.8-21.9-19.8c-1.3-13.3 11.9-22 23.8-21.7 c11.6 0.3 21.6 9.5 22 21.2c0 1 2.9 0.4 2.9-0.8c-1-29.6-50.6-28.6-51.6 0.6c-0.5 14.2 14.1 22.7 26.7 22.3 c12.5-0.3 24.4-9.7 24.9-22.7C148.2 128.9 145.2 129.5 145.2 130.5z");
+    d3.select(container).append("g").append("g").append("path")
+                        .attr("d", "M201.5 129.1c-0.9 27.2-44.8 26.5-45.7-0.3c-0.4-12.8 12.3-20.8 23.8-20.5C191 108.6 201.2 117.6 201.5 129.1 c0 1.4 3 0.9 2.9-0.3c-1-29.9-50.6-29.2-51.6 0.3c-0.5 13.4 13.3 22.8 25.6 22.5c13-0.3 25.5-9 25.9-22.8 C204.5 127.5 201.6 128 201.5 129.1z");
+    d3.select(container).append("g").append("g").append("path")
+                        .attr("d", "M146.1 131.1c2.7 0.1 5.3 0.2 8 0.3c1.1 0 3.1-1.5 1.1-1.6c-2.7-0.1-5.3-0.2-8-0.3C146.2 129.5 144.1 131 146.1 131.1 L146.1 131.1z");
+    d3.select(container).append("g").append("g").append("path")
+                        .attr("d", "M204.1 123.8c1.3-2.7 2.7-5.3 4-8c-0.9 0.2-1.9 0.5-2.8 0.7c2 1.3 4 2.7 6 4c0.8 0.5 3.4-0.6 2.7-1.1c-2-1.3-4-2.7-6-4 c-0.8-0.5-2.4-0.1-2.8 0.7c-1.3 2.7-2.7 5.3-4 8C200.9 124.9 203.7 124.6 204.1 123.8L204.1 123.8z");
+    d3.select(container).append("g").append("g").append("path")
+                        .attr("d", "M100.4 122.6c-1.3-2.7-2.7-5.3-4-8c-0.4-0.8-1.8-0.5-2.4-0.1c-2.1 1.4-4.2 2.9-6.3 4.3c-1.6 1.1 0.9 1.6 1.8 1 c2.1-1.4 4.2-2.9 6.3-4.3c-0.8 0-1.6-0.1-2.4-0.1c1.3 2.7 2.7 5.3 4 8C98.1 124.4 100.9 123.5 100.4 122.6L100.4 122.6z");
   };
 
 
@@ -246,7 +268,8 @@ $(document).ready(function(){
   // To make sample FruitFace
   orange_container = ".sample-orange"
   bodyRound(orange_container);
-  hairShaggy(orange_container);
+  hairLeaf(orange_container);
+  glasses(orange_container);
   eyesClosed(orange_container);
   arms(orange_container);
   legs(orange_container);
@@ -261,6 +284,16 @@ $(document).ready(function(){
   arms(pear_container);
   freckles(pear_container);
   mouthOpen(pear_container);
+
+  strawberry_container = ".sample-strawberry"
+  legs(strawberry_container);
+  bodyStrawberry(strawberry_container);
+  hairShaggy(strawberry_container);
+  eyesOpen(strawberry_container);
+  arms(strawberry_container);
+  freckles(strawberry_container);
+  mouthSad(strawberry_container);
+
 
   // Function to append parts to svg
   // Make sure that the name of the function and the id of the element match
@@ -292,7 +325,7 @@ $(document).ready(function(){
     // preview.remove(target)
 
       // gets the data attribute of each part
-      // var part = d3.selectAll("" + this.class + "").attr("data-part")
+      // var part = d3.selectAll("" + this.id + "").attr("data-part")
     
       // var part = this.getAttribute("data-part")
       // console.log(part);

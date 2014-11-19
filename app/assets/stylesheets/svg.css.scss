@@ -4,14 +4,20 @@ svg {
   background: steelblue;
 }
 
-.bodyRound {
+.body-round {
   fill: orange;
   stroke: #000000;
   stroke-miterlimit:  10;
 }
 
-.bodyPear {
+.body-pear {
   fill: #58C823;
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+.body-strawberry {
+  fill: #FF134D;
   stroke: #000000;
   stroke-miterlimit:  10;
 }
