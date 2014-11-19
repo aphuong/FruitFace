@@ -9,7 +9,7 @@ $(document).ready(function(){
   // container to append svg
   var container
 
-  window.bodyRound = function(){
+  window.bodyRound = function(container){
     d3.select(container).append("ellipse")
                     .attr("cx", 151.7)
                     .attr("cy", 120.3)
@@ -19,7 +19,7 @@ $(document).ready(function(){
   };
   // bodyRound();
 
-  window.bodyPear = function(){
+  window.bodyPear = function(container){
     d3.select(container).append("path")
                     .attr("d", "M207.3 115.3c13.3 15.5 9.2 44.6 2.7 56 c-11.6 20.1-40.2 27.9-59.7 28c-27.3 0.1-65.5-11.1-66.2-59.7c-0.2-11.3 4.9-20.4 8.5-24.7c7.6-9 3.7-4 12.3-13.3 c0.4-0.4 4.3-2.7 8-12c3.3-8.3 10-40.7 39.3-40.7c32.7 0 27.2 17.9 39.7 46C194 99.4 202.3 109.4 207.3 115.3z")
                     .attr("class", "body-pear");
@@ -27,7 +27,7 @@ $(document).ready(function(){
   // bodyPear();
 
 
-  window.eyesOpen = function(){
+  window.eyesOpen = function(container){
     d3.select(container).append("circle")
                     .attr("cx", 125.7)
                     .attr("cy", 129)
@@ -66,7 +66,7 @@ $(document).ready(function(){
   // eyesOpen();
 
 
-  window.eyesClosed = function(){
+  window.eyesClosed = function(container){
     d3.select(container).append("path")
                     .attr("d", "M113.3 135.3c1-2.3 0.7-3.4 3.2-4.9c2.2-1.3 5.3-2.1 7.8-2.4 c5-0.6 11.7 3.3 11.6 9")
                     .attr("class", "closed-eye");
@@ -89,7 +89,7 @@ $(document).ready(function(){
   // eyesClosed();
 
 
-  window.freckles = function(){
+  window.freckles = function(container){
     d3.select(container).append("ellipse")
                     .attr("cx", 108.9)
                     .attr("cy", 147.8)
@@ -142,7 +142,7 @@ $(document).ready(function(){
   // freckles();
 
 
-  window.hairLeaf = function(){
+  window.hairLeaf = function(container){
     d3.select(container).append("path")
                     .attr("d", "M153.2 32.1c0-1.2-1-2.1-2.1-2.1l0 0c-1.3 0-1.4 0.6-3.3 1.8 l3.2 20.5c-1.9 1.4-1 2.3 0.2 2.3l0 0c1.2 0 2.1-1 2.1-2.1V32.1z")
                     .attr("class", "hair-leaf")
@@ -153,7 +153,7 @@ $(document).ready(function(){
   // hairLeaf();
 
 
-  window.hairDoubleLeaf = function(){
+  window.hairDoubleLeaf = function(container){
     d3.select(container).append("g").append("path")
                     .attr("d", "M153.2 32.1c0-1.2-1-2.1-2.1-2.1l0 0c-1.3 0-1.4 0.6-3.3 1.8 l3.2 20.5c-1.9 1.4-1 2.3 0.2 2.3l0 0c1.2 0 2.1-1 2.1-2.1V32.1z")
                     .attr("class", "hair-double-leaf");
@@ -170,7 +170,7 @@ $(document).ready(function(){
   // hairDoubleLeaf();
 
 
-  window.hairShaggy = function(){
+  window.hairShaggy = function(container){
     d3.select(container).append("g").append("g").append("path")
                     .attr("d", "M151.8 48.5l1.9-0.2c7-0.8 16.7 2.4 20.6 8.6 c-4.8-2.6-10.4-1.2-15.5-1.3c5.2 2.3 14 3.1 15.2 10c-6.2-4-13-4.8-20.2-5c5.1 4.7 9.1 10.4 13.2 16c-7.5-1.5-13.7-9.9-19.7-14.2 C150 69 146 76 146.7 82.7c-4.3-7-6.7-14.9-10-22.3c-1.2 6.9-7.4 11.7-9 18.5c0-7.4-0.8-17 4.7-22.9")
                     .attr("class", "hair-shaggy");
@@ -187,7 +187,7 @@ $(document).ready(function(){
   // hairShaggy();
 
 
-  window.legs = function(){
+  window.legs = function(container){
     d3.select(container).append("path")
                     .attr("d", "M172.3 235.8c0 2.2-1.6 4-3.5 4l0 0c-1.9 0-3.5-1.8-3.5-4v-54.4 c0-2.2 1.6-4 3.5-4l0 0c1.9 0 3.5 1.8 3.5 4V235.8z")
                     .attr("class", "legs");
@@ -198,7 +198,7 @@ $(document).ready(function(){
   // legs();
 
 
-  window.arms = function(){
+  window.arms = function(container){
     d3.select(container).append("path")
                     .attr("d", "M242 140c0 1.6-1.3 2.8-2.8 2.8h-22.3c-1.6 0-2.8-1.3-2.8-2.8l0 0 c0-1.6 1.3-2.8 2.8-2.8h22.3C240.7 137.2 242 138.4 242 140L242 140z")
                     .attr("class", "arms");
@@ -208,14 +208,14 @@ $(document).ready(function(){
   };
   // arms();
 
-  window.mouthSad = function(){
+  window.mouthSad = function(container){
     d3.select(container).append("path")
                     .attr("d", "M141.5 161.6c0-4.8 4-8.6 9-8.6s9 3.9 9 8.6")
                     .attr("class", "mouth-sad");
   }
   // mouthSad();
 
-  window.mouthHappy = function(){
+  window.mouthHappy = function(container){
     d3.select(container).append("g").append("path")
                     .attr("d", "M167 155.2l-1.8-0.5c0 6.7-6.6 12.2-14.8 12.2 c-8.2 0-14.8-5.5-14.8-12.2l-2.5 0.5")
                     .attr("class", "mouth-happy");
@@ -235,7 +235,7 @@ $(document).ready(function(){
   // mouthHappy();
 
 
-  window.mouthOpen = function(){
+  window.mouthOpen = function(container){
     d3.select(container).append("g").append("path")
                     .attr("d", "M150 172c8.4 0 15.5-7.5 15.2-14.1c0-0.9-0.4-2.2-0.4-2.2s-0.8-2.3-1.8-0.1c-1.8 3.9-5.8 3.8-13 3.8s-11.3 0.1-13-3.8 c-1-2.2-1.8 0.1-1.8 0.1s-0.3 1.3-0.4 2.2C134.5 164.5 141.6 172 150 172z");
     d3.select(container).append("path")
@@ -245,136 +245,41 @@ $(document).ready(function(){
   // mouthOpen();
 
 
-
-
   // To make sample FruitFace
-  container = ".sample-orange"
-  bodyRound();
-  hairShaggy();
-  eyesClosed();
-  arms();
-  legs();
-  freckles();
-  mouthHappy();
+  orange_container = ".sample-orange"
+  bodyRound(orange_container);
+  hairShaggy(orange_container);
+  eyesClosed(orange_container);
+  arms(orange_container);
+  legs(orange_container);
+  freckles(orange_container);
+  mouthHappy(orange_container);
 
-  container = ".sample-pear"
-  legs();
-  bodyPear();
-  hairDoubleLeaf();
-  eyesOpen();
-  arms();
-  freckles();
-  mouthOpen();
-
-  // To make components - should this be a JS loop?
-  container = "#body-round"
-  bodyRound();
-
-  container = "#body-pear"
-  bodyPear();
-
-  container = "#eyes-open"
-  eyesOpen();
-
-  container = "#eyes-closed"
-  eyesClosed();
-
-  container = "#legs"
-  legs();
-
-  container = "#arms"
-  arms();
-
-  container = "#mouth-happy"
-  mouthHappy();
-
-  container = "#mouth-sad"
-  mouthSad();
-
-  container = "#mouth-open"
-  mouthOpen();
-
-  container = "#hair-leaf"
-  hairLeaf();
-
-  container = "#hair-double-leaf"
-  hairDoubleLeaf();
-
-  container = "#hair-shaggy"
-  hairShaggy();
-
-  container = "#freckles"
-  freckles();
+  pear_container = ".sample-pear"
+  legs(pear_container);
+  bodyPear(pear_container);
+  hairDoubleLeaf(pear_container);
+  eyesOpen(pear_container);
+  arms(pear_container);
+  freckles(pear_container);
+  mouthOpen(pear_container);
 
 
-
-
-// Function to choose components, find the thing that was clicked
-// clear body class and append the thing that was clicked
-  $("#body-round").click(function() {
-    container = ".preview"
-    bodyRound();
+  // Make sure that the name of the function and the id of the element match
+  $(".parts").each(function() {
+    window[this.id]("#" + this.id);
   });
 
-  $("#body-pear").click(function() {
-    container = ".preview"
-    bodyPear();
+
+  // Function to choose components, find the thing that was clicked
+  // clear body class and append the thing that was clicked
+
+  $(".parts").each(function(){
+    $("#" + this.id).click(function() {
+      window[this.id](".preview");
+    });
   });
 
-  $("#eyes-open").click(function(){
-    container = ".preview"
-    eyesOpen();
-  });
-
-  $("#eyes-closed").click(function(){
-    container = ".preview"
-    eyesClosed();
-  });
-
-  $("#legs").click(function(){
-    container = ".preview"
-    legs();
-  });
-
-  $("#arms").click(function(){
-    container = ".preview"
-    arms();
-  });
-
-  $("#mouth-happy").click(function(){
-    container = ".preview"
-    mouthHappy();
-  });
-
-  $("#mouth-sad").click(function(){
-    container = ".preview"
-    mouthSad();
-  });
-
-  $("#mouth-open").click(function(){
-    container = ".preview"
-    mouthOpen();
-  });
-
-  $("#hair-leaf").click(function(){
-    container = ".preview"
-    hairLeaf();
-  });
-
-  $("#hair-double-leaf").click(function(){
-    container = ".preview"
-    hairDoubleLeaf();
-  });
-
-  $("#hair-shaggy").click(function(){
-    container = ".preview"
-    hairShaggy();
-  });
-
-  $("#freckles").click(function(){
-    container = ".preview"
-    freckles();
-  });
 
 });
 
