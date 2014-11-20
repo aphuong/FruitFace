@@ -10,7 +10,7 @@ $(document).ready(function(){
   var container
 
   window.bodyRound = function(container){
-    group = d3.select(container).append("g").attr("data-part", "body")
+    group = d3.select(container).append("g").attr("data-part", "body").attr("data-name", "bodyRound")
 
     group.append("ellipse")
       .attr("cx", 151.7)
@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 
   window.bodyPear = function(container){
-    group = d3.select(container).append("g").attr("data-part", "body")
+    group = d3.select(container).append("g").attr("data-part", "body").attr("data-name", "bodyPear")
 
     group.append("path")
       .attr("d", "M207.3 115.3c13.3 15.5 9.2 44.6 2.7 56 c-11.6 20.1-40.2 27.9-59.7 28c-27.3 0.1-65.5-11.1-66.2-59.7c-0.2-11.3 4.9-20.4 8.5-24.7c7.6-9 3.7-4 12.3-13.3 c0.4-0.4 4.3-2.7 8-12c3.3-8.3 10-40.7 39.3-40.7c32.7 0 27.2 17.9 39.7 46C194 99.4 202.3 109.4 207.3 115.3z")
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 
   window.bodyStrawberry = function(container) {
-    group = d3.select(container).append("g").attr("data-part", "body")
+    group = d3.select(container).append("g").attr("data-part", "body").attr("data-name", "bodyStrawberry")
 
     group.append("g").append("path")
       .attr("d", "M220.3 112.3c2.7-46.7-48.1-60-70-60c-21.9 0-71.3 10.7-67.3 57.3 c4 47.3 44.8 104.7 66.7 104.7C171.6 214.3 217.7 159 220.3 112.3z")
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 
   window.eyesOpen = function(container){
-    group = d3.select(container).append("g").attr("data-part", "eyes")
+    group = d3.select(container).append("g").attr("data-part", "eyes").attr("data-name", "eyesOpen")
 
     group.append("circle")
       .attr("cx", 125.7)
@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 
   window.eyesClosed = function(container){
-    group = d3.select(container).append("g").attr("data-part", "eyes")
+    group = d3.select(container).append("g").attr("data-part", "eyes").attr("data-name", "eyesClosed")
 
     group.append("path")
       .attr("d", "M113.3 135.3c1-2.3 0.7-3.4 3.2-4.9c2.2-1.3 5.3-2.1 7.8-2.4 c5-0.6 11.7 3.3 11.6 9")
@@ -103,8 +103,8 @@ $(document).ready(function(){
   };
 
 
-  window.glasses = function(container) {
-    group = d3.select(container).append("g").attr("data-part", "glasses")
+  window.roundGlasses = function(container) {
+    group = d3.select(container).append("g").attr("data-part", "glasses").attr("data-name", "roundGlasses")
 
     group.append("g").append("g").append("g").append("path")
       .attr("d", "M145.2 130.5c-0.4 12.8-11.5 20.9-23.8 20.6c-11.1-0.3-20.8-8.8-21.9-19.8c-1.3-13.3 11.9-22 23.8-21.7 c11.6 0.3 21.6 9.5 22 21.2c0 1 2.9 0.4 2.9-0.8c-1-29.6-50.6-28.6-51.6 0.6c-0.5 14.2 14.1 22.7 26.7 22.3 c12.5-0.3 24.4-9.7 24.9-22.7C148.2 128.9 145.2 129.5 145.2 130.5z");
@@ -120,7 +120,7 @@ $(document).ready(function(){
 
 
   window.freckles = function(container){
-    group = d3.select(container).append("g").attr("data-part", "freckles")
+    group = d3.select(container).append("g").attr("data-part", "freckles").attr("data-name", "freckles")
 
     group.append("ellipse")
       .attr("cx", 108.9)
@@ -174,7 +174,7 @@ $(document).ready(function(){
 
 
   window.hairLeaf = function(container){
-    group = d3.select(container).append("g").attr("data-part", "hair")
+    group = d3.select(container).append("g").attr("data-part", "hair").attr("data-name", "hairLeaf")
 
     group.append("path")
       .attr("d", "M153.2 32.1c0-1.2-1-2.1-2.1-2.1l0 0c-1.3 0-1.4 0.6-3.3 1.8 l3.2 20.5c-1.9 1.4-1 2.3 0.2 2.3l0 0c1.2 0 2.1-1 2.1-2.1V32.1z")
@@ -186,7 +186,7 @@ $(document).ready(function(){
 
 
   window.hairDoubleLeaf = function(container){
-    group = d3.select(container).append("g").attr("data-part", "hair")
+    group = d3.select(container).append("g").attr("data-part", "hair").attr("data-name", "hairDoubleLeaf")
 
     group.append("g").append("path")
       .attr("d", "M153.2 32.1c0-1.2-1-2.1-2.1-2.1l0 0c-1.3 0-1.4 0.6-3.3 1.8 l3.2 20.5c-1.9 1.4-1 2.3 0.2 2.3l0 0c1.2 0 2.1-1 2.1-2.1V32.1z")
@@ -204,7 +204,7 @@ $(document).ready(function(){
 
 
   window.hairShaggy = function(container){
-    group = d3.select(container).append("g").attr("data-part", "hair")
+    group = d3.select(container).append("g").attr("data-part", "hair").attr("data-name", "hairShaggy")
 
     group.append("g").append("g").append("path")
       .attr("d", "M151.8 48.5l1.9-0.2c7-0.8 16.7 2.4 20.6 8.6 c-4.8-2.6-10.4-1.2-15.5-1.3c5.2 2.3 14 3.1 15.2 10c-6.2-4-13-4.8-20.2-5c5.1 4.7 9.1 10.4 13.2 16c-7.5-1.5-13.7-9.9-19.7-14.2 C150 69 146 76 146.7 82.7c-4.3-7-6.7-14.9-10-22.3c-1.2 6.9-7.4 11.7-9 18.5c0-7.4-0.8-17 4.7-22.9")
@@ -222,7 +222,7 @@ $(document).ready(function(){
 
 
   window.legs = function(container){
-    group = d3.select(container).append("g").attr("data-part", "legs")
+    group = d3.select(container).append("g").attr("data-part", "legs").attr("data-name", "legs")
 
     group.append("path")
       .attr("d", "M172.3 235.8c0 2.2-1.6 4-3.5 4l0 0c-1.9 0-3.5-1.8-3.5-4v-54.4 c0-2.2 1.6-4 3.5-4l0 0c1.9 0 3.5 1.8 3.5 4V235.8z")
@@ -234,7 +234,7 @@ $(document).ready(function(){
 
 
   window.arms = function(container){
-    group = d3.select(container).append("g").attr("data-part", "arms")
+    group = d3.select(container).append("g").attr("data-part", "arms").attr("data-name", "arms")
 
     group.append("path")
       .attr("d", "M242 140c0 1.6-1.3 2.8-2.8 2.8h-22.3c-1.6 0-2.8-1.3-2.8-2.8l0 0 c0-1.6 1.3-2.8 2.8-2.8h22.3C240.7 137.2 242 138.4 242 140L242 140z")
@@ -246,7 +246,7 @@ $(document).ready(function(){
 
 
   window.mouthSad = function(container){
-    group = d3.select(container).append("g").attr("data-part", "mouth")
+    group = d3.select(container).append("g").attr("data-part", "mouth").attr("data-name", "mouthSad")
 
     group.append("path")
       .attr("d", "M141.5 161.6c0-4.8 4-8.6 9-8.6s9 3.9 9 8.6")
@@ -255,7 +255,7 @@ $(document).ready(function(){
 
 
   window.mouthHappy = function(container){
-    group = d3.select(container).append("g").attr("data-part", "mouth")
+    group = d3.select(container).append("g").attr("data-part", "mouth").attr("data-name", "mouthHappy")
 
     group.append("g").append("path")
       .attr("d", "M167 155.2l-1.8-0.5c0 6.7-6.6 12.2-14.8 12.2 c-8.2 0-14.8-5.5-14.8-12.2l-2.5 0.5")
@@ -276,7 +276,7 @@ $(document).ready(function(){
 
 
   window.mouthOpen = function(container){
-    group = d3.select(container).append("g").attr("data-part", "mouth")
+    group = d3.select(container).append("g").attr("data-part", "mouth").attr("data-name", "mouthOpen")
 
     group.append("g").append("path")
       .attr("d", "M150 172c8.4 0 15.5-7.5 15.2-14.1c0-0.9-0.4-2.2-0.4-2.2s-0.8-2.3-1.8-0.1c-1.8 3.9-5.8 3.8-13 3.8s-11.3 0.1-13-3.8 c-1-2.2-1.8 0.1-1.8 0.1s-0.3 1.3-0.4 2.2C134.5 164.5 141.6 172 150 172z");
@@ -290,7 +290,7 @@ $(document).ready(function(){
   orange_container = ".sample-orange"
   bodyRound(orange_container);
   hairLeaf(orange_container);
-  glasses(orange_container);
+  roundGlasses(orange_container);
   eyesClosed(orange_container);
   arms(orange_container);
   legs(orange_container);
@@ -334,6 +334,21 @@ $(document).ready(function(){
       // Add the part to the preview
       window[this.id](".preview");
   });
+
+
+  // Function to save fruit
+  $("#saveFruit").click(function(){
+
+    // get name of every part in preview box
+    saved_parts = $(".preview g").data("name"); 
+    console.log(saved_parts);
+
+   
+     
+
+    // send to rails using jquery ajax request
+  });
+
 });
 
 
