@@ -1,4 +1,4 @@
-.body-round {
+.body-round, .body-pear, .body-strawberry {
   transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: rotate 1s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
@@ -7,7 +7,7 @@
 
 @-webkit-keyframes rotate {
   50% {
-    -webkit-transform: rotate(200deg);
+    -webkit-transform: rotate(25deg);
   }
 }
 

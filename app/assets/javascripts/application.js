@@ -10,7 +10,9 @@ $(document).ready(function(){
   var container
 
   window.bodyRound = function(container){
-    d3.select(container).append("ellipse")
+    group = d3.select(container).append("g").attr("data-part", "body")
+
+    group.append("ellipse")
                     .attr("cx", 151.7)
                     .attr("cy", 120.3)
                     .attr("rx", 69.7)
@@ -21,7 +23,9 @@ $(document).ready(function(){
 
 
   window.bodyPear = function(container){
-    d3.select(container).append("path")
+    group = d3.select(container).append("g").attr("data-part", "body")
+
+    group.append("path")
                     .attr("d", "M207.3 115.3c13.3 15.5 9.2 44.6 2.7 56 c-11.6 20.1-40.2 27.9-59.7 28c-27.3 0.1-65.5-11.1-66.2-59.7c-0.2-11.3 4.9-20.4 8.5-24.7c7.6-9 3.7-4 12.3-13.3 c0.4-0.4 4.3-2.7 8-12c3.3-8.3 10-40.7 39.3-40.7c32.7 0 27.2 17.9 39.7 46C194 99.4 202.3 109.4 207.3 115.3z")
                     .attr("class", "body-pear")
                     .attr("data-part", "body");
@@ -29,7 +33,9 @@ $(document).ready(function(){
 
 
   window.bodyStrawberry = function(container) {
-    d3.select(container).append("g").append("path")
+    group = d3.select(container).append("g").attr("data-part", "body")
+
+    group.append("g").append("path")
                         .attr("d", "M220.3 112.3c2.7-46.7-48.1-60-70-60c-21.9 0-71.3 10.7-67.3 57.3 c4 47.3 44.8 104.7 66.7 104.7C171.6 214.3 217.7 159 220.3 112.3z")
                         .attr("class", "body-strawberry")
                         .attr("data-part", "body");
@@ -37,46 +43,42 @@ $(document).ready(function(){
 
 
   window.eyesOpen = function(container){
-    d3.select(container).append("circle")
-                    .attr("cx", 125.7)
-                    .attr("cy", 129)
-                    .attr("r", 12)
-                    .attr("class", "open-eye-lg")
-                    .attr("data-part", "eyes");
-    d3.select(container).append("circle")
-                    .attr("cx", 173)
-                    .attr("cy", 128)
-                    .attr("r", 12)
-                    .attr("class", "open-eye-lg")
-                    .attr("data-part", "eyes");
-    d3.select(container).append("ellipse")
-                    .attr("cx", 119.7)
-                    .attr("cy", 130.7)
-                    .attr("rx", 5.7)
-                    .attr("ry", 5.3)
-                    .attr("class", "open-eye-md")
-                    .attr("data-part", "eyes");
-    d3.select(container).append("ellipse")
-                    .attr("cx", 166.7)
-                    .attr("cy", 129.8)
-                    .attr("rx", 5.7)
-                    .attr("ry", 5.3)
-                    .attr("class", "open-eye-md")
-                    .attr("data-part", "eyes");
-    d3.select(container).append("ellipse")
-                    .attr("cx", 115.7)
-                    .attr("cy", 130.4)
-                    .attr("rx", 1.8)
-                    .attr("ry", 3.2)
-                    .attr("class", "open-eye-sm")
-                    .attr("data-part", "eyes");
-    d3.select(container).append("ellipse")
-                    .attr("cx", 162.8)
-                    .attr("cy", 128.9)
-                    .attr("rx", 1.8)
-                    .attr("ry", 3.2)
-                    .attr("class", "open-eye-sm")
-                    .attr("data-part", "eyes");
+    group = d3.select(container).append("g").attr("data-part", "eyes")
+
+    group.append("circle")
+      .attr("cx", 125.7)
+      .attr("cy", 129)
+      .attr("r", 12)
+      .attr("class", "open-eye-lg")
+    group.append("circle")
+      .attr("cx", 173)
+      .attr("cy", 128)
+      .attr("r", 12)
+      .attr("class", "open-eye-lg")
+    group.append("ellipse")
+      .attr("cx", 119.7)
+      .attr("cy", 130.7)
+      .attr("rx", 5.7)
+      .attr("ry", 5.3)
+      .attr("class", "open-eye-md")
+    group.append("ellipse")
+      .attr("cx", 166.7)
+      .attr("cy", 129.8)
+      .attr("rx", 5.7)
+      .attr("ry", 5.3)
+      .attr("class", "open-eye-md")
+    group.append("ellipse")
+      .attr("cx", 115.7)
+      .attr("cy", 130.4)
+      .attr("rx", 1.8)
+      .attr("ry", 3.2)
+      .attr("class", "open-eye-sm")
+    group.append("ellipse")
+      .attr("cx", 162.8)
+      .attr("cy", 128.9)
+      .attr("rx", 1.8)
+      .attr("ry", 3.2)
+      .attr("class", "open-eye-sm")
   };
 
 
@@ -302,49 +304,17 @@ $(document).ready(function(){
   });
 
 
-  // Function to choose components 
-  // Check to see if that data-part exists in the preview. If it does remove it first.
-  $(".parts").each(function(){
-    $("#" + this.id).click(function() {
+  // Add click event to each part that adds it to the preview
+  $(".parts").click(function(){
 
-// This deletes all the parts
-    //   parts = $(".parts")
-    //   for (i = 0; i < parts.length; i++) {
-    //   part = parts[i]
-    //   part_name = $(".parts").data('body')
+      part_name = $(this).children('g').data('part')
+      // Remove all similar parts from preview
+      similar_parts = $(".preview [data-part=" + part_name + "]")
+      similar_parts.remove()
 
-    //   // loop through and replace with updated content
-    //   part_type = $(".preview[data-type=" + part_name + "]")
-    //   $(part).text(part_type.text());
-    // }
-
-// This deletes the preview
-    // preview = $(".preview")
-    // part_name = d3.select("#" + this.id).attr("data-part")
-    // target = $(".preview [data-part=' + part_name + ']").html()
-    // preview.remove(target)
-
-      // gets the data attribute of each part
-      // var part = d3.selectAll("" + this.id + "").attr("data-part")
-    
-      // var part = this.getAttribute("data-part")
-      // console.log(part);
-      // console.log("***");
-      // console.log(this);
-
-// This is just wrong
-      // var preview = $(".preview")["data-part"]
-      // gets the data attribute in preview
-      // var preview = ".preview" "[data-part]" + "part"
-      // $(data).remove(this);
-
+      // Add the part to the preview
       window[this.id](".preview");
-    });
   });
-
-
-
-
 });
 
 
