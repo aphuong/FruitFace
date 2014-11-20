@@ -1,5 +1,14 @@
 class FruitsController < ApplicationController 
 
-  def new
+  def index
+    @fruits = Fruit.all
   end
+
+  def new
+
+  end
+
+  
+
+
 end
