@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120162100) do
+ActiveRecord::Schema.define(version: 20141120220626) do
 
   create_table "fruits", force: true do |t|
     t.boolean  "bodyRound"
@@ -31,6 +31,10 @@ ActiveRecord::Schema.define(version: 20141120162100) do
     t.boolean  "hairShaggy"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "bodyGrape"
+    t.boolean  "squareGlasses"
+    t.boolean  "mustache"
+    t.boolean  "mustache_two"
   end
 
 end
