@@ -12,26 +12,26 @@ $(document).ready(function(){
   hairLeaf(orange_container);
   roundGlasses(orange_container);
   eyesClosed(orange_container);
-  arms(orange_container);
-  legs(orange_container);
+  // arms(orange_container);
+  // legs(orange_container);
   freckles(orange_container);
   mouthHappy(orange_container);
 
   pear_container = ".sample-pear"
-  legs(pear_container);
+  // legs(pear_container);
   bodyPear(pear_container);
   hairDoubleLeaf(pear_container);
   eyesOpen(pear_container);
-  arms(pear_container);
+  // arms(pear_container);
   freckles(pear_container);
   mouthOpen(pear_container);
 
   strawberry_container = ".sample-strawberry"
-  legs(strawberry_container);
+  // legs(strawberry_container);
   bodyStrawberry(strawberry_container);
   hairShaggy(strawberry_container);
   eyesOpen(strawberry_container);
-  arms(strawberry_container);
+  // arms(strawberry_container);
   freckles(strawberry_container);
   mouthSad(strawberry_container);
 
