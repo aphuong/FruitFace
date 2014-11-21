@@ -6,6 +6,7 @@
 
 $(document).ready(function(){
 
+
   // To make sample FruitFace
   orange_container = ".sample-orange"
   bodyRound(orange_container);
@@ -72,7 +73,7 @@ $(document).ready(function(){
     saved_parts = $.map(arr, function(p) {
       return $(p).data("name");
     });
-    console.log(saved_parts);
+    // console.log(saved_parts);
 
     // turn saved_parts into a javascript object
     function toObject(saved_parts) {
@@ -82,30 +83,31 @@ $(document).ready(function(){
       return object;
     }
     var params = toObject(saved_parts);
+    // console.log(params);
+ 
 
-    console.log(params);
-    // var params = {
-    //   bodyPear: true,
-    //   eyesOpen: true
-    // }
-
-    // send to rails using (jquery post)ajax request
+    // send params to rails using jquery ajax request
     $.post( "/create", {fruit: params}, function() {
       alert( "success" );
     })
-      .done(function() {
-        alert( "second success" );
-      })
-      .fail(function() {
-        alert( "error" );
-      })
-      .always(function() {
-        alert( "finished" );
-    });
-
-    
+    .done(function() {
+      alert( "second success" );
+    })
+    .fail(function() {
+      alert( "error" );
+    })
   });
 
+
+  // accordian display
+  $(function(){
+    $("#accordian h3").click(function(){
+    $("#accordian ul ul").slideUp();
+      if ($(this).next().is(":hidden")){
+        $(this).next().slideDown();
+      }
+    });
+  });
 });
 
 
