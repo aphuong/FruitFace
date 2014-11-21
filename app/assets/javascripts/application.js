@@ -65,7 +65,7 @@ $(document).ready(function(){
   // Function to save fruit
   $("#saveFruit").click(function(){
 
-    // get name of every part in preview box
+    // get name of every part in preview box in an array
     preview_all_groups = $(".preview > g");
     arr = $.makeArray(preview_all_groups);
 
@@ -74,15 +74,22 @@ $(document).ready(function(){
     });
     console.log(saved_parts);
 
-    // turn saved_parts into a javascript object 
-    var params = $.extend({}, saved_parts);
-    console.log(params);
+    // turn saved_parts into a javascript object
+    function toObject(saved_parts) {
+      var object = {};
+      for (var i = 0; i < saved_parts.length; ++i)
+        object[saved_parts[i]] = true;
+      return object;
+    }
+    var params = toObject(saved_parts);
 
+    console.log(params);
     // var params = {
     //   bodyPear: true,
     //   eyesOpen: true
     // }
 
+    // send to rails using (jquery post)ajax request
     $.post( "/create", {fruit: params}, function() {
       alert( "success" );
     })
@@ -96,7 +103,6 @@ $(document).ready(function(){
         alert( "finished" );
     });
 
-    // send to rails using (jquery post)ajax request
     
   });
 
