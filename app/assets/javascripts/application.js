@@ -73,8 +73,30 @@ $(document).ready(function(){
       return $(p).data("name");
     });
     console.log(saved_parts);
-  
-    // send to rails using jquery ajax request
+
+    // turn saved_parts into a javascript object 
+    var params = $.extend({}, saved_parts);
+    console.log(params);
+
+    // var params = {
+    //   bodyPear: true,
+    //   eyesOpen: true
+    // }
+
+    $.post( "/create", {fruit: params}, function() {
+      alert( "success" );
+    })
+      .done(function() {
+        alert( "second success" );
+      })
+      .fail(function() {
+        alert( "error" );
+      })
+      .always(function() {
+        alert( "finished" );
+    });
+
+    // send to rails using (jquery post)ajax request
     
   });
 
