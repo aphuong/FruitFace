@@ -3,7 +3,7 @@
  */
 
  // Variables
-// @import 'variables';
+@import 'variables';
 
 // Vendor
 @import 'bourbon';
@@ -14,6 +14,8 @@
 @import 'svg';
 @import 'animation';
 
+// Components 
+@import 'buttons';
 
 
 // bourbon animations:
@@ -69,5 +71,4 @@
     opacity: 1;
   }
 }
-
 

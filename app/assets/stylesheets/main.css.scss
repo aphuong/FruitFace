@@ -1,8 +1,17 @@
-// * {margin:0; padding:0;}
-
 body {
   color: #444;
-  background:#4eb889;
+  // background:#4eb889;
+  font-family: $font-stack;
+}
+
+html { 
+  background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: -o-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, #E6F1D2), color-stop(1, #2B8B9D));
+  background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: radial-gradient(circle farthest-corner at center bottom, #E6F1D2 0%, #2B8B9D 100%);
+  min-height:100%;
 }
 
 .parts {
@@ -13,17 +22,21 @@ body {
 .preview {
   width: 300px;
   height: 300px;
+  margin-left: 10%;
 }
-
 
 .parts-container {
   margin-left: 33px;
 }
 
+.preview-wrapper {
+  // margin-top: 10%;
+}
+
 
 #accordian {
   background:#004050; 
-  width: 100%;
+  vertical-align: top;
   // margin: 100px auto 0 auto;
   color: #fff;
   box-shadow: 0 5px 15px 1px rgba(0,0,0,.6), 0 0 200px 10px rgba(255,255,255,.5);
@@ -34,7 +47,9 @@ body {
   line-height:34px;
   padding: 0 40px;
   cursor:pointer;
-  @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  background: #003040; 
+  background: linear-gradient(#003040, #002535);
+  // @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
 }
 
 #accordian {
