@@ -73,21 +73,48 @@ $(document).ready(function(){
     saved_parts = $.map(arr, function(p) {
       return $(p).data("name");
     });
+
+    // parts_params = {parts: {}}
+    // parts_params.parts.1 = { identifier: "bodyType" }
+    // parts_params.parts.2 = { identifier: "otherType" }
+
     // console.log(saved_parts);
 
     // turn saved_parts into a javascript object
     function toObject(saved_parts) {
-      var object = {};
+      var params = {};
       for (var i = 0; i < saved_parts.length; ++i)
-        object[saved_parts[i]] = true;
-      return object;
+        params[i] = {"identifier": saved_parts[i]};
+      return params;
     }
-    var params = toObject(saved_parts);
+    var parts_params = toObject(saved_parts);
+    var fruit_params = { "name": "mr jesse" };
     // console.log(params);
  
+    // get params looking like this:
+    params = { 
+      fruit_and_parts: {
+        fruit: fruit_params,
+        parts: parts_params
+      }
+    }
+    //   fruit: { name: "mr jesse" },
+
+    //   parts: { 
+    //     1: { identifier: "bodyType"},
+    //     2: { identifier: "bigEye"}
+    //     }
+    //   }
+
+    
+
+
+
+    // params = $.extend({}, saved_parts);
+    // console.log(params);
 
     // send params to rails using jquery ajax request
-    $.post( "/create", {fruit: params}, function() {
+    $.post( "/create", params, function() {
       alert( "success" );
     })
     .done(function() {

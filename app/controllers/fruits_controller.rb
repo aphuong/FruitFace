@@ -1,4 +1,4 @@
-class FruitsController < ApplicationController 
+class FruitsController < ApplicationController
 
   def index
     @fruits = Fruit.all
@@ -8,12 +8,27 @@ class FruitsController < ApplicationController
     # else do nothing.
   end
 
+  def show
+    @fruit = Fruit.find(params[:id])
+
+    respond_to do |format|
+      format.json {
+        render json: { fruit: @fruit, parts: @fruit.parts }
+      }
+      format.html {}
+    end
+  end
+
   def new
     @fruit = Fruit.new
   end
 
   def create
+
     @fruit = Fruit.new(fruit_params)
+    parts_params.each do |k, v|
+      @fruit.parts << Part.create(identifier: v["identifier"])
+    end
 
     if @fruit.save
       respond_to do |format|
@@ -31,15 +46,10 @@ class FruitsController < ApplicationController
   private
 
   def fruit_params
-    params.require(:fruit).permit(:bodyRound, :bodyPear, :bodyStrawberry, :eyesOpen, :eyesClosed, :mouthSad, :mouthHappy, :mouthOpen, :roundGlasses, :freckles, :hairLeaf, :hairDoubleLeaf, :hairShaggy, :bodyGrape, :squareGlasses, :mustache, :mustache_two)
+    params.require(:fruit_and_parts)[:fruit].permit(:name)
   end
 
-
-
-
-
+  def parts_params
+    params.require(:fruit_and_parts)[:parts]
+  end
 end
-
-
-  
- 

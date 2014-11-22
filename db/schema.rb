@@ -11,30 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120220626) do
+ActiveRecord::Schema.define(version: 20141122022924) do
 
-  create_table "fruits", force: true do |t|
-    t.boolean  "bodyRound"
-    t.boolean  "bodyPear"
-    t.boolean  "bodyStrawberry"
-    t.boolean  "eyesOpen"
-    t.boolean  "eyesClosed"
-    t.boolean  "mouthSad"
-    t.boolean  "mouthHappy"
-    t.boolean  "mouthOpen"
-    t.boolean  "legs"
-    t.boolean  "arms"
-    t.boolean  "roundGlasses"
-    t.boolean  "freckles"
-    t.boolean  "hairLeaf"
-    t.boolean  "hairDoubleLeaf"
-    t.boolean  "hairShaggy"
+  create_table "fruit_parts", force: true do |t|
+    t.integer  "fruit_id"
+    t.integer  "part_id"
+    t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "bodyGrape"
-    t.boolean  "squareGlasses"
-    t.boolean  "mustache"
-    t.boolean  "mustache_two"
+  end
+
+  create_table "fruits", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parts", force: true do |t|
+    t.string   "identifier"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

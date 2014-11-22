@@ -1,0 +1,17 @@
+<%= @fruit.name %>
+
+<script>
+  var id = <%= @fruit.id %>
+  console.log(id)
+
+  $.getJSON("/fruits/" + id, function(data) {
+    console.log(data)
+    // build dat fruit with the data
+
+
+
+
+
+  });
+
+</script>
