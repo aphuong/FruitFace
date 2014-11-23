@@ -1,5 +1,26 @@
-<h2>FruitFace Gallery</h2>
+<div class="container">
+  <h2>FruitFace Gallery</h2>
 
-<% @fruits.each do |fruit| %>
-  <%= fruit %>
-<% end %>
+
+</div>
+
+<script>
+  <% @fruits.each do |fruit| %>
+    var id = <%= fruit.id %>
+
+    $.getJSON("/fruits/" + id, function(data) {
+      console.log(data.fruit.name);
+
+      d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
+
+      $.each(data.parts, function(key, value) {
+        this_fruit_part = value["identifier"];
+
+        container = ".fruit-" + data.fruit.id
+        window[this_fruit_part](container)
+      });
+    });
+
+  <% end %>
+</script>
+

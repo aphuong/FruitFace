@@ -5,13 +5,14 @@
   console.log(id)
 
   $.getJSON("/fruits/" + id, function(data) {
-    console.log(data)
-    // build dat fruit with the data
+    d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>")
 
+    $.each(data.parts, function(key, value) {
+      this_fruit_part = value["identifier"];
 
-
-
-
+      container = ".fruit-" + data.fruit.id
+      window[this_fruit_part](container)
+    });
   });
 
 </script>

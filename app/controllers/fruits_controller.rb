@@ -2,10 +2,13 @@ class FruitsController < ApplicationController
 
   def index
     @fruits = Fruit.all
-    # loop through all fruits
-    # check if there are true values
-    # if yes, create a new svg container, use that key to run the function, appending parts to the svg
-    # else do nothing.
+
+    respond_to do |format|
+      format.json {
+        render json: { fruits: @fruits, parts: @fruits.parts }
+      }
+      format.html {}
+    end
   end
 
   def show

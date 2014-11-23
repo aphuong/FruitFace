@@ -14,15 +14,20 @@ html {
   min-height:100%;
 }
 
+
+
 .parts {
   width: 300px;
   height: 300px;
+  display: block;
+  margin: 0 auto;
 }
 
 .preview {
   width: 300px;
   height: 300px;
-  margin-left: 10%;
+  display: block;
+  margin: 0 auto;
 }
 
 .parts-container {
@@ -36,8 +41,6 @@ html {
 
 #accordian {
   background:#004050; 
-  vertical-align: top;
-  // margin: 100px auto 0 auto;
   color: #fff;
   box-shadow: 0 5px 15px 1px rgba(0,0,0,.6), 0 0 200px 10px rgba(255,255,255,.5);
 }
@@ -62,24 +65,48 @@ html {
   }
 }
 
-// #accordian ul ul li a {
-//   color:snow;
-//   text-decoration:none;
-//   font-size:11px;
-//   line-height:27px;
-//   display:block;
-//   padding:0 15px;
-//   transition: all .15s;
-// }
-
-// #accordian ul li li a:hover {
-//   background: #003545;
-//   border-left:5px solid lightgreen; 
-// }
-
 
 #accordian ul ul {
   display:none;
 }
+
+// fruit index
+.fruit-gallery {
+  display: block;
+  margin: 0 auto;
+}
+
+// home index
+.sample {
+  display: block;
+  margin: 0 auto;
+}
+
+// fruit show
+.show-fruit {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+
+
+@media screen and (min-width: $laptop) {
+  body {
+    color: tomato;
+  }
+
+  .fruit-gallery {
+    display: inline-block;
+  }
+
+  .sample {
+    display: inline-block;
+  }
+}
+
+
+
+
 
 

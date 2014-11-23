@@ -13,26 +13,20 @@ $(document).ready(function(){
   hairLeaf(orange_container);
   roundGlasses(orange_container);
   eyesClosed(orange_container);
-  // arms(orange_container);
-  // legs(orange_container);
   freckles(orange_container);
   mouthHappy(orange_container);
 
   pear_container = ".sample-pear"
-  // legs(pear_container);
   bodyPear(pear_container);
   hairDoubleLeaf(pear_container);
   eyesOpen(pear_container);
-  // arms(pear_container);
   freckles(pear_container);
   mouthOpen(pear_container);
 
   strawberry_container = ".sample-strawberry"
-  // legs(strawberry_container);
   bodyStrawberry(strawberry_container);
   hairShaggy(strawberry_container);
   eyesOpen(strawberry_container);
-  // arms(strawberry_container);
   freckles(strawberry_container);
   mouthSad(strawberry_container);
 
@@ -66,19 +60,17 @@ $(document).ready(function(){
   // Function to save fruit
   $("#saveFruit").click(function(){
 
-    // get name of every part in preview box in an array
+    // get name of fruit
+    var fruit_name = $('#fruit_name').val();
+    var fruit_params = {"name": fruit_name};
+
+    // put name of every part in preview box in an array
     preview_all_groups = $(".preview > g");
     arr = $.makeArray(preview_all_groups);
 
     saved_parts = $.map(arr, function(p) {
       return $(p).data("name");
     });
-
-    // parts_params = {parts: {}}
-    // parts_params.parts.1 = { identifier: "bodyType" }
-    // parts_params.parts.2 = { identifier: "otherType" }
-
-    // console.log(saved_parts);
 
     // turn saved_parts into a javascript object
     function toObject(saved_parts) {
@@ -88,30 +80,15 @@ $(document).ready(function(){
       return params;
     }
     var parts_params = toObject(saved_parts);
-    var fruit_params = { "name": "mr jesse" };
-    // console.log(params);
- 
-    // get params looking like this:
+    
+
+    // Save fruit_params and parts_params as params
     params = { 
       fruit_and_parts: {
         fruit: fruit_params,
         parts: parts_params
       }
     }
-    //   fruit: { name: "mr jesse" },
-
-    //   parts: { 
-    //     1: { identifier: "bodyType"},
-    //     2: { identifier: "bigEye"}
-    //     }
-    //   }
-
-    
-
-
-
-    // params = $.extend({}, saved_parts);
-    // console.log(params);
 
     // send params to rails using jquery ajax request
     $.post( "/create", params, function() {
@@ -135,6 +112,8 @@ $(document).ready(function(){
       }
     });
   });
+
+
 });
 
 
