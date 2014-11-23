@@ -1,4 +1,3 @@
-.btn,
 .open-parts-slider {
   background: #004050;
   color: #ffffff;
@@ -7,8 +6,20 @@
   padding: 3%;
 }
 
-.btn {
-  
+.help-btn {
+  width: 20%; 
+  display: inline-block;
+  background: none;
+  color: #ffffff;
+  border: none;
+}
+
+.save-btn {
+  width: 20%;
+  display: inline-block;
+  background: none;
+  color: #ffffff;
+  border: none;
 }
 
 .open-parts-slider:first-of-type {

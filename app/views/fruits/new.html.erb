@@ -1,21 +1,30 @@
 <div class="container">
-  <h2 class="logo">FruitFace</h2>
+
+  <div class="header-container">
+    <button type="button" class="help-btn">HELP</button> 
+    <h2 class="logo">FruitFace</h2>
+    <button type="button" class="save-btn" id="saveFruit">SAVE</button> 
+    
+    <section>
+      <div class="shim"></div>
+      <div class="help-content"><%= render partial: 'help' %></div>
+    </section>
+
+  </div>
+
   <div class="preview-wrapper">
     <svg class="preview"></svg>
 
-    <div class="save-container">
-      <form>
-        <div class="user-input">
-          <span class="user-info">FruitFace's Name:</span>
-          <input type="text" id="fruit_name"/>
-        </div>
-        <div class="user-input">
-          <span class="user-info">Twitter Handle:</span>
-          <input type="text" id="twitter_name"/>
-        </div>
-      </form>
-      <button type="button" class="btn" id="saveFruit">SAVE</button> 
-    </div>
+    <form>
+      <div class="user-input">
+        <span class="user-info">FruitFace's Name:</span>
+        <input type="text" id="fruit_name"/>
+      </div>
+      <div class="user-input">
+        <span class="user-info">Twitter Handle:</span>
+        <input type="text" id="twitter_name"/>
+      </div>
+    </form>
   </div>
 
 

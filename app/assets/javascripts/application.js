@@ -104,18 +104,8 @@ $(document).ready(function(){
   });
 
 
-  // accordian display
-  $(function(){
-    $("#accordian h3").click(function(){
-    $("#accordian ul ul").slideUp();
-      if ($(this).next().is(":hidden")){
-        $(this).next().slideDown();
-      }
-    });
-  });
-
  
-
+  // display flexslider
   $(".open-parts-slider").click(function(){
     flex_class = $(this).data("flexslider-class")
     $("." + flex_class).show();
@@ -134,7 +124,21 @@ $(document).ready(function(){
     });
   });
 
+  // display help content
+  $(".help-btn").click(function(){
+    $(".shim").show();
+    $(".help-content").show();//.animate({ top: "90px" }, 200);
+    // $("body").css("overflow", "hidden");
+    // $("body").animate({ scrollTop: 0 }, 200);
+  })
 
+
+  $(".shim").on("click", function(){
+    $(this).hide();
+    $(".help-content").hide().css("top", "50%");
+    // $(".save-content").hide().css("top", "50%");
+    $("body").css("overflow", "visible");
+  });
 
 });
 
