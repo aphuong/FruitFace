@@ -1,6 +1,6 @@
 body {
   color: #444;
-  background:#4eb889;
+  // background:#4eb889;
   font-family: $font-stack;
 }
 
@@ -15,23 +15,27 @@ body {
   background: rgba(12, 13, 13, 0.67);
 }
 
-// html { 
-//   background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-//   background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-//   background-image: -o-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-//   background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, #E6F1D2), color-stop(1, #2B8B9D));
-//   background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-//   background-image: radial-gradient(circle farthest-corner at center bottom, #E6F1D2 0%, #2B8B9D 100%);
-//   min-height:100%;
-// }
+html { 
+  background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: -o-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, #E6F1D2), color-stop(1, #2B8B9D));
+  background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: radial-gradient(circle farthest-corner at center bottom, #E6F1D2 0%, #2B8B9D 100%);
+  min-height:100%;
+}
 
 // fruits new
 .logo {
   text-align: center;
-  margin: 0;
   padding-top: 1%;
   width: 58%;
   display: inline-block;
+}
+
+.instructions {
+  margin: 6%;
+  text-align: center;
 }
 
 .flexslider1, 
@@ -54,6 +58,10 @@ body {
   height: 250px;
   display: block;
   margin: 0 auto;
+}
+
+.preview-wrapper {
+  margin-bottom: 2%;
   background: rgba(230, 241, 210, 0.4);
 }
 
@@ -63,23 +71,20 @@ body {
 }
 
 .user-input {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.user-info {
-  width: 33%;
-  display: inline-block;
+  margin: 4%;
 }
 
 #fruit_name,
 #twitter_name {
-  width: 62%;
-  margin: 1%;
-  display: inline-block;
+  width: 96%;
 }
 
-.help-content {
+.save-btn-wrapper {
+  width: 100%;
+  text-align: right;
+}
+
+.help-content, .save-content {
   width: 85%;
   z-index: 1;
   display: none;

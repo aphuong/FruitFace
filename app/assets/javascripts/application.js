@@ -127,17 +127,18 @@ $(document).ready(function(){
   // display help content
   $(".help-btn").click(function(){
     $(".shim").show();
-    $(".help-content").show();//.animate({ top: "90px" }, 200);
-    // $("body").css("overflow", "hidden");
-    // $("body").animate({ scrollTop: 0 }, 200);
+    $(".help-content").show();
+  });
+
+  $(".finish-btn").click(function(){
+    $(".shim").show();
+    $(".save-content").show();
   })
 
-
-  $(".shim").on("click", function(){
+  $(".shim").click(function(){
     $(this).hide();
-    $(".help-content").hide().css("top", "50%");
-    // $(".save-content").hide().css("top", "50%");
-    $("body").css("overflow", "visible");
+    $(".help-content").hide();
+    $(".save-content").hide();
   });
 
 });

@@ -1,9 +1,14 @@
-.open-parts-slider {
+.open-parts-slider, 
+.save-btn {
   background: #004050;
   color: #ffffff;
   border-radius: 4px;
   border: none;
   padding: 3%;
+}
+
+.save-btn {
+  
 }
 
 .help-btn {
@@ -14,7 +19,7 @@
   border: none;
 }
 
-.save-btn {
+.finish-btn {
   width: 20%;
   display: inline-block;
   background: none;
