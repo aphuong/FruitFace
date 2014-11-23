@@ -1,67 +1,121 @@
 <div class="container">
-
+  <h2 class="logo">FruitFace</h2>
   <div class="preview-wrapper">
-    <button type="button" class="btn" id="saveFruit">Save it!</button> 
-    <input type="text" id="fruit_name"/>
     <svg class="preview"></svg>
+
+    <div class="save-container">
+      <form>
+        <div class="user-input">
+          <span class="user-info">FruitFace's Name:</span>
+          <input type="text" id="fruit_name"/>
+        </div>
+        <div class="user-input">
+          <span class="user-info">Twitter Handle:</span>
+          <input type="text" id="twitter_name"/>
+        </div>
+      </form>
+      <button type="button" class="btn" id="saveFruit">SAVE</button> 
+    </div>
   </div>
 
 
-  <div id="accordian">
-    <ul>
+
+  <button type="button" class="open-parts-slider" data-flexslider-class="flexslider1">BODY</button>
+
+  <div class="flexslider1">
+    <button type="button" class="x-btn">DONE</button>
+    <ul class="slides">
       <li>
-        <h3>Body Type</h3>
-        <ul>
-          <div class="parts-container body">
-            <svg class="parts" id="bodyRound"></svg>
-            <svg class="parts" id="bodyPear"></svg>   
-            <svg class="parts" id="bodyStrawberry"></svg>
-            <svg class="parts" id="bodyGrape"></svg>
-          </div>
-        </ul>  
+        <svg class="parts" id="bodyRound"></svg>
       </li>
       <li>
-        <h3>Eyes</h3>
-        <ul>
-          <div class="parts-container eyes">
-            <svg class="parts" id="eyesOpen"></svg>
-            <svg class="parts" id="eyesClosed"></svg>
-          </div> 
-        </ul>  
+        <svg class="parts" id="bodyPear"></svg>   
       </li>
       <li>
-        <h3>Mouth</h3>
-        <ul>
-          <div class="parts-container mouth">
-            <svg class="parts" id="mouthHappy"></svg>
-            <svg class="parts" id="mouthSad"></svg>
-            <svg class="parts" id="mouthOpen"></svg>
-          </div>
-        </ul>  
+        <svg class="parts" id="bodyStrawberry"></svg>
       </li>
       <li>
-        <h3>Hair</h3>
-        <ul>
-          <div class="parts-container hair">
-            <svg class="parts" id="hairLeaf"></svg>
-            <svg class="parts" id="hairDoubleLeaf"></svg>
-            <svg class="parts" id="hairShaggy"></svg>
-          </div>
-        </ul>  
+        <svg class="parts" id="bodyGrape"></svg>
       </li>
-      <li>
-        <h3>Accessories</h3>
-        <ul>
-          <div class="parts-container accessories">
-            <svg class="parts" id="freckles"></svg>
-            <svg class="parts" id="roundGlasses"></svg>
-            <svg class="parts" id="squareGlasses"></svg>
-            <svg class="parts" id="mustache"></svg>
-            <svg class="parts" id="mustache_two"></svg>
-          </div>
-        </ul>  
-      </li>        
     </ul>
   </div>
+
+
+  <button type="button" class="open-parts-slider" data-flexslider-class="flexslider2">EYES</button>
+
+  <div class="flexslider2">
+    <button type="button" class="x-btn">DONE</button>
+    <ul class="slides">
+      <li>
+        <svg class="parts" id="eyesOpen"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="eyesClosed"></svg>  
+      </li>
+    </ul>
+  </div>
+
+
+  <button type="button" class="open-parts-slider" data-flexslider-class="flexslider3">MOUTH</button>
+
+  <div class="flexslider3">
+    <button type="button" class="x-btn">DONE</button>
+    <ul class="slides">
+      <li>
+        <svg class="parts" id="mouthHappy"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="mouthSad"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="mouthOpen"></svg>
+      </li>
+    </ul>
+  </div>
+
+
+  <button type="button" class="open-parts-slider" data-flexslider-class="flexslider4">HAIR</button>
+
+  <div class="flexslider4">
+    <button type="button" class="x-btn">DONE</button>
+    <ul class="slides">
+      <li>
+        <svg class="parts" id="hairLeaf"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="hairDoubleLeaf"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="hairShaggy"></svg>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <button type="button" class="open-parts-slider" data-flexslider-class="flexslider5">ACCESSORIES</button>
+
+  <div class="flexslider5">
+    <button type="button" class="x-btn">DONE</button>
+    <ul class="slides">
+      <li>
+        <svg class="parts" id="freckles"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="roundGlasses"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="squareGlasses"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="mustache"></svg>
+      </li>
+      <li>
+        <svg class="parts" id="mustache_two"></svg>
+      </li>
+    </ul>
+  </div>
+
+
 
 </div>

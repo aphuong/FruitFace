@@ -1,20 +1,37 @@
 body {
   color: #444;
-  // background:#4eb889;
+  background:#4eb889;
   font-family: $font-stack;
 }
 
-html { 
-  background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -o-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, #E6F1D2), color-stop(1, #2B8B9D));
-  background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: radial-gradient(circle farthest-corner at center bottom, #E6F1D2 0%, #2B8B9D 100%);
-  min-height:100%;
+// html { 
+//   background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+//   background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+//   background-image: -o-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+//   background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, #E6F1D2), color-stop(1, #2B8B9D));
+//   background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
+//   background-image: radial-gradient(circle farthest-corner at center bottom, #E6F1D2 0%, #2B8B9D 100%);
+//   min-height:100%;
+// }
+
+li {
+  list-style: none;
 }
 
+// fruits new
+.logo {
+  text-align: center;
+  margin: 0;
+  padding-top: 1%;
+}
 
+.flexslider1, 
+.flexslider2,
+.flexslider3,
+.flexslider4,
+.flexslider5 {
+  display:none;
+}
 
 .parts {
   width: 300px;
@@ -25,50 +42,64 @@ html {
 
 .preview {
   width: 300px;
-  height: 300px;
+  height: 250px;
   display: block;
+  margin: 0 auto;
+  background: rgba(230, 241, 210, 0.4);
+}
+
+.save-container {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.user-input {
+  width: 90%;
   margin: 0 auto;
 }
 
-.parts-container {
-  margin-left: 33px;
+.user-info {
+  width: 33%;
+  display: inline-block;
 }
 
-.preview-wrapper {
-  // margin-top: 10%;
+#fruit_name,
+#twitter_name {
+  width: 62%;
+  margin: 1%;
+  display: inline-block;
 }
 
+// #accordian {
+//   background:#004050; 
+//   color: #fff;
+//   box-shadow: 0 5px 15px 1px rgba(0,0,0,.6), 0 0 200px 10px rgba(255,255,255,.5);
+// }
 
-#accordian {
-  background:#004050; 
-  color: #fff;
-  box-shadow: 0 5px 15px 1px rgba(0,0,0,.6), 0 0 200px 10px rgba(255,255,255,.5);
-}
+// #accordian h3 {
+//   font-size:12px;
+//   line-height:34px;
+//   padding: 0 40px;
+//   cursor:pointer;
+//   background: #003040; 
+//   background: linear-gradient(#003040, #002535);
+//   // @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+// }
 
-#accordian h3 {
-  font-size:12px;
-  line-height:34px;
-  padding: 0 40px;
-  cursor:pointer;
-  background: #003040; 
-  background: linear-gradient(#003040, #002535);
-  // @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-}
+// #accordian {
+//   ul {
+//     margin-left: -40px;
+//   }
 
-#accordian {
-  ul {
-    margin-left: -40px;
-  }
-
-  li {
-    list-style:none; 
-  }
-}
+//   li {
+//     list-style:none; 
+//   }
+// }
 
 
-#accordian ul ul {
-  display:none;
-}
+// #accordian ul ul {
+//   display:none;
+// }
 
 // fruit index
 .fruit-gallery {

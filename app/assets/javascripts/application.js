@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require d3
 //= require turbolinks
+//= require jquery.flexslider
 //= require_tree .
 
 $(document).ready(function(){
@@ -112,6 +113,27 @@ $(document).ready(function(){
       }
     });
   });
+
+ 
+
+  $(".open-parts-slider").click(function(){
+    flex_class = $(this).data("flexslider-class")
+    $("." + flex_class).show();
+    $(".x-btn").show();
+    $(".open-parts-slider").hide();
+
+    $(".x-btn").click(function(){
+      $("." + flex_class).hide();
+      $(".open-parts-slider").show();
+    });
+
+    $("." + flex_class).flexslider({
+      animation: "slide",
+      slideshow: false,
+      touch: true
+    });
+  });
+
 
 
 });
