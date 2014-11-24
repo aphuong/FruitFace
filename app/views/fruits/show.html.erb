@@ -1,3 +1,19 @@
+<h2>Wondering how your FruitFace was made, wishing you could include FruitFace inside our projects...</h2>
+<div class="fruit-view"></div>
+<p>Checkout the code snippet below!</p>
+<ol>
+  <li>
+    Inside your HTML file, include an svg tag: </br>
+    <pre> &ltsvg width="300" height="300"&gt &lt/svg&gt </pre>
+  </li>
+  <li>
+    Copy the code below and paste between the &ltsvg&gt you just created.
+  </li>
+
+</ol>
+
+<div class="code-container"></div>
+
 
 
 <script>
@@ -6,8 +22,8 @@
 
   $.getJSON("/fruits/" + id, function(data) {
 
-    group = d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>");
-      group.append("text").text("<%= @fruit.name %>");
+    group = d3.select(".fruit-view").append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>");
+      group.append("text").text("<%= @fruit.name %>").attr("x", 130).attr("y", 250);
 
     $.each(data.parts, function(key, value) {
       this_fruit_part = value["identifier"];
@@ -15,6 +31,19 @@
       container = ".fruit-" + data.fruit.id
       window[this_fruit_part](container)
     });
+
+    // Change fruit color
+    <% if @fruit.color %>
+      $(".fruit-<%= @fruit.id %> .color-change").css("fill", "<%= @fruit.color %>"); 
+    <% end %>
+
+    // Add code to view
+    code = $(".show-fruit").html();
+    $(".code-container").text(code);
+
+    styles = "<%= @fruit["identifier"] %>"
+    console.log(styles)
+
   });
 
 </script>

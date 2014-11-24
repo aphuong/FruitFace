@@ -5,6 +5,11 @@ body {
   font-size: 1.5em;
 }
 
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .shim {
   display: none;
   position: absolute;
@@ -146,18 +151,13 @@ html {
   margin: 0 auto;
 }
 
-// fruit show
-.show-fruit {
-  display: block;
-  margin: 0 auto;
-  padding-top: 10%;
-}
+
 
 
 
 @media screen and (min-width: $laptop) {
   body {
-    color: tomato;
+    color: #FFFFFF;
   }
 
   .fruit-gallery {

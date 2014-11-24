@@ -16,10 +16,11 @@
 @import 'main';
 @import 'svg';
 @import 'animation';
+@import 'show';
 
 // Components 
 @import 'buttons';
-
+@import 'nav';
 
 // bourbon animations:
 @include keyframes(bounce) {
