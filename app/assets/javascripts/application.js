@@ -141,12 +141,14 @@ $(document).ready(function(){
     $(".save-content").hide();
   });
 
-  // display color picker text (click in mobile view)
+  // color picker
   $(".color-picker").hover(function(){
     $(".color-picker-info").toggle();
   })
 
-  
+  $('#colorinput').on('input', function() {
+    $('.preview .color-change').css('fill', $(this).val()); 
+  });
 
 });
 

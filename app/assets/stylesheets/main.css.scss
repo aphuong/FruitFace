@@ -33,6 +33,7 @@ html {
   width: 58%;
   display: inline-block;
   margin: 0;
+  color: #FFFFFF;
 }
 
 .instructions {
@@ -123,6 +124,12 @@ html {
 .fruit-gallery {
   display: block;
   margin: 0 auto;
+}
+
+.gallery-logo {
+  text-align: center;
+  width: 100%;
+  color: #FFFFFF;
 }
 
 // home index
