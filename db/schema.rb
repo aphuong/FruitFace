@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122022924) do
+ActiveRecord::Schema.define(version: 20141124030535) do
 
   create_table "fruit_parts", force: true do |t|
     t.integer  "fruit_id"
     t.integer  "part_id"
-    t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,6 +24,7 @@ ActiveRecord::Schema.define(version: 20141122022924) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "color"
   end
 
   create_table "parts", force: true do |t|

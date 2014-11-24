@@ -61,11 +61,16 @@ $(document).ready(function(){
   // Function to save fruit
   $("#saveFruit").click(function(){
 
+    // get color of fruit
+    var fruit_color = $(".preview .color-change").css("fill");
+    
     // get name of fruit
-    var fruit_name = $('#fruit_name').val();
-    var fruit_params = {"name": fruit_name};
+    var fruit_name = $("#fruit_name").val();
+    var fruit_params = {"name": fruit_name, "color": fruit_color};
 
-    // put name of every part in preview box in an array
+
+
+    // put name of every identifier part from preview box in an array
     preview_all_groups = $(".preview > g");
     arr = $.makeArray(preview_all_groups);
 
@@ -90,6 +95,7 @@ $(document).ready(function(){
         parts: parts_params
       }
     }
+
 
     // send params to rails using jquery ajax request
     $.post( "/create", params, function() {

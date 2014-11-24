@@ -5,7 +5,7 @@
 </div>
 
 <script>
-  <% @fruits.each do |fruit| %>
+  <% @fruits.order(:created_at).each do |fruit| %>
     var id = <%= fruit.id %>
 
     $.getJSON("/fruits/" + id, function(data) {
@@ -19,6 +19,10 @@
         container = ".fruit-" + data.fruit.id
         window[this_fruit_part](container)
       });
+      
+      <% if fruit.color %>
+        $('.fruit-<%= fruit.id %> .color-change').css('fill', "<%= fruit.color %>"); 
+      <% end %>
     });
 
   <% end %>

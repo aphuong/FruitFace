@@ -27,7 +27,6 @@ class FruitsController < ApplicationController
   end
 
   def create
-
     @fruit = Fruit.new(fruit_params)
     parts_params.each do |k, v|
       @fruit.parts << Part.create(identifier: v["identifier"])
@@ -49,7 +48,7 @@ class FruitsController < ApplicationController
   private
 
   def fruit_params
-    params.require(:fruit_and_parts)[:fruit].permit(:name)
+    params.require(:fruit_and_parts)[:fruit].permit(:name, :color)
   end
 
   def parts_params
