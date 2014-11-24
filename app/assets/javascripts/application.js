@@ -1,7 +1,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require d3
-//= require turbolinks
 //= require jquery.flexslider
 //= require_tree .
 

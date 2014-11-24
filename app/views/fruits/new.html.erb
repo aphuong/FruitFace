@@ -1,8 +1,8 @@
 <div class="container">
 
   <div class="header-container">
-    <button type="button" class="help-btn">HELP</button> 
-    <h2 class="logo">FruitFace</h2>
+    <button type="button" class="help-btn">HELP</button>
+    <%= link_to "FruitFace", root_path, class: "logo" %>
     <button type="button" class="finish-btn">FINISHED</button>
     
     <section>
@@ -28,94 +28,96 @@
   </div>
 
 
-  <div class="flexslider1">
-    <button type="button" class="done-btn">DONE</button>
-    <ul class="slides">
-      <li>
-        <svg class="parts" id="bodyRound"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="bodyPear"></svg>   
-      </li>
-      <li>
-        <svg class="parts" id="bodyStrawberry"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="bodyGrape"></svg>
-      </li>
-    </ul>
+  <div class="flexslider-wrapper">
+    <div class="flexslider1">
+      <button type="button" class="done-btn">DONE</button>
+      <ul class="slides">
+        <li>
+          <svg class="parts" id="bodyRound"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="bodyPear"></svg>   
+        </li>
+        <li>
+          <svg class="parts" id="bodyStrawberry"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="bodyGrape"></svg>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div class="flexslider2">
+      <button type="button" class="done-btn">DONE</button>
+      <ul class="slides">
+        <li>
+          <svg class="parts" id="eyesOpen"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="eyesClosed"></svg>  
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div class="flexslider3">
+      <button type="button" class="done-btn">DONE</button>
+      <ul class="slides">
+        <li>
+          <svg class="parts" id="mouthHappy"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="mouthSad"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="mouthOpen"></svg>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div class="flexslider4">
+      <button type="button" class="done-btn">DONE</button>
+      <ul class="slides">
+        <li>
+          <svg class="parts" id="hairLeaf"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="hairDoubleLeaf"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="hairShaggy"></svg>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="flexslider5">
+      <button type="button" class="done-btn">DONE</button>
+      <ul class="slides">
+        <li>
+          <svg class="parts" id="freckles"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="roundGlasses"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="squareGlasses"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="mustache"></svg>
+        </li>
+        <li>
+          <svg class="parts" id="mustache_two"></svg>
+        </li>
+      </ul>
+    </div>
   </div>
-
-
-
-  <div class="flexslider2">
-    <button type="button" class="done-btn">DONE</button>
-    <ul class="slides">
-      <li>
-        <svg class="parts" id="eyesOpen"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="eyesClosed"></svg>  
-      </li>
-    </ul>
-  </div>
-
-
-
-  <div class="flexslider3">
-    <button type="button" class="done-btn">DONE</button>
-    <ul class="slides">
-      <li>
-        <svg class="parts" id="mouthHappy"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="mouthSad"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="mouthOpen"></svg>
-      </li>
-    </ul>
-  </div>
-
-
-
-  <div class="flexslider4">
-    <button type="button" class="done-btn">DONE</button>
-    <ul class="slides">
-      <li>
-        <svg class="parts" id="hairLeaf"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="hairDoubleLeaf"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="hairShaggy"></svg>
-      </li>
-    </ul>
-  </div>
-
-
-  <div class="flexslider5">
-    <button type="button" class="done-btn">DONE</button>
-    <ul class="slides">
-      <li>
-        <svg class="parts" id="freckles"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="roundGlasses"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="squareGlasses"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="mustache"></svg>
-      </li>
-      <li>
-        <svg class="parts" id="mustache_two"></svg>
-      </li>
-    </ul>
-  </div>
-
+  
   <div class="instructions">
     <p>You can customize fruit-type, color, and more!</p>
     <p>Click on the tabs above to explore the options.</p>
