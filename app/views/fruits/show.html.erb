@@ -1,11 +1,13 @@
-<%= @fruit.name %>
+
 
 <script>
   var id = <%= @fruit.id %>
   console.log(id)
 
   $.getJSON("/fruits/" + id, function(data) {
-    d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>")
+
+    group = d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>");
+      group.append("text").text("<%= @fruit.name %>");
 
     $.each(data.parts, function(key, value) {
       this_fruit_part = value["identifier"];

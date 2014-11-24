@@ -9,9 +9,9 @@
     var id = <%= fruit.id %>
 
     $.getJSON("/fruits/" + id, function(data) {
-      console.log(data.fruit.name);
 
-      d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
+      group = d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
+        group.append("text").text(data.fruit.name).attr('x', 135).attr('y', 250);
 
       $.each(data.parts, function(key, value) {
         this_fruit_part = value["identifier"];
@@ -21,7 +21,7 @@
       });
       
       <% if fruit.color %>
-        $('.fruit-<%= fruit.id %> .color-change').css('fill', "<%= fruit.color %>"); 
+        $(".fruit-<%= fruit.id %> .color-change").css("fill", "<%= fruit.color %>"); 
       <% end %>
     });
 
