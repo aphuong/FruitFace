@@ -109,10 +109,10 @@ $(document).ready(function(){
   $(".open-parts-slider").click(function(){
     flex_class = $(this).data("flexslider-class")
     $("." + flex_class).show();
-    $(".x-btn").show();
+    $(".done-btn").show();
     $(".open-parts-slider").hide();
 
-    $(".x-btn").click(function(){
+    $(".done-btn").click(function(){
       $("." + flex_class).hide();
       $(".open-parts-slider").show();
     });
