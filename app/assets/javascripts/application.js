@@ -124,7 +124,7 @@ $(document).ready(function(){
     });
   });
 
-  // display help content
+  // display help/save content
   $(".help-btn").click(function(){
     $(".shim").show();
     $(".help-content").show();
@@ -140,6 +140,13 @@ $(document).ready(function(){
     $(".help-content").hide();
     $(".save-content").hide();
   });
+
+  // display color picker text (click in mobile view)
+  $(".color-picker").hover(function(){
+    $(".color-picker-info").toggle();
+  })
+
+  
 
 });
 
