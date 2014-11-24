@@ -4,19 +4,23 @@
 
  // Variables
 @import 'variables';
+@import 'fonts';
 
 // Vendor
 @import 'bourbon';
 @import 'normalize';
+@import 'flexslider';
+
 
 // Pages
 @import 'main';
 @import 'svg';
 @import 'animation';
+@import 'show';
 
 // Components 
 @import 'buttons';
-
+@import 'nav';
 
 // bourbon animations:
 @include keyframes(bounce) {

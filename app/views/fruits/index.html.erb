@@ -1,25 +1,32 @@
 <div class="container">
-  <h2>FruitFace Gallery</h2>
-
+  <h2 class="gallery-logo">FruitFace Gallery</h2>
 
 </div>
 
 <script>
-  <% @fruits.each do |fruit| %>
-    var id = <%= fruit.id %>
+  <% @fruits.order(:created_at).each do |fruit| %>
 
-    $.getJSON("/fruits/" + id, function(data) {
-      console.log(data.fruit.name);
+      var id = <%= fruit.id %>
 
-      d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
+      $.getJSON("/fruits/" + id, function(data) {
 
-      $.each(data.parts, function(key, value) {
-        this_fruit_part = value["identifier"];
+        display_time = "<%= time_ago_in_words(fruit.created_at.to_time) %>"
 
-        container = ".fruit-" + data.fruit.id
-        window[this_fruit_part](container)
-      });
-    });
+        group = d3.select("body").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
+          group.append("text").text(data.fruit.name).attr("x", 130).attr("y", 250).attr("class", "names");
+          group.append("text").text(display_time + " ago").attr("x", 90).attr("y", 275);
+
+        $.each(data.parts, function(key, value) {
+          this_fruit_part = value["identifier"];
+
+          container = ".fruit-" + data.fruit.id
+          window[this_fruit_part](container)
+        });
+        
+        <% if fruit.color %>
+          $(".fruit-<%= fruit.id %> .color-change").css("fill", "<%= fruit.color %>"); 
+        <% end %>
+      });   
 
   <% end %>
 </script>

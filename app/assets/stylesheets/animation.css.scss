@@ -12,7 +12,7 @@
 }
 
 
-.body-strawberry {
+.sample-strawberry {
   -webkit-animation-name: glow;
   -webkit-animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
@@ -24,7 +24,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
-  
 }
 
 @-webkit-keyframes glow { 
@@ -38,7 +37,6 @@
   50% { fill: hsl(6, 93%, 56%); }
   100% { fill: hsl(6, 93%, 65%); }
 }
-
 
 
 
@@ -59,3 +57,5 @@
   @include animation(grow 2s infinite);
   transform-origin: 50%;
 }
+
+

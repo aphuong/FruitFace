@@ -1,7 +1,24 @@
 body {
   color: #444;
   // background:#4eb889;
-  font-family: $font-stack;
+  font-family: $font-fancy;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.shim {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(12, 13, 13, 0.67);
 }
 
 html { 
@@ -14,7 +31,35 @@ html {
   min-height:100%;
 }
 
+// fruits new
+.logo {
+  text-align: center;
+  padding-top: 1%;
+  width: 58%;
+  display: inline-block;
+  margin: 0;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
+.instructions {
+  margin: 6%;
+  text-align: center;
+}
+
+.flexslider1, 
+.flexslider2,
+.flexslider3,
+.flexslider4,
+.flexslider5 {
+  display:none;
+}
+
+.flexslider-wrapper {
+  position: relative;
+}
 
 .parts {
   width: 300px;
@@ -23,51 +68,69 @@ html {
   margin: 0 auto;
 }
 
+.btn-container,
+.index-container {
+  width: 100%;
+  text-align: center;
+}
+
 .preview {
   width: 300px;
-  height: 300px;
+  height: 240px;
   display: block;
   margin: 0 auto;
 }
 
-.parts-container {
-  margin-left: 33px;
-}
-
 .preview-wrapper {
-  // margin-top: 10%;
+  position: relative;
+  margin-bottom: 2%;
+  background: rgba(230, 241, 210, 0.4);
 }
 
-
-#accordian {
-  background:#004050; 
-  color: #fff;
-  box-shadow: 0 5px 15px 1px rgba(0,0,0,.6), 0 0 200px 10px rgba(255,255,255,.5);
+.header-container {
+  width: 98%;
+  margin: 0 auto;
+  padding: 1%;
 }
 
-#accordian h3 {
-  font-size:12px;
-  line-height:34px;
-  padding: 0 40px;
-  cursor:pointer;
-  background: #003040; 
-  background: linear-gradient(#003040, #002535);
-  // @include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+.user-input {
+  margin: 4%;
 }
 
-#accordian {
-  ul {
-    margin-left: -40px;
-  }
-
-  li {
-    list-style:none; 
-  }
+#fruit_name,
+#twitter_name {
+  width: 96%;
 }
 
+.save-btn-wrapper {
+  width: 100%;
+  text-align: right;
+}
 
-#accordian ul ul {
-  display:none;
+.help-content, .save-content {
+  width: 85%;
+  z-index: 1;
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 2%;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.color-picker {
+  bottom: 20px;
+  right: 20px;
+  position: absolute;
+}
+
+.color-picker-info {
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  position: absolute;
 }
 
 // fruit index
@@ -76,24 +139,25 @@ html {
   margin: 0 auto;
 }
 
+.gallery-logo {
+  text-align: center;
+  width: 100%;
+  color: #FFFFFF;
+}
+
 // home index
 .sample {
   display: block;
   margin: 0 auto;
 }
 
-// fruit show
-.show-fruit {
-  display: block;
-  margin: 0 auto;
-  padding-top: 10%;
-}
+
 
 
 
 @media screen and (min-width: $laptop) {
   body {
-    color: tomato;
+    color: #FFFFFF;
   }
 
   .fruit-gallery {

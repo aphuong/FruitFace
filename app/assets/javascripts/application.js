@@ -1,7 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require d3
-//= require turbolinks
+//= require jquery.flexslider
 //= require_tree .
 
 $(document).ready(function(){
@@ -60,11 +60,16 @@ $(document).ready(function(){
   // Function to save fruit
   $("#saveFruit").click(function(){
 
+    // get color of fruit
+    var fruit_color = $(".preview .color-change").css("fill");
+    
     // get name of fruit
-    var fruit_name = $('#fruit_name').val();
-    var fruit_params = {"name": fruit_name};
+    var fruit_name = $("#fruit_name").val();
+    var fruit_params = {"name": fruit_name, "color": fruit_color};
 
-    // put name of every part in preview box in an array
+
+
+    // put name of every identifier part from preview box in an array
     preview_all_groups = $(".preview > g");
     arr = $.makeArray(preview_all_groups);
 
@@ -90,6 +95,7 @@ $(document).ready(function(){
       }
     }
 
+
     // send params to rails using jquery ajax request
     $.post( "/create", params, function() {
       alert( "success" );
@@ -103,16 +109,51 @@ $(document).ready(function(){
   });
 
 
-  // accordian display
-  $(function(){
-    $("#accordian h3").click(function(){
-    $("#accordian ul ul").slideUp();
-      if ($(this).next().is(":hidden")){
-        $(this).next().slideDown();
-      }
+ 
+  // display flexslider
+  $(".open-parts-slider").click(function(){
+    flex_class = $(this).data("flexslider-class")
+    $("." + flex_class).show();
+    $(".done-btn").show();
+    $(".open-parts-slider").hide();
+
+    $(".done-btn").click(function(){
+      $("." + flex_class).hide();
+      $(".open-parts-slider").show();
+    });
+
+    $("." + flex_class).flexslider({
+      animation: "slide",
+      slideshow: false,
+      touch: true
     });
   });
 
+  // display help/save content
+  $(".help-btn").click(function(){
+    $(".shim").show();
+    $(".help-content").show();
+  });
+
+  $(".finish-btn").click(function(){
+    $(".shim").show();
+    $(".save-content").show();
+  })
+
+  $(".shim").click(function(){
+    $(this).hide();
+    $(".help-content").hide();
+    $(".save-content").hide();
+  });
+
+  // color picker
+  $(".color-picker").hover(function(){
+    $(".color-picker-info").toggle();
+  })
+
+  $('#colorinput').on('input', function() {
+    $('.preview .color-change').css('fill', $(this).val()); 
+  });
 
 });
 
