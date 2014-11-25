@@ -156,7 +156,10 @@ $(document).ready(function(){
     $('.preview .color-change').css('fill', $(this).val()); 
   });
 
-  // tooltip
+  // menu
+  $(".menu").click(function(){
+    $("#menu-list").toggle();
+  });
 
 });
 

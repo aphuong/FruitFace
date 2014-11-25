@@ -1,7 +1,25 @@
-nav {
+#menu-list {
+  display: none;
+  margin: 0;
+
+  ul {
+    margin: 0;
+  }
 
   li {
     list-style: none;
     display: inline;
   }
 }
+
+.menu {
+  color: #FFFFFF;
+  // width: 100%;
+}
+
+#menu-wrapper {
+  text-align: right;
+  padding: 2%;
+}
+
+
