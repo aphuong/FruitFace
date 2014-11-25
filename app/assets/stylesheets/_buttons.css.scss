@@ -36,3 +36,20 @@
   margin-left: 3%;
 }
 
+#my-button_pre {
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  color: #FFFFFF;
+  background-color: #004050;
+  padding: 10px;
+}
+      
+#my-button_pre.zeroclipboard-is-hover { 
+  background-color: #690; 
+}
+    
+#my-button_pre.zeroclipboard-is-active {
+ background-color: #aaa; 
+}
+

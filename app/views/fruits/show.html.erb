@@ -2,25 +2,30 @@
 <div class="fruit-view"></div>
 
 
-<div class="code-wrapper">
+<div class="code-wrapper page">
 
   <p>Checkout the code snippet below!</p>
 
   <ol>
-    <li>Inside your HTML file, include an svg tag.</li>
+    <li>Inside your HTML file, include an &ltsvg&gt tag.</li>
 
-    <pre>
-      <code class="language-markup code-toolbar">&ltsvg width="300" height="300"&gt &lt/svg&gt</code>
+    <pre class="svg-tool-tip">
+      <code class="language-markup">&ltsvg width="300" height="300"&gt&lt/svg&gt</code>
     </pre>
 
-    <li>Copy the code below and paste between the &ltsvg&gt you just created.</li>
-    <pre>
-      <code class="language-markup code-toolbar" id="code-container"></code>
+    <p>SVG(scalable vector graphics) can be created using Adobe Illustrator and appended to HTML using SVG tags.</p>
+
+    <li><button id="my-button_pre" data-clipboard-target="clipboard_pre">Copy to Clipboard</button> and paste between the &ltsvg&gt you just created.</li>
+
+    <pre id="clipboard_pre">
+      <code class="language-markup" id="code-container" ></code>
     </pre>
   </ol>
 </div>
 
 <div class="style-container"></div>
+
+
 
 
 <script>
@@ -54,5 +59,15 @@
     // console.log(style)
 
   });
+
+  var client = new ZeroClipboard($("#my-button_pre"));
+
+  client.on( "ready", function(event) {
+    client.on( "copy", function (event) {
+      event.clipboardData.setData( "text/html", event.target.innerHTML);
+      alert("Copied! Paste into html file or test it out on JS Fiddle.");
+    });
+  });
+  
 
 </script>

@@ -3,6 +3,7 @@
 //= require d3
 //= require jquery.flexslider
 //= require prism
+//= require zeroclipboard
 //= require_tree .
 
 $(document).ready(function(){
