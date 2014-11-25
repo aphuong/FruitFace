@@ -1,19 +1,26 @@
 <h2>Wondering how your FruitFace was made, wishing you could include FruitFace inside our projects...</h2>
 <div class="fruit-view"></div>
-<p>Checkout the code snippet below!</p>
-<ol>
-  <li>
-    Inside your HTML file, include an svg tag: </br>
-    <pre> &ltsvg width="300" height="300"&gt &lt/svg&gt </pre>
-  </li>
-  <li>
-    Copy the code below and paste between the &ltsvg&gt you just created.
-  </li>
 
-</ol>
 
-<div class="code-container"></div>
+<div class="code-wrapper">
 
+  <p>Checkout the code snippet below!</p>
+
+  <ol>
+    <li>Inside your HTML file, include an svg tag.</li>
+
+    <pre>
+      <code class="language-markup code-toolbar">&ltsvg width="300" height="300"&gt &lt/svg&gt</code>
+    </pre>
+
+    <li>Copy the code below and paste between the &ltsvg&gt you just created.</li>
+    <pre>
+      <code class="language-markup code-toolbar" id="code-container"></code>
+    </pre>
+  </ol>
+</div>
+
+<div class="style-container"></div>
 
 
 <script>
@@ -39,10 +46,12 @@
 
     // Add code to view
     code = $(".show-fruit").html();
-    $(".code-container").text(code);
+    $("#code-container").text(code);
+    Prism.highlightAll();
 
-    styles = "<%= @fruit["identifier"] %>"
-    console.log(styles)
+    // style = $(".show-fruit").css();
+    // $(".style-container").text(style);
+    // console.log(style)
 
   });
 

@@ -5,9 +5,13 @@
   // padding-top: 10%;
 }
 
-.code-container {
-  width: 60%;
-  background: #004050;
+.code-wrapper {
+  width: 70%;
   margin: 0 auto;
-  padding: 20px;
+}
+
+.language-markup {
+  font-family: $font-stack;
+  font-weight: lighter;
+  font-size: .85em;
 }

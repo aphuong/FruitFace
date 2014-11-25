@@ -2,10 +2,10 @@
 //= require jquery_ujs
 //= require d3
 //= require jquery.flexslider
+//= require prism
 //= require_tree .
 
 $(document).ready(function(){
-
 
   // To make sample FruitFace
   orange_container = ".sample-orange"
