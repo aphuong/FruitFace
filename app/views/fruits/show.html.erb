@@ -3,23 +3,24 @@
 
 
 <div class="code-wrapper page">
-
-  <p>Checkout the code snippet below!</p>
+  <p class="code-title">Checkout the code snippet below!</p>
 
   <ol>
-    <li>Inside your HTML file, include an &ltsvg&gt tag.</li>
+    <div class="col-left">
+      <li>Inside your HTML file, include an &ltsvg&gt tag.</li>
+      <pre>
+        <code class="language-markup">&ltsvg width="300" height="300"&gt&lt/svg&gt</code>
+      </pre>
+      <p class="svg-info">SVG(scalable vector graphics) can be created using Adobe Illustrator and appended to HTML using SVG tags.</p>
+    </div>
 
-    <pre class="svg-tool-tip">
-      <code class="language-markup">&ltsvg width="300" height="300"&gt&lt/svg&gt</code>
-    </pre>
 
-    <p>SVG(scalable vector graphics) can be created using Adobe Illustrator and appended to HTML using SVG tags.</p>
-
-    <li><button id="my-button_pre" data-clipboard-target="clipboard_pre">Copy to Clipboard</button> and paste between the &ltsvg&gt you just created.</li>
-
-    <pre id="clipboard_pre">
-      <code class="language-markup" id="code-container" ></code>
-    </pre>
+    <div class="col-right">
+      <li><button id="my-button_pre" data-clipboard-target="clipboard_pre">Copy to Clipboard</button> and paste between the &ltsvg&gt you just created.</li>
+      <pre id="clipboard_pre">
+        <code class="language-markup" id="code-container" ></code>
+      </pre>
+    </div>
   </ol>
 </div>
 
@@ -67,6 +68,12 @@
       event.clipboardData.setData( "text/html", event.target.innerHTML);
       alert("Copied! Paste into html file or test it out on JS Fiddle.");
     });
+  });
+
+
+  // tooltip
+  $(".svg-tool-tip").hover(function(){
+    $(".svg-info").toggle();
   });
   
 

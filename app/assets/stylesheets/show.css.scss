@@ -16,7 +16,7 @@
     font-size: .8em;
   }
 
-  p {
+  .code-title {
     text-align: center;
     font-size: 1.5em;
   }
@@ -28,6 +28,14 @@
   font-size: .8em;
   border-radius: 4px;
 }
+
+.svg-info {
+  display: none;
+}
+
+
+
+
 
 
 
@@ -80,5 +88,61 @@
     top:-2px;
     left:0;
   }
+
+  .col-left {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .col-right {
+    width: 60%;
+    margin-left: 5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .svg-info {
+    width: 80%;
+    font-size: .7em;
+    opacity: 0;
+    z-index: 99;
+    // color: #bbb;
+    color: #FFFFFF;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #111;
+    // background: rgba(51,51,51,0.9);
+    background-color: #690; 
+    // border: 1px solid rgba(34,34,34,0.9);
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    @include transform(scale(0));
+    @include transition(all .4s ease-in-out); 
+  }
+
+  .svg-info:before,
+  .svg-info:after {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #690;
+    position: absolute;
+    top: -10px;
+    left: 43%;
+  }
+
+  .col-left:hover {
+    .svg-info {
+      opacity: 1;
+      @include transform(scale(1));
+    }
+  }
+
+
+
 
 }

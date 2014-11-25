@@ -156,6 +156,8 @@ $(document).ready(function(){
     $('.preview .color-change').css('fill', $(this).val()); 
   });
 
+  // tooltip
+
 });
 
 
