@@ -37,7 +37,10 @@
   color: #ffffff;
   border-radius: 4px;
   border: none;
-  margin-left: 3%;
+  position: absolute;
+  left: 22px;
+  top: 12px;
+  z-index: 1;
 }
 
 .reset-btn {
@@ -47,8 +50,8 @@
   border-radius: 4px;
   border: none;
   position: absolute;
-  right: 22px;
-  bottom: -40px;
+  left: 22px;
+  bottom: 12px;
 }
 
 #my-button_pre {

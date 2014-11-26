@@ -21,17 +21,6 @@ a {
   background: rgba(12, 13, 13, 0.67);
 }
 
-.menu-shim {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  background: #ffffff;
-}
-
 html { 
   background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
   background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
@@ -150,7 +139,6 @@ html {
 .fruit-gallery {
   display: block;
   margin: 0 auto;
-  margin: 3px 5px;
 }
 
 .gallery-logo {
@@ -174,6 +162,8 @@ html {
  
   .fruit-gallery {
     display: inline-block;
+    margin: 3px 5px;
+
   }
 
   .sample {

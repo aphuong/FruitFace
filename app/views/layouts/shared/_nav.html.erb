@@ -1,20 +1,19 @@
 <div id="menu-wrapper">
-  <h1 class="nav-logo">FruitFace Generator</h1>
 
   <div class="menu"><i class="fa fa-bars"></i></div>
-  
- 
 
   <section>
     <div class="menu-shim"></div>
     <div class="close-menu"><i class="fa fa-times"></i></div>
-    <h1 class="menu-logo">FruitFace</h1>
     
+    
+
     <ul id="menu-list">
+      <li><h1 class="menu-logo">FruitFace</h1></li>
       <li class="menu-item"><%= link_to "Home", root_path %></li>
       <li class="menu-item"><%= link_to "Gallery", fruits_path %></li>
       <li class="menu-item"><%= link_to "Create", new_fruit_path %></li>
-      <li class="menu-item"><%= link_to "About" %></li>
+      <li class="menu-item"><%= link_to "About", about_path %></li>
     </ul>
     
   </section>

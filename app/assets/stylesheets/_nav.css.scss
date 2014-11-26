@@ -3,9 +3,9 @@
   z-index: 1;
   margin: 0 auto;
   position: absolute;
-  left: 40%;
-  top: 25%;
-  padding: 2%;
+  left: 42%;
+  top: 15%;
+  padding-left: 0;
 
   ul {
     margin: 0;
@@ -29,12 +29,7 @@
 }
 
 .menu-logo {
-  position: absolute;
-  left: 34%;
-  top: 5%;
-  display: none;
-  z-index: 1;
-  border-bottom: 1px solid #444;
+  margin-left: -20%;
 }
 
 .close-menu {
@@ -49,10 +44,6 @@
   padding: 2%;
 }
 
-.nav-logo {
-  display: none;
-}
-
 .fa-bars {
   padding-top: 13px;
   color: #FFFFFF;
@@ -64,21 +55,31 @@
   color: #444;
 }
 
+.menu-shim {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: #ffffff;
+}
 
 
 
 @media screen and (min-width: $laptop) {
 
-  .menu {
-    
-  }
-
   #menu-list {
-  display: block;
-  font-family: $font-stack;
-  font-weight: lighter;
-  font-size: .7em;
-  padding-left: 2%;
+    display: none;
+    font-family: $font-stack;
+    font-weight: lighter;
+    font-size: .7em;
+    padding-left: 2%;
+    position: absolute;
+    left: 28%;
+    top: 90%;
+    width: 100%;
 
     ul {
       margin: 0;
@@ -88,21 +89,27 @@
       padding-right: 7%;
       list-style: none;
       display: inline;
+
+      a {
+        font-weight: bolder;
+      }
     }
+
+    li:first-child { 
+      display: none;
+    }
+
   }
 
-  .nav-logo {
-    text-shadow: 1px 1px 2px #111;
-    text-align: left;
-    padding-top: 1%;
-    width: 65%;
+  .menu-shim {
+    border: 80px solid #FFFFFF;
+    display: none;
+    z-index: 0;
+    background: none;
+  }
+  
+  .menu-logo {
     display: inline-block;
-    margin: 0;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 2em;
-    font-weight: bold;
-    font-family: $font-fancy;
   }
 
   .fa-bars {

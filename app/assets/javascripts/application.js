@@ -153,18 +153,18 @@ $(document).ready(function(){
   });
 
 // mobile nav display
-  $(".menu").click(function(){
-    $(".menu-shim").show();
-    $(".close-menu").show();
-    $(".menu-logo").show();
-    $("#menu-list a").show();
-  });
-
   $(".close-menu").click(function(){
     $(this).hide();
     $(".menu-shim").hide();
-    $(".menu-logo").hide();
     $("#menu-list a").hide();
+    $(".menu-logo").hide();
+  });
+
+  $(".menu").click(function(){
+    $(".menu-shim").fadeIn();
+    $(".menu-logo").show();
+    $("#menu-list a").show();
+    $(".close-menu").show();
   });
 
   // color picker
