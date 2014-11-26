@@ -17,6 +17,7 @@
 @import 'svg';
 @import 'animation';
 @import 'show';
+@import 'home';
 
 // Components 
 @import 'buttons';
@@ -74,6 +75,16 @@
   100% {
     @include transform(scale(1));
     opacity: 1;
+  }
+}
+
+
+@include keyframes(slow-bounce) {
+  0% {
+   @include transform(translateY(80px));
+  }
+  100% {
+    @include transform(translateY(30px));
   }
 }
 

@@ -130,6 +130,11 @@ $(document).ready(function(){
     });
   });
 
+  // reset preview
+  $(".reset-btn").click(function(e){
+    $(".preview").empty();
+  })
+
   // display help/save content
   $(".help-btn").click(function(){
     $(".shim").show();
@@ -145,6 +150,21 @@ $(document).ready(function(){
     $(this).hide();
     $(".help-content").hide();
     $(".save-content").hide();
+  });
+
+// mobile nav display
+  $(".menu").click(function(){
+    $(".menu-shim").show();
+    $(".close-menu").show();
+    $(".menu-logo").show();
+    $("#menu-list a").show();
+  });
+
+  $(".close-menu").click(function(){
+    $(this).hide();
+    $(".menu-shim").hide();
+    $(".menu-logo").hide();
+    $("#menu-list a").hide();
   });
 
   // color picker

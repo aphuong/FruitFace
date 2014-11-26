@@ -12,9 +12,9 @@
 
         display_time = "<%= time_ago_in_words(fruit.created_at.to_time) %>"
 
-        group = d3.select(".container").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
-          group.append("text").text(data.fruit.name).attr("x", 130).attr("y", 250).attr("class", "names");
-          group.append("text").text(display_time + " ago").attr("x", 90).attr("y", 275);
+        svg = d3.select(".container").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
+          svg.append("text").text(data.fruit.name + ", created " + display_time + " ago").attr("x", 90).attr("y", 250).attr("class", "names");
+
 
         $.each(data.parts, function(key, value) {
           this_fruit_part = value["identifier"];
@@ -26,6 +26,10 @@
         <% if fruit.color %>
           $(".fruit-<%= fruit.id %> .color-change").css("fill", "<%= fruit.color %>"); 
         <% end %>
+
+        // append svg to a tag
+        // $("svg").setAttribute("href", "wwww.google.com");
+
       });   
 
   <% end %>

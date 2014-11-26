@@ -1,6 +1,11 @@
 #menu-list {
   display: none;
-  margin: 0;
+  z-index: 1;
+  margin: 0 auto;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+  padding: 2%;
 
   ul {
     margin: 0;
@@ -8,18 +13,100 @@
 
   li {
     list-style: none;
-    display: inline;
+    padding-bottom: 10px;
+
+    a {
+      color: #444;
+      font-family: $font-stack;
+    }
   }
 }
 
 .menu {
-  color: #FFFFFF;
-  // width: 100%;
+  position: absolute;
+  right: 2%;
+  top: 0;
+}
+
+.menu-logo {
+  position: absolute;
+  left: 34%;
+  top: 5%;
+  display: none;
+  z-index: 1;
+  border-bottom: 1px solid #444;
+}
+
+.close-menu {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  right: 2%;
+  top: 0;
 }
 
 #menu-wrapper {
-  text-align: right;
   padding: 2%;
 }
 
+.nav-logo {
+  display: none;
+}
+
+.fa-bars {
+  padding-top: 13px;
+  color: #FFFFFF;
+}
+
+.fa-times {
+  z-index: 1;
+  padding-top: 13px;
+  color: #444;
+}
+
+
+
+
+@media screen and (min-width: $laptop) {
+
+  .menu {
+    
+  }
+
+  #menu-list {
+  display: block;
+  font-family: $font-stack;
+  font-weight: lighter;
+  font-size: .7em;
+  padding-left: 2%;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      padding-right: 7%;
+      list-style: none;
+      display: inline;
+    }
+  }
+
+  .nav-logo {
+    text-shadow: 1px 1px 2px #111;
+    text-align: left;
+    padding-top: 1%;
+    width: 65%;
+    display: inline-block;
+    margin: 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: $font-fancy;
+  }
+
+  .fa-bars {
+    padding-top: 13px;
+  }
+}
 
