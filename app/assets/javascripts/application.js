@@ -38,6 +38,8 @@ $(document).ready(function(){
   squareGlasses(grape_container);
   mustache(grape_container);
 
+  
+
   // Function to append parts to svg
   // Make sure that the name of the function and the id of the element match
   $(".parts").each(function() {
