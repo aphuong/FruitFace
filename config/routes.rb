@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   post '/create' => 'fruits#create'
   get '/fruits' => 'fruits#index'
   get '/fruits/:id' => 'fruits#show', :as => "show_fruit"
-
+  get '/about' => 'home#about'
 end

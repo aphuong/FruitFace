@@ -1,7 +1,120 @@
-nav {
+#menu-list {
+  display: none;
+  z-index: 1;
+  margin: 0 auto;
+  position: absolute;
+  left: 42%;
+  top: 15%;
+  padding-left: 0;
+
+  ul {
+    margin: 0;
+  }
 
   li {
     list-style: none;
-    display: inline;
+    padding-bottom: 10px;
+
+    a {
+      color: #444;
+      font-family: $font-stack;
+    }
   }
 }
+
+.menu {
+  position: fixed;
+  right: 2%;
+  top: 0;
+}
+
+.menu-logo {
+  margin-left: -20%;
+}
+
+.close-menu {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  right: 2%;
+  top: 0;
+}
+
+#menu-wrapper {
+  padding: 2%;
+}
+
+.fa-bars {
+  padding-top: 13px;
+  color: #FFFFFF;
+}
+
+.fa-times {
+  z-index: 1;
+  padding-top: 13px;
+  color: #444;
+}
+
+.menu-shim {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: #ffffff;
+}
+
+
+@media screen and (min-width: $laptop) {
+
+  #menu-list {
+    display: none;
+    font-family: $font-stack;
+    font-weight: lighter;
+    font-size: .7em;
+    padding-left: 2%;
+    position: absolute;
+    left: 28%;
+    top: 5%;
+    width: 100%;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      padding-right: 7%;
+      list-style: none;
+      display: inline;
+
+      a {
+        font-weight: bolder;
+      }
+    }
+
+    li:first-child { 
+      display: none;
+    }
+
+  }
+
+  .menu-shim {
+    border: 80px solid #FFFFFF;
+    display: none;
+    z-index: 0;
+    background: rgba(12, 13, 13, 0.67);
+  }
+  
+  .menu-logo {
+    display: inline-block;
+  }
+
+  .fa-bars {
+    padding-top: 13px;
+  }
+
+
+}
+

@@ -10,17 +10,19 @@
 @import 'bourbon';
 @import 'normalize';
 @import 'flexslider';
-
+@import 'prism';
 
 // Pages
 @import 'main';
 @import 'svg';
 @import 'animation';
 @import 'show';
+@import 'home';
 
 // Components 
 @import 'buttons';
 @import 'nav';
+@import 'footer';
 
 // bourbon animations:
 @include keyframes(bounce) {
@@ -75,4 +77,16 @@
     opacity: 1;
   }
 }
+
+
+@include keyframes(slow-bounce) {
+  0% {
+   @include transform(translateY(80px));
+  }
+  100% {
+    @include transform(translateY(30px));
+  }
+}
+
+
 

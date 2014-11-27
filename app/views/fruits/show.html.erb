@@ -1,18 +1,33 @@
-<h2>Wondering how your FruitFace was made, wishing you could include FruitFace inside our projects...</h2>
+<div>
+  <h2 class="show-title">Share your FruitFace!</h2>
+  <h4 class="show-subtitle">View your creation in the <%= link_to "Gallery", fruits_path %>.</h4>
+</div>
 <div class="fruit-view"></div>
-<p>Checkout the code snippet below!</p>
-<ol>
-  <li>
-    Inside your HTML file, include an svg tag: </br>
-    <pre> &ltsvg width="300" height="300"&gt &lt/svg&gt </pre>
-  </li>
-  <li>
-    Copy the code below and paste between the &ltsvg&gt you just created.
-  </li>
 
-</ol>
+<div class="code-wrapper page">
+  <p class="code-title">View code snippet</p>
 
-<div class="code-container"></div>
+  <ol>
+    <div class="col-left">
+      <li>Inside your HTML file, include an &ltsvg&gt tag.</li>
+      <pre>
+        <code class="language-markup">&ltsvg width="300" height="300"&gt&lt/svg&gt</code>
+      </pre>
+      <p class="svg-info">SVG(scalable vector graphics) can be created using Adobe Illustrator and appended to HTML using SVG tags.</p>
+    </div>
+
+
+    <div class="col-right">
+      <li><button id="my-button_pre" data-clipboard-target="clipboard_pre">Copy to Clipboard</button> and paste between the &ltsvg&gt you just created in an HTML file or you can try <%= link_to "JSFiddle", "http://jsfiddle.net/"%>.</li>
+      <pre id="clipboard_pre">
+        <code class="language-markup" id="code-container" ></code>
+      </pre>
+    </div>
+  </ol>
+</div>
+
+<div class="style-container"></div>
+
 
 
 
@@ -23,7 +38,7 @@
   $.getJSON("/fruits/" + id, function(data) {
 
     group = d3.select(".fruit-view").append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>");
-      group.append("text").text("<%= @fruit.name %>").attr("x", 130).attr("y", 250);
+      group.append("text").text("<%= @fruit.name %>").attr("x", 130).attr("y", 250).attr("class", "name-text");
 
     $.each(data.parts, function(key, value) {
       this_fruit_part = value["identifier"];
@@ -39,11 +54,29 @@
 
     // Add code to view
     code = $(".show-fruit").html();
-    $(".code-container").text(code);
+    $("#code-container").text(code);
+    Prism.highlightAll();
 
-    styles = "<%= @fruit["identifier"] %>"
-    console.log(styles)
+    // style = $(".show-fruit").css();
+    // $(".style-container").text(style);
+    // console.log(style)
 
   });
+
+  var client = new ZeroClipboard($("#my-button_pre"));
+
+  client.on( "ready", function(event) {
+    client.on( "copy", function (event) {
+      event.clipboardData.setData( "text/html", event.target.innerHTML);
+      alert("Copied! Paste into html file or test it out on JS Fiddle.");
+    });
+  });
+
+
+  // tooltip
+  $(".svg-tool-tip").hover(function(){
+    $(".svg-info").toggle();
+  });
+  
 
 </script>

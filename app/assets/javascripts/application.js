@@ -2,10 +2,11 @@
 //= require jquery_ujs
 //= require d3
 //= require jquery.flexslider
+//= require prism
+//= require zeroclipboard
 //= require_tree .
 
 $(document).ready(function(){
-
 
   // To make sample FruitFace
   orange_container = ".sample-orange"
@@ -129,6 +130,11 @@ $(document).ready(function(){
     });
   });
 
+  // reset preview
+  $(".reset-btn").click(function(e){
+    $(".preview").empty();
+  })
+
   // display help/save content
   $(".help-btn").click(function(){
     $(".shim").show();
@@ -146,6 +152,29 @@ $(document).ready(function(){
     $(".save-content").hide();
   });
 
+// mobile nav display
+  $(".close-menu").click(function(){
+    $(this).hide();
+    $(".menu-shim").hide();
+    $("#menu-list a").hide();
+    $(".menu-logo").hide();
+    $("body").css("overflow", "visible");
+  });
+
+  $(".menu").click(function(){
+    $(".menu-shim").fadeIn();
+    $(".menu-logo").show();
+    $("#menu-list a").show();
+    $(".close-menu").show();
+    $("body").css("overflow", "hidden");
+    $("body").animate({ scrollTop: 0 }, 200);
+  });
+
+  // menu
+  $(".menu").click(function(){
+    $("#menu-list").show();
+  });
+
   // color picker
   $(".color-picker").hover(function(){
     $(".color-picker-info").toggle();
@@ -154,6 +183,8 @@ $(document).ready(function(){
   $('#colorinput').on('input', function() {
     $('.preview .color-change').css('fill', $(this).val()); 
   });
+
+  
 
 });
 
