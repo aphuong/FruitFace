@@ -23,7 +23,7 @@
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   right: 2%;
   top: 0;
 }
@@ -67,7 +67,6 @@
 }
 
 
-
 @media screen and (min-width: $laptop) {
 
   #menu-list {
@@ -78,7 +77,7 @@
     padding-left: 2%;
     position: absolute;
     left: 28%;
-    top: 90%;
+    top: 5%;
     width: 100%;
 
     ul {
@@ -105,7 +104,7 @@
     border: 80px solid #FFFFFF;
     display: none;
     z-index: 0;
-    background: none;
+    background: rgba(12, 13, 13, 0.67);
   }
   
   .menu-logo {
@@ -115,5 +114,7 @@
   .fa-bars {
     padding-top: 13px;
   }
+
+
 }
 

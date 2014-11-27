@@ -158,6 +158,7 @@ $(document).ready(function(){
     $(".menu-shim").hide();
     $("#menu-list a").hide();
     $(".menu-logo").hide();
+    $("body").css("overflow", "visible");
   });
 
   $(".menu").click(function(){
@@ -165,6 +166,13 @@ $(document).ready(function(){
     $(".menu-logo").show();
     $("#menu-list a").show();
     $(".close-menu").show();
+    $("body").css("overflow", "hidden");
+    $("body").animate({ scrollTop: 0 }, 200);
+  });
+
+  // menu
+  $(".menu").click(function(){
+    $("#menu-list").show();
   });
 
   // color picker
@@ -176,10 +184,7 @@ $(document).ready(function(){
     $('.preview .color-change').css('fill', $(this).val()); 
   });
 
-  // menu
-  $(".menu").click(function(){
-    $("#menu-list").toggle();
-  });
+  
 
 });
 

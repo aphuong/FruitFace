@@ -162,12 +162,63 @@ html {
  
   .fruit-gallery {
     display: inline-block;
-    margin: 3px 5px;
+    // margin: 3px 5px;
+  }
 
+  .gallery-logo {
+    display: none;
   }
 
   .sample {
     display: inline-block;
+  }
+
+  .preview-wrapper {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 4px;
+    margin-bottom: 2%;
+    background: rgba(230, 241, 210, 0.4);
+    display: inline-block;
+  }
+
+  .flexslider-wrapper {
+    width: 50%;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .header-container {
+    padding: 0;
+  }
+
+  .help-content, .save-content {
+    width: 45%;
+    z-index: 1;
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 2%;
+    border-radius: 4px;
+    background: #ffffff;
+    font-family: $font-stack;
+    font-weight: lighter;
+    font-size: .7em;
+
+    ol {
+      text-align: left;
+    }
+  }
+
+  .instructions {
+    margin: -0%;
+  }
+
+  .logo {
+    width: 25%;
   }
 }
 
