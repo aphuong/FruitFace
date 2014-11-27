@@ -13,7 +13,7 @@
         display_time = "<%= time_ago_in_words(fruit.created_at.to_time) %>"
 
         svg = d3.select(".container").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
-          svg.append("text").text(data.fruit.name + ", created " + display_time + " ago").attr("x", 90).attr("y", 250).attr("class", "names");
+          svg.append("text").text(data.fruit.name + ", " + display_time + " ago").attr("x", 90).attr("y", 250).attr("class", "names");
 
 
         $.each(data.parts, function(key, value) {
