@@ -12,7 +12,7 @@ $(document).ready(function(){
   orange_container = ".sample-orange"
   bodyRound(orange_container);
   hairLeaf(orange_container);
-  roundGlasses(orange_container);
+  squareGlasses(orange_container);
   eyesClosed(orange_container);
   freckles(orange_container);
   mouthHappy(orange_container);
@@ -35,10 +35,10 @@ $(document).ready(function(){
   bodyGrape(grape_container);
   hairDoubleLeaf(grape_container);
   eyesClosed(grape_container);
-  squareGlasses(grape_container);
+  roundGlasses(grape_container);
   mustache(grape_container);
 
-  
+
 
   // Function to append parts to svg
   // Make sure that the name of the function and the id of the element match
@@ -59,18 +59,8 @@ $(document).ready(function(){
       window[this.id](".preview");
   });
 
-
-  // Function to save fruit
-  $("#saveFruit").click(function(){
-
-    // get color of fruit
-    var fruit_color = $(".preview .color-change").css("fill");
-    
-    // get name of fruit
-    var fruit_name = $("#fruit_name").val();
-    var fruit_params = {"name": fruit_name, "color": fruit_color};
-
-
+  // 
+  var post_create_fruit = function(fruit_params){
 
     // put name of every identifier part from preview box in an array
     preview_all_groups = $(".preview > g");
@@ -89,7 +79,6 @@ $(document).ready(function(){
     }
     var parts_params = toObject(saved_parts);
     
-
     // Save fruit_params and parts_params as params
     params = { 
       fruit_and_parts: {
@@ -98,20 +87,43 @@ $(document).ready(function(){
       }
     }
 
-
     // send params to rails using jquery ajax request
-    $.post( "/create", params, function() {
-      alert( "success" );
-    })
-    .done(function() {
-      alert( "second success" );
+    $.post( "/create", params, function(data) {
+      $(".save-content").html("<h3>" + "SAVE WAS SUCCESFUL!" + "</h3>" + "<button type='button' class='code-redirect-btn'>" + "See the Code" + "</button>" + "<button type='button' class='gallery-redirect-btn'>" + "View in Gallery" + "</button>");
+    
+      $(".gallery-redirect-btn").click(function(){
+        location = "/fruits";
+      });
+
+      $(".code-redirect-btn").click(function(){
+        location = "/fruits/" + data.id;
+      });
     })
     .fail(function() {
-      alert( "error" );
+      alert( "Looks like something went wrong. Please try saving again!" );
     })
+  }
+
+  // Function to save fruit
+  $("#saveFruit").click(function(){
+
+    // get color of fruit
+    var fruit_color = $(".preview .color-change").css("fill");
+    
+    // get name of fruit
+    var fruit_name = $("#fruit_name").val();
+
+    if (fruit_name.length == 0) {
+      $(".save-content").append("<p class='validation-alert'>Please give your FruitFace a name.</p>");
+    } else if (fruit_name.length > 25) {
+      $(".save-content").append("<p class='validation-alert'>Sorry that name is too long, try again.</p>");
+    } else {
+      var fruit_params = {"name": fruit_name, "color": fruit_color};
+
+      post_create_fruit(fruit_params);
+    }
   });
-
-
+  
  
   // display flexslider
   $(".open-parts-slider").click(function(){
@@ -154,27 +166,37 @@ $(document).ready(function(){
     $(".save-content").hide();
   });
 
-// mobile nav display
-  $(".close-menu").click(function(){
-    $(this).hide();
+// nav display
+  var closeShim = function(){
     $(".menu-shim").hide();
+    $(".close-menu").hide(); 
     $("#menu-list a").hide();
     $(".menu-logo").hide();
+    $("footer").hide();
     $("body").css("overflow", "visible");
+  };
+
+  $(".close-menu").click(function(event){
+    closeShim();
+  });
+
+  $(".menu-shim").click(function(){
+    closeShim();
   });
 
   $(".menu").click(function(){
     $(".menu-shim").fadeIn();
     $(".menu-logo").show();
     $("#menu-list a").show();
+    $("footer").show();
     $(".close-menu").show();
     $("body").css("overflow", "hidden");
     $("body").animate({ scrollTop: 0 }, 200);
   });
 
-  // menu
   $(".menu").click(function(){
     $("#menu-list").show();
+    $("footer").show();
   });
 
   // color picker

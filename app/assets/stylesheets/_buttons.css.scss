@@ -1,16 +1,23 @@
 .open-parts-slider, 
-.save-btn {
+.save-btn, 
+.code-redirect-btn,
+.gallery-redirect-btn {
   text-shadow: 1px 1px 2px #111;
   background: #004050;
   color: #ffffff;
   border-radius: 4px;
   border: none;
   padding: 10px;
-  
+  margin-right: 4px;
+  border:1px solid darken(#004050, 10%);
+  box-shadow: 0 3px 0 0 darken(#004050, 5%), 0px 1px 0px darken(#004050, 10%);
+
   &:hover {
     background: $highlight;
+    box-shadow: 0 0 0 0;
   }
 }
+
 
 .help-btn {
   text-shadow: 1px 1px 2px #111;
@@ -41,6 +48,13 @@
   left: 22px;
   top: 12px;
   z-index: 1;
+  border:1px solid darken(#004050, 10%);
+  box-shadow: 0 3px 0 0 darken(#004050, 5%), 0px 1px 0px darken(#004050, 10%);
+
+  &:hover {
+    background: $highlight;
+    box-shadow: 0 0 0 0;
+  }
 }
 
 .reset-btn {
@@ -52,6 +66,13 @@
   position: absolute;
   left: 22px;
   bottom: 12px;
+  border:1px solid darken(#004050, 10%);
+  box-shadow: 0 3px 0 0 darken(#004050, 5%), 0px 1px 0px darken(#004050, 10%);
+
+  &:hover {
+    background: $highlight;
+    box-shadow: 0 0 0 0;
+  }
 }
 
 #my-button_pre {
@@ -72,3 +93,6 @@
  background-color: #aaa; 
 }
 
+.after-save-btn {
+  margin-right: 12px;
+}

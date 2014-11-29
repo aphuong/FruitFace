@@ -22,7 +22,6 @@
 // Components 
 @import 'buttons';
 @import 'nav';
-@import 'footer';
 
 // bourbon animations:
 @include keyframes(bounce) {
@@ -85,14 +84,10 @@
 }
 
 @include keyframes(bounceDown) {
-  0% { opacity: 0;
-    @include transform(translateY(-2000px));}
-  60% {opacity:1;
-    @include transform(translateY(1em));}
-  80% {
-    @include transform(translateY(-0.5em));}
-  100% {
-    @include transform(translateY(0));}
+  0% {@include transform(translateY(-2000px));}
+  60% {@include transform(translateY(1em));}
+  80% {@include transform(translateY(-0.5em));}
+  100% {@include transform(translateY(0));}
 }
 
 
