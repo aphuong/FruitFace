@@ -7,7 +7,16 @@ body {
 
 a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: $lightgrey;
+
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.container {
+  width: 100%;
+  text-align: center;
 }
 
 .shim {

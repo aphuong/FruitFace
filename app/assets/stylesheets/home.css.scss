@@ -1,5 +1,12 @@
 .index-container {
-  height: 600px;
+  height: 630px;
+}
+
+.index-logo {
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+  font-size: 3em;
 }
 // landing page animation
 
@@ -127,12 +134,60 @@
 
 
 .sample-orange {
-  position: absolute;
-  right: 10%;
-  @include animation(bounceDown 8s);
-  // @include animation(bounce 2s infinite);
+  position: relative;
+  // right: 100px;
+  top: 30px;
+  // @include animation(tubeDrop 5s infinite);
 }
 
+.sample-pear {
+  position: relative;
+  left: 150px;
+}
+
+.sample-slice {
+  @include animation(bounce 3s infinite);
+}
+
+.sample-grape {
+  top: 60px;
+  // left: -205px;
+  position: relative;
+}
+
+.sample-strawberry {
+  top: 120px;
+  // left: 100px;
+  position: relative;
+}
+
+.sample-slice {
+  top: 100px;
+  position: relative;
+}
+
+// .tube {
+//   position: absolute;
+//   left: 59.8%;
+//   bottom: -54.4%;
+//   border-radius: 5px;
+//   background: #201C1C;
+//   height: 600px;
+//   width: 7.1%; 
+//   z-index: 1;
+// }
+
+// .tube-bottom:after {
+//   position: absolute;
+//   bottom: -54px;
+//   left: -61%;
+//   content: "";
+//   display: block;
+//   transform: rotate(180deg);
+//   border-left: 100px solid transparent;
+//   border-right: 100px solid transparent;
+//   border-top: 100px solid rgba(29, 24, 24, .8);
+// }
 
 .arrow{
   position: relative;
@@ -142,7 +197,7 @@
   line-height: 40px;
   margin-bottom: 30px; 
   text-align: center;
-  color: $lightgrey;
+  color: $highlight;
 }
 
 .arrow-bottom:after{
@@ -164,3 +219,74 @@
   @include animation(bounce 3s infinite);
 }
 
+.landing-text-wrapper {
+  position: relative;
+  background: $beige;
+  // height: 600px;
+  padding: 3%;
+
+  h2:nth-of-type(1) {
+    position: absolute;
+    // left: 5%;
+    top: 10%;
+    @include animation(slideLeft 3s);
+  }
+
+  h2:nth-of-type(2) {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    width: 30%;
+    @include animation(slideRight2 3s);
+  } 
+
+  p:nth-of-type(1) {
+    position: absolute;
+    right: 12%;
+    top: 35%;
+    width: 30%;
+  }
+  
+  h3 {
+    position: absolute;
+    right: 22%;
+    top: 70%;
+    @include animation(slideRight 3s);
+  }
+
+
+  p {
+    margin-left: 6%;
+    font-family: $font-stack;
+    font-weight: lighter;
+    font-size: .8em;
+  }
+}
+
+
+
+.emoji-wrapper {
+  margin-left: 5%;
+  margin-top: 10%;
+
+  img {
+    width: 7%;
+  }
+}
+
+.symbols {
+  font-family: $font-stack;
+  vertical-align: 24px;
+  font-size: 1.7em;
+}
+
+.title-text {
+  vertical-align: 24px;
+  font-size: 2em;
+}
+
+.fruit-party {
+  width: 100%;
+  // margin-top: 20%;
+  // height: 900px;
+}

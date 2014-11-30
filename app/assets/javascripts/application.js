@@ -38,7 +38,12 @@ $(document).ready(function(){
   roundGlasses(grape_container);
   mustache(grape_container);
 
-
+  slice_container = ".sample-slice"
+  bodyPear(slice_container);
+  hairDoubleLeaf(slice_container);
+  eyesClosed(slice_container);
+  roundGlasses(slice_container);
+  mustache(slice_container);
 
   // Function to append parts to svg
   // Make sure that the name of the function and the id of the element match
@@ -227,9 +232,37 @@ $(document).ready(function(){
     $("footer").show();
   });
 
- 
+
+   
+  //scroll animation, homepage
+  $("p").hide();
+  $("h2").hide();
+  $("h3").hide();
+
+  //init scrolling event heandler
+  $(document).scroll(function(){
+   
+    var docScroll = $(document).scrollTop();
+    var textContainer = $(".landing-text").offset().top -400;
+    
+    if(docScroll >= textContainer ) {
+      $("p").fadeIn(1000);
+      $("h2").fadeIn(1000);
+      $("h3").fadeIn(1000);
+    } else {
+      $("p").fadeOut(1000);
+      $("h2").fadeOut(1000);
+      $("h3").fadeOut(1000);
+    }
+  });
 
 });
+  
+  
+
+
+
+
 
 
 
