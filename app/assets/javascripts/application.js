@@ -50,18 +50,54 @@ $(document).ready(function(){
   // Add click event to each part that adds it to the preview
   $(".parts").click(function(){
 
-      part_name = $(this).children('g').data('part');
-      // Remove all similar parts from preview
-      similar_parts = $(".preview [data-part=" + part_name + "]");
-      similar_parts.remove();
+    part_name = $(this).children('g').data('part');
+    
+    // Remove all similar parts from preview
+    similar_parts = $(".preview [data-part=" + part_name + "]");
+    similar_parts.remove();
 
-      // Add the part to the preview
-      window[this.id](".preview");
+    // Add the part to the preview
+    window[this.id](".preview");
+
+    // function to add color picker
+    $(".preview g").each(function(){
+      if ($(this).data("part") == "body"){
+        $(".color-picker").show();
+
+        $(".color-picker").hover(function(){
+          $(".color-picker-info").toggle();
+        });
+
+        $('#colorinput').on('input', function() {
+          $('.preview .color-change').css('fill', $(this).val()); 
+        });
+      } else {
+        console.log("not body");
+      }
+    });
+
+    // function to hide and show instructions/finish button
+    if ($(".preview").contents().length != 0) {
+      $(".instructions").html("<button type='button' class='finish-btn'>FINISHED</button>" + "<button type='button' class='reset-btn'>RESET</button>");
+     
+      // show save content
+      $(".finish-btn").click(function(){
+        $(".shim").show();
+        $(".save-content").show();
+      });
+      
+      // reset preview
+      $(".reset-btn").click(function(e){
+        $(".preview").empty();
+      });
+    };
+
   });
 
-  // 
-  var post_create_fruit = function(fruit_params){
 
+
+  // function to get params for saving furuit
+  var post_create_fruit = function(fruit_params){
     // put name of every identifier part from preview box in an array
     preview_all_groups = $(".preview > g");
     arr = $.makeArray(preview_all_groups);
@@ -144,21 +180,13 @@ $(document).ready(function(){
     });
   });
 
-  // reset preview
-  $(".reset-btn").click(function(e){
-    $(".preview").empty();
-  })
+
 
   // display help/save content
   $(".help-btn").click(function(){
     $(".shim").show();
     $(".help-content").show();
   });
-
-  $(".finish-btn").click(function(){
-    $(".shim").show();
-    $(".save-content").show();
-  })
 
   $(".shim").click(function(){
     $(this).hide();
@@ -199,16 +227,7 @@ $(document).ready(function(){
     $("footer").show();
   });
 
-  // color picker
-  $(".color-picker").hover(function(){
-    $(".color-picker-info").toggle();
-  })
-
-  $('#colorinput').on('input', function() {
-    $('.preview .color-change').css('fill', $(this).val()); 
-  });
-
-  
+ 
 
 });
 

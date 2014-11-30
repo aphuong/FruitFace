@@ -65,5 +65,11 @@
 
  
 
+.sample-pear {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  @include animation(dash 3s linear alternate infinite);
+}
+
 
 

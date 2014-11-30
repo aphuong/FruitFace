@@ -1,6 +1,6 @@
 body {
   color: #444;
-  // background:#4eb889;
+  // background: $red;
   font-family: $font-fancy;
   font-size: 1.5em;
 }
@@ -26,12 +26,12 @@ a {
 }
 
 html { 
-  background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -o-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, #E6F1D2), color-stop(1, #2B8B9D));
-  background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: radial-gradient(circle farthest-corner at center bottom, #E6F1D2 0%, #2B8B9D 100%);
+  background-image: -ms-radial-gradient(center bottom, circle farthest-corner, $beige 0%, #5BA7B6 100%);
+  background-image: -moz-radial-gradient(center bottom, circle farthest-corner, $beige 0%, #5BA7B6 100%);
+  background-image: -o-radial-gradient(center bottom, circle farthest-corner, $beige 0%, #5BA7B6 100%);
+  background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, $beige), color-stop(1, #5BA7B6));
+  background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, $beige 0%, #5BA7B6 100%);
+  background-image: radial-gradient(circle farthest-corner at center bottom, $beige 0%, #5BA7B6 100%);
   min-height:100%;
 }
 
@@ -42,7 +42,7 @@ html {
   padding-top: 1%;
   width: 55%;
   display: inline-block;
-  margin: 0;
+  margin-right: 13%;
   color: #FFFFFF;
   text-decoration: none;
   font-size: 2em;
@@ -91,6 +91,7 @@ html {
   position: relative;
   margin-bottom: 2%;
   background: rgba(230, 241, 210, 0.4);
+  box-shadow: 4px 4px 4px rgba(63, 59, 59, 0.27);
 }
 
 .header-container {
@@ -127,6 +128,7 @@ html {
 }
 
 .color-picker {
+  display: none;
   bottom: 20px;
   right: 20px;
   position: absolute;
@@ -186,6 +188,7 @@ html {
     border-radius: 4px;
     margin-bottom: 2%;
     background: rgba(230, 241, 210, 0.4);
+    box-shadow: 7px 7px 5px rgba(63, 59, 59, 0.27);
     display: inline-block;
   }
 
@@ -229,6 +232,7 @@ html {
 
   .logo {
     width: 25%;
+    margin-right: 20%;
   }
 
   .svg-wrapper {
