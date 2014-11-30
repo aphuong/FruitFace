@@ -135,14 +135,15 @@
 
 .sample-orange {
   position: relative;
-  // right: 100px;
+  left: 290px;
   top: 30px;
   // @include animation(tubeDrop 5s infinite);
 }
 
 .sample-pear {
   position: relative;
-  left: 150px;
+  left: 386px;
+  top: 65px;
 }
 
 .sample-slice {
@@ -151,19 +152,26 @@
 
 .sample-grape {
   top: 60px;
-  // left: -205px;
+  left: 240px;
   position: relative;
 }
 
 .sample-strawberry {
-  top: 120px;
-  // left: 100px;
+  top: -13px;
+  left: -134px;
   position: relative;
 }
 
 .sample-slice {
-  top: 100px;
+  top: 208px;
+  left: 340px;
   position: relative;
+}
+
+.sample-apple {
+  position: relative;
+  left: -266px;
+  top: 148px;
 }
 
 // .tube {
@@ -222,12 +230,12 @@
 .landing-text-wrapper {
   position: relative;
   background: $beige;
-  // height: 600px;
+  height: 400px;
   padding: 3%;
 
   h2:nth-of-type(1) {
     position: absolute;
-    // left: 5%;
+    left: 5%;
     top: 10%;
     @include animation(slideLeft 3s);
   }

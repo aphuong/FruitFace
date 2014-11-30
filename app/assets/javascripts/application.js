@@ -45,6 +45,13 @@ $(document).ready(function(){
   roundGlasses(slice_container);
   mustache(slice_container);
 
+  apple_container = ".sample-apple"
+  bodyStrawberry(apple_container);
+  hairDoubleLeaf(apple_container);
+  eyesClosed(apple_container);
+  roundGlasses(apple_container);
+  mustache(apple_container);
+
   // Function to append parts to svg
   // Make sure that the name of the function and the id of the element match
   $(".parts").each(function() {
