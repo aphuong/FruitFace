@@ -2,6 +2,7 @@
   <h2 class="show-title">Wondering how this FruitFace was made...</h2>
   <h4 class="show-subtitle">Check out others in the <%= link_to "Gallery", fruits_path %>.</h4>
 </div>
+
 <div class="fruit-view"></div>
 
 <div class="code-wrapper page">
@@ -26,7 +27,16 @@
   </ol>
 </div>
 
-<div class="style-container"></div>
+
+<!-- <div class="svgStyles">
+  <div>
+    <pre><code class="language-css">
+      .body-round {fill: orange; stroke: #000000; stroke-miterlimit:  10;}
+
+    </code></pre>
+  </div>
+</div> -->
+
 
 
 
@@ -56,10 +66,6 @@
     code = $(".show-fruit").html();
     $("#code-container").text(code);
     Prism.highlightAll();
-
-    // style = $(".show-fruit").css();
-    // $(".style-container").text(style);
-    // console.log(style)
 
   });
 

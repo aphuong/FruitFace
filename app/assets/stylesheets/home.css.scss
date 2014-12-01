@@ -261,101 +261,10 @@
     height: 350px;
   }
 
-  // .computer {
-  //   width: 110px;
-  //   height: 82px;
-  //   border-radius: 16px;
-  //   position: absolute;
-  //   top: 37%;
-  //   background: lightgrey;
-  // }
-
-  // .comp-screen {
-  //   width: 90px;
-  //   height: 64px;
-  //   border-radius: 16px;
-  //   position: absolute;
-  //   top: 39.5%;
-  //   left: 2%;
-  //   z-index: 1;
-  //   background: rgba(0,0,0,.75);
-  // }
-
-
-  // .power {
-  //   width: 5px;
-  //   height: 5px;
-  //   border-radius: 50%;
-  //   background: red;
-  //   position: absolute;
-  //   top: 58%;
-  //   left: 19%;
-  // }
-
-  // .comp-stand {
-  //   background: lightgrey;
-  //   z-index: 1;
-  //   width: 90px;
-  //   height: 87px;
-  //   position: absolute;
-  //   top: 61%;
-  //   left: 2%;
-  // }
-
-  // .fa-code {
-  //   color: #27D020;
-  //   margin-top: 20px;
-  //   @include animation(blinker 1s linear infinite);
-  // }
-
-  // .band {
-  //   position: absolute;
-  //   width: 80%;
-  //   height: 15px;
-  //   background: darken(#4b5d6f, 10);
-  //   border-radius: 8px;
-  //   transform: translate(-4px, 210px);
-  // }
-
   .band {
     height: 16px;
     width: 80%;
   }
-
-  // .band-stand {
-  //   background: #4b5d6f;
-  //   position: absolute;
-  //   top: 64.5%;
-  //   transform: skew(-15deg);
-  //   width: 76%;
-  //   height: 75px;
-  //   left: -10px;
-  // }
-
-  // .dots {
-  //   width: 78%;
-  //   position: absolute;
-  //   top: 53.5%;
-  //   height: 30px;
-  //   border-bottom: 9px dotted #4b5d6f;
-  //   overflow: hidden;
-  //   @include animation(conveyor-belt 3s infinite);
-  // }
-
-  // .dots {
-  //   top: 53.5%;
-  // }
-
-  // .shadow {
-  //   height: 20px;
-  //   background: rgba(0, 0, 0, 0.5);
-  //   width: 18%;
-  //   border-radius: 100%;
-  //   position: absolute;
-  //   bottom: 14%;
-  //   left: 75%;
-  //   z-index: -1;
-  // }
 
   .stage {
     ul {
@@ -382,12 +291,11 @@
     }
   }
 
-
   .sample-orange {
     display: inline-block;
     position: absolute;
-    left: 309px;
-    top: -10px;
+    left: 300px;
+    top: -43px;
   }
 
   .sample-pear {
@@ -399,7 +307,7 @@
 
   .sample-grape {
     display: inline-block;
-    top: 2px;
+    top: -39px;
     right: 300px;
     position: absolute;
   }
@@ -407,7 +315,7 @@
   .sample-strawberry {
     display: inline-block;
     top: 100px;
-    right: 99px;
+    right: 145px;
     position: absolute;
   }
 
