@@ -11,6 +11,7 @@
       $.getJSON("/fruits/" + id, function(data) {
 
         display_time = "<%= time_ago_in_words(fruit.created_at.to_time) %>"
+        
         wrapper = d3.select(".container").append("div").attr("class", "svg-wrapper")
         svg = wrapper.append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
         
