@@ -33,10 +33,11 @@ $(document).ready(function(){
 
   grape_container = ".sample-grape"
   bodyGrape(grape_container);
+  blush(grape_container);
   hairDoubleLeaf(grape_container);
   eyesClosed(grape_container);
   roundGlasses(grape_container);
-  mustache(grape_container);
+  mouthSad(grape_container);
 
   slice_container = ".sample-slice"
   bodyPear(slice_container);

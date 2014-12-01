@@ -111,18 +111,13 @@
 
 @include keyframes(slideRight) {
   0% {transform: translate(200px, 0px);}
-  50% {transform: translate(-50px, 0px);}
+  50% {transform: translate(-20px, 0px);}
   100% {transform: translate(0px, 0px);}
 }
 
 @include keyframes(slideLeft) {
   0% {transform: translate(-200px, 0px);}
-  50% {transform: translate(50px, 0px);}
+  50% {transform: translate(20px, 0px);}
   100% {transform: translate(0px, 0px);}
 }
 
-// @include keyframes(slideLeft) {
-//   0% { left: -20%; }
-//   50% { left: 10%; }
-//   100% { left: 5%; }
-// }

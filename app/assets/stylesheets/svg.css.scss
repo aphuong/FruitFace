@@ -27,6 +27,30 @@ svg {
   stroke-miterlimit:  10;
 }
 
+.body-slice1 {
+  stroke:  #000000;
+  stroke-miterlimit:  10;
+  fill: #059447;
+}
+
+.body-slice {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill: #D32A27;
+}
+
+.body-apple {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  #6DF818;
+}
+
+.body-oval {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  #FFE922;
+}
+
 //Open Eyes
 .open-eye-lg {
   fill: #FFFFFF;
@@ -52,11 +76,65 @@ svg {
   stroke-miterlimit:  10;
 }
 
+// EyesBlack
+.eyesBlack {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+// EyesPirate
+.eyesPirate {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  #050606;
+}
+
+.eyesPirate1 {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  none;
+}
+
+.eyesPirate2 {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  #FFFFFF;
+}
+
+.eyesPirate3 {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+}
+
+// EyesSurprise
+.eyesSurprise {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  #FFFFFF;
+}
+
+.eyesSurprise1 {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  #070808;
+}
+
+.eyesSurprise2 {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  none;
+}
+
 //Freckles
 .freckles { 
   fill: #EEE810;
   stroke: #FEC255;
   stroke-miterlimit:  10;
+}
+
+// Blush
+.blush {
+  fill: #EAACCE;
 }
 
 //Hair-Leaf
@@ -84,6 +162,13 @@ svg {
   fill: none;
   stroke: #000000;
   stroke-miterlimit:  10;
+}
+
+// Hairpineapple
+.hairPineapple {
+  stroke: #000000;
+  stroke-miterlimit: 10;
+  fill: #08A94B;
 }
 
 //Mouth-Sad

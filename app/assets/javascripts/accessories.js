@@ -78,3 +78,21 @@ window.mustache_two = function(container){
     .attr("class", "mustache");
 };
 
+
+window.blush = function(container){
+  group = d3.select(container).append("g").attr("data-part", "freckles").attr("data-name", "blush");
+
+  group.append("ellipse")
+    .attr("cx", 115.8)
+    .attr("cy", 150)
+    .attr("rx", 10.4)
+    .attr("ry", 10)
+    .attr("class", "blush");
+  group.append("ellipse")
+    .attr("cx", 186.2)
+    .attr("cy", 150)
+    .attr("rx", 10.4)
+    .attr("ry", 10)
+    .attr("class", "blush");  
+};
+
