@@ -19,23 +19,18 @@
       <div class="dots"></div>
       <div class="band-stand"></div>
       <div class="shadow"></div>
-      <!-- <div class="tube tube-bottom"></div> -->
-
     </div>
 
-
-  
     <div class="arrow-wrapper">
       <div href="#" class="arrow arrow-bottom">Scroll Down</div> 
     </div>
   </div>
 </section>
 
-
-
 <section class="landing-text-wrapper">  
-  <div class="landing-text">
-
+  <div class="landing-text row">
+    
+    <div class="col-6 left">
       <h2 class="heading">What...</h2>
       <div class="emoji-wrapper">
         <%= image_tag "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Emoji_u1f34f.svg/2000px-Emoji_u1f34f.svg.png" %>
@@ -44,15 +39,16 @@
         <span class="symbols"> = </span>
         <span class="title-text">FRUITFACE.</span>
       </div>
+      <p class="description">Create a FruitFace using the generator.</p>
+      <p class="description">Personalize it with an assortment of features.</p>
+    </div>
 
-    <h2 class="heading">View the Code and Share it!</h2>
-    <p class="description">Want to know how your FruitFace was made? Checkout the code snippet and learn how you can share your creation. </p>
-
+    <div class="col-6 right">
+      <h2 class="heading">View the Code and Share it!</h2>
+      <p class="description">Want to know how your FruitFace was made? </br>Checkout the code snippet and learn how you can share your creation. </p>
+      <h3 class="heading">Don't forget to visit the <%= link_to "Gallery", fruits_path %>.</h3>
+    </div>
     
-    <h3 class="heading">Don't forget to visit the <%= link_to "Gallery", fruits_path %>.</h3>
-
-    <p class="description">Create a FruitFace using the generator.</p>
-    <p class="description">Personalize it with an assortment of features.</p>
   </div>
 </section>
 

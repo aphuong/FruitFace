@@ -240,23 +240,19 @@ $(document).ready(function(){
   });
 
 
-   
-  //scroll animation, homepage
-  $(".description").hide();
-  $(".heading").hide();
 
-  //scrolling event handler
+  //scroll animation, homepage
   $(document).scroll(function(){
    
     var docScroll = $(document).scrollTop();
-    var textContainer = $(".landing-text").offset().top -400;
+    var textContainer = $(".landing-text-wrapper").offset().top -400;
     
     if(docScroll >= textContainer ) {
-      $(".description").fadeIn(1000);
-      $(".heading").fadeIn(1000);
+      $(".col-6.left").show().addClass("slideLeft");
+      $(".col-6.right").show().addClass("slideRight");
     } else {
-      $(".description").fadeOut(1000);
-      $(".heading").fadeOut(1000);
+      $(".col-6.left").fadeOut(1000);
+      $(".col-6.right").fadeOut(1000);
     }
   });
 

@@ -3,20 +3,18 @@
 }
 
 .index-logo {
+  font-size: 2em;
+  text-align: center;
   width: 100%;
   margin: 0px;
-  text-align: center;
-  font-size: 3em;
 }
-// landing page animation
 
 .stage {
   overflow: hidden;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -175px 0 0 -250px;
-  width: 500px;
+  top: 104px;
+  left: 0px;
+  width: 420px;
   height: 350px;
 }
 
@@ -25,7 +23,7 @@
   height: 82px;
   border-radius: 16px;
   position: absolute;
-  top: 37%;
+  top: 128px;
   background: lightgrey;
 }
 
@@ -48,7 +46,7 @@
   background: red;
   position: absolute;
   top: 58%;
-  left: 19%;
+  left: 90px;
 }
 
 .comp-stand {
@@ -69,8 +67,8 @@
 
 .band {
   position: absolute;
-  width: 80%;
-  height: 15px;
+  width: 82%;
+  height: 16px;
   background: darken(#4b5d6f, 10);
   border-radius: 8px;
   transform: translate(-4px, 210px);
@@ -89,7 +87,7 @@
 .dots {
   width: 78%;
   position: absolute;
-  top: 53.5%;
+  top: 54.5%;
   height: 30px;
   border-bottom: 9px dotted #4b5d6f;
   overflow: hidden;
@@ -127,75 +125,36 @@
       border-radius: 50%;
       background-color: orange;
       transform: translate(90px, 8px);
-      @include animation(moveRight 4s infinite);
+      @include animation(moveRightMobile 4s infinite);
     }
   }
 }
 
-
 .sample-orange {
-  position: relative;
-  left: 290px;
-  top: 30px;
-  // @include animation(tubeDrop 5s infinite);
+  // position: absolute;
+  // top: 184%;
+  // left: -5%
 }
 
 .sample-pear {
-  position: relative;
-  left: 386px;
-  top: 65px;
-}
-
-.sample-slice {
-  @include animation(bounce 3s infinite);
+  display: none;
 }
 
 .sample-grape {
-  top: 60px;
-  left: 240px;
-  position: relative;
+  display: none;
 }
 
 .sample-strawberry {
-  top: -13px;
-  left: -134px;
-  position: relative;
+  display: none;
 }
 
 .sample-slice {
-  top: 208px;
-  left: 340px;
-  position: relative;
+  display: none;
 }
 
 .sample-apple {
-  position: relative;
-  left: -266px;
-  top: 148px;
+  display: none;
 }
-
-// .tube {
-//   position: absolute;
-//   left: 59.8%;
-//   bottom: -54.4%;
-//   border-radius: 5px;
-//   background: #201C1C;
-//   height: 600px;
-//   width: 7.1%; 
-//   z-index: 1;
-// }
-
-// .tube-bottom:after {
-//   position: absolute;
-//   bottom: -54px;
-//   left: -61%;
-//   content: "";
-//   display: block;
-//   transform: rotate(180deg);
-//   border-left: 100px solid transparent;
-//   border-right: 100px solid transparent;
-//   border-top: 100px solid rgba(29, 24, 24, .8);
-// }
 
 .arrow{
   position: relative;
@@ -222,49 +181,32 @@
 
 .arrow-wrapper {
   position: absolute;
-  bottom: 2%;
-  left: 45%;
+  bottom: 80px;
+  left: 36%;
   @include animation(bounce 3s infinite);
 }
 
+.row {
+  width: 100%;
+}
+
+.col-6 {
+  width: 100%;
+  padding: 15px 30px;
+  text-align: center;
+}
+
 .landing-text-wrapper {
-  position: relative;
+  overflow: hidden;
   background: $beige;
-  height: 400px;
-  padding: 3%;
+  height: 600px;
 
-  h2:nth-of-type(1) {
-    position: absolute;
-    left: 5%;
-    top: 10%;
-    @include animation(slideLeft 3s);
-  }
 
-  h2:nth-of-type(2) {
-    position: absolute;
-    right: 15%;
-    top: 10%;
-    width: 30%;
-    @include animation(slideRight2 3s);
-  } 
-
-  p:nth-of-type(1) {
-    position: absolute;
-    right: 12%;
-    top: 35%;
-    width: 30%;
-  }
-  
+  .heading:nth-of-type(2),
   h3 {
-    position: absolute;
-    right: 22%;
-    top: 70%;
-    @include animation(slideRight 3s);
   }
-
 
   p {
-    margin-left: 6%;
     font-family: $font-stack;
     font-weight: lighter;
     font-size: .8em;
@@ -272,14 +214,8 @@
 }
 
 
-
-.emoji-wrapper {
-  margin-left: 5%;
-  margin-top: 10%;
-
-  img {
-    width: 7%;
-  }
+.emoji-wrapper img {
+  width: 12%;
 }
 
 .symbols {
@@ -295,5 +231,277 @@
 
 .fruit-party {
   width: 100%;
+  height: 600px;
   margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: $laptop) {
+  .index-container {
+    height: 630px;
+  }
+
+  .index-logo {
+    font-size: 3em;
+  }
+
+  .stage {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -175px 0 0 -250px;
+    width: 500px;
+    height: 350px;
+  }
+
+  // .computer {
+  //   width: 110px;
+  //   height: 82px;
+  //   border-radius: 16px;
+  //   position: absolute;
+  //   top: 37%;
+  //   background: lightgrey;
+  // }
+
+  // .comp-screen {
+  //   width: 90px;
+  //   height: 64px;
+  //   border-radius: 16px;
+  //   position: absolute;
+  //   top: 39.5%;
+  //   left: 2%;
+  //   z-index: 1;
+  //   background: rgba(0,0,0,.75);
+  // }
+
+
+  // .power {
+  //   width: 5px;
+  //   height: 5px;
+  //   border-radius: 50%;
+  //   background: red;
+  //   position: absolute;
+  //   top: 58%;
+  //   left: 19%;
+  // }
+
+  // .comp-stand {
+  //   background: lightgrey;
+  //   z-index: 1;
+  //   width: 90px;
+  //   height: 87px;
+  //   position: absolute;
+  //   top: 61%;
+  //   left: 2%;
+  // }
+
+  // .fa-code {
+  //   color: #27D020;
+  //   margin-top: 20px;
+  //   @include animation(blinker 1s linear infinite);
+  // }
+
+  // .band {
+  //   position: absolute;
+  //   width: 80%;
+  //   height: 15px;
+  //   background: darken(#4b5d6f, 10);
+  //   border-radius: 8px;
+  //   transform: translate(-4px, 210px);
+  // }
+
+  .band {
+    height: 16px;
+    width: 80%;
+  }
+
+  // .band-stand {
+  //   background: #4b5d6f;
+  //   position: absolute;
+  //   top: 64.5%;
+  //   transform: skew(-15deg);
+  //   width: 76%;
+  //   height: 75px;
+  //   left: -10px;
+  // }
+
+  // .dots {
+  //   width: 78%;
+  //   position: absolute;
+  //   top: 53.5%;
+  //   height: 30px;
+  //   border-bottom: 9px dotted #4b5d6f;
+  //   overflow: hidden;
+  //   @include animation(conveyor-belt 3s infinite);
+  // }
+
+  // .dots {
+  //   top: 53.5%;
+  // }
+
+  // .shadow {
+  //   height: 20px;
+  //   background: rgba(0, 0, 0, 0.5);
+  //   width: 18%;
+  //   border-radius: 100%;
+  //   position: absolute;
+  //   bottom: 14%;
+  //   left: 75%;
+  //   z-index: -1;
+  // }
+
+  .stage {
+    ul {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      width: 420px;
+      height: 140px;
+      overflow: hidden;
+      transform: translate(60px, 160px);
+    
+
+      li {
+        overflow: hidden;
+        z-index: 1;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: orange;
+        transform: translate(90px, 8px);
+        @include animation(moveRight 4s infinite);
+      }
+    }
+  }
+
+
+  .sample-orange {
+    display: inline-block;
+    position: absolute;
+    left: 309px;
+    top: -10px;
+  }
+
+  .sample-pear {
+    display: inline-block;
+    position: absolute;
+    right: 337px;
+    top: 274px;
+  }
+
+  .sample-grape {
+    display: inline-block;
+    top: 2px;
+    right: 300px;
+    position: absolute;
+  }
+
+  .sample-strawberry {
+    display: inline-block;
+    top: 100px;
+    right: 99px;
+    position: absolute;
+  }
+
+  .sample-slice {
+    display: inline-block;
+    top: 130px; 
+    left: 126px;
+    position: absolute;
+    @include animation(bounce 3s infinite);
+  }
+
+  .sample-apple {
+    display: inline-block;
+    position: absolute;
+    left: 315px;
+    top: 258px;
+  }
+
+  .arrow{
+    position: relative;
+    width: 120px;
+    background: $beige;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 30px; 
+    text-align: center;
+    color: $highlight;
+  }
+
+  .arrow-bottom:after{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+    content: "";
+    display: block;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $beige; 
+  }
+
+  .arrow-wrapper {
+    position: absolute;
+    bottom: 2%;
+    left: 45%;
+    @include animation(bounce 3s infinite);
+  }
+
+  .col-6 {
+    width: 49%;
+    display: inline-block;
+    padding: 5%;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .landing-text-wrapper {
+    background: $beige;
+    height: 450px;
+
+    p {
+      margin-left: 10px;
+      font-family: $font-stack;
+      font-weight: lighter;
+      font-size: .8em;
+    }
+  }
+
+  .slideRight {
+    @include animation(slideRight 3s);
+  }
+
+  .slideLeft {
+    @include animation(slideLeft 3s);
+  }
+
+  .emoji-wrapper img {
+    width: 60px;
+  }
+  
+
+  .symbols {
+    vertical-align: 12px;
+  }
+
+  .title-text {
+    vertical-align: 24px;
+    font-size: 2em;
+  }
+
+  .fruit-party {
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+  }
+
 }

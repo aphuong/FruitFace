@@ -29,7 +29,7 @@
   width: 200px;
   padding: 10px;
   position: relative;
-  bottom: 300px;
+  bottom: 60px;
   margin: 0 auto;
   letter-spacing: 3px;
 
@@ -127,5 +127,9 @@
   .gallery-btn {
     width: 20%;
     margin: 0 auto;
+  }
+
+  .build-btn {
+    bottom: -200px;
   }
 }

@@ -31,12 +31,6 @@
   60% {@include transform(translateY(-15px));}
 }
 
-@include keyframes(tubeDrop) {
-  0% {@include transform(translateY(-100px));}
-  40% {@include transform(translateY(50px));}
-  100% {@include transform(translateY(80px));}
-}
-
 @include keyframes(blink) {
   0%, 1%, 2%, 60%, 61%, 62%, 100% {@include transform(scaleX(1) scaleY(1));}
   1% { @include transform(scaleX(1.3) scaleY(0.1));}
@@ -76,6 +70,14 @@
   100% {transform: translate(340px, 110px);}
 }
 
+@include keyframes(moveRightMobile) {
+  0%   {transform: translate(0px, 8px);}
+  50%  {transform: translate(0px, 8px);}
+  80%  {transform: translate(200px, 8px);}
+  90%  {transform: translate(250px, 12px);}
+  100% {transform: translate(285px, 110px);}
+}
+
 @include keyframes(conveyor-belt) {
   0%   {transform: translate(0px, 0px);}
   50%  {transform: translate(0px, 0px);}
@@ -108,19 +110,19 @@
 }
 
 @include keyframes(slideRight) {
-  0% { right: -20%; }
-  50% { right: 27%; }
-  100% { right: 22%; }
-}
-
-@include keyframes(slideRight2) {
-  0% { right: -20%; }
-  50% { right: 20%; }
-  100% { right: 15%; }
+  0% {transform: translate(200px, 0px);}
+  50% {transform: translate(-50px, 0px);}
+  100% {transform: translate(0px, 0px);}
 }
 
 @include keyframes(slideLeft) {
-  0% { left: -20%; }
-  50% { left: 10%; }
-  100% { left: 5%; }
+  0% {transform: translate(-200px, 0px);}
+  50% {transform: translate(50px, 0px);}
+  100% {transform: translate(0px, 0px);}
 }
+
+// @include keyframes(slideLeft) {
+//   0% { left: -20%; }
+//   50% { left: 10%; }
+//   100% { left: 5%; }
+// }
