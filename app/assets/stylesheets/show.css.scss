@@ -2,7 +2,6 @@
 .show-fruit {
   display: block;
   margin: 0 auto;
-  // padding-top: 10%;
 }
 
 .code-wrapper {
@@ -38,9 +37,18 @@
 }
 
 
-.show-title, .show-subtitle {
+.show-title {
   text-align: center;
   margin: 0px;
+  color: $beige;
+  text-shadow: 1px 1px 2px #111;
+  letter-spacing: 1px;
+}
+
+.show-subtitle {
+  text-align: center;
+  margin: 0px;
+  color: #444;
 }
 
 

@@ -11,10 +11,10 @@
       $.getJSON("/fruits/" + id, function(data) {
 
         display_time = "<%= time_ago_in_words(fruit.created_at.to_time) %>"
-
-        svg = d3.select(".container").append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
-          svg.append("text").text(data.fruit.name + ", " + display_time + " ago").attr("x", 90).attr("y", 250).attr("class", "names");
-
+        wrapper = d3.select(".container").append("div").attr("class", "svg-wrapper")
+        svg = wrapper.append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
+        
+        $(wrapper[0]).append("<p>" + data.fruit.name + ", " + display_time + " ago" + "</p>").wrap("<a href=" + "/fruits/" + data.fruit.id + "/>");
 
         $.each(data.parts, function(key, value) {
           this_fruit_part = value["identifier"];
@@ -26,9 +26,6 @@
         <% if fruit.color %>
           $(".fruit-<%= fruit.id %> .color-change").css("fill", "<%= fruit.color %>"); 
         <% end %>
-
-        // append svg to a tag
-        // $("svg").setAttribute("href", "wwww.google.com");
 
       });   
 

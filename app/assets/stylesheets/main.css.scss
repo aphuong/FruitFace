@@ -1,13 +1,36 @@
+* {box-sizing: border-box;}
+
 body {
   color: #444;
-  // background:#4eb889;
   font-family: $font-fancy;
-  font-size: 1.5em;
+  font-size: 1.5em; 
+  background-image: -ms-radial-gradient(center bottom, circle farthest-corner, $beige 0%, #5BA7B6 100%);
+  background-image: -moz-radial-gradient(center bottom, circle farthest-corner, $beige 0%, #5BA7B6 100%);
+  background-image: -o-radial-gradient(center bottom, circle farthest-corner, $beige 0%, #5BA7B6 100%);
+  background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, $beige), color-stop(1, #5BA7B6));
+  background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, $beige 0%, #5BA7B6 100%);
+  background-image: radial-gradient(circle farthest-corner at center bottom, $beige 0%, #5BA7B6 100%);
+  min-height:100%;
+
+  &.gallery {
+    background: $beige;
+  }
 }
+
+
 
 a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: $lightgrey;
+
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.container {
+  width: 100%;
+  text-align: center;
 }
 
 .shim {
@@ -21,15 +44,11 @@ a {
   background: rgba(12, 13, 13, 0.67);
 }
 
-html { 
-  background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -o-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 561, color-stop(0, #E6F1D2), color-stop(1, #2B8B9D));
-  background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #E6F1D2 0%, #2B8B9D 100%);
-  background-image: radial-gradient(circle farthest-corner at center bottom, #E6F1D2 0%, #2B8B9D 100%);
-  min-height:100%;
+.flex-direction-nav a {
+  z-index: 1;
 }
+
+
 
 // fruits new
 .logo {
@@ -38,7 +57,7 @@ html {
   padding-top: 1%;
   width: 55%;
   display: inline-block;
-  margin: 0;
+  margin-right: 13%;
   color: #FFFFFF;
   text-decoration: none;
   font-size: 2em;
@@ -87,6 +106,7 @@ html {
   position: relative;
   margin-bottom: 2%;
   background: rgba(230, 241, 210, 0.4);
+  box-shadow: 4px 4px 4px rgba(63, 59, 59, 0.27);
 }
 
 .header-container {
@@ -123,6 +143,7 @@ html {
 }
 
 .color-picker {
+  display: none;
   bottom: 20px;
   right: 20px;
   position: absolute;
@@ -142,11 +163,29 @@ html {
 }
 
 .gallery-logo {
-  text-shadow: 1px 1px 2px #111;
+  text-shadow: 1px 1px 2px #fff;
   text-align: center;
   width: 100%;
-  color: #FFFFFF;
+  color: #444;
+  letter-spacing: 1px;
+  font-size: 2em;
+  font-weight: bolder;
 }
+
+.svg-wrapper {
+ p {
+    margin-top: -65px;
+    color: $lightgrey;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+
 
 // home index
 .sample {
@@ -162,12 +201,8 @@ html {
  
   .fruit-gallery {
     display: inline-block;
-    // margin: 3px 5px;
   }
 
-  .gallery-logo {
-    display: none;
-  }
 
   .sample {
     display: inline-block;
@@ -180,7 +215,12 @@ html {
     border-radius: 4px;
     margin-bottom: 2%;
     background: rgba(230, 241, 210, 0.4);
+    box-shadow: 7px 7px 5px rgba(63, 59, 59, 0.27);
     display: inline-block;
+  }
+
+  .shim {
+    z-index: 2;
   }
 
   .flexslider-wrapper {
@@ -195,7 +235,7 @@ html {
 
   .help-content, .save-content {
     width: 45%;
-    z-index: 1;
+    z-index: 2;
     display: none;
     margin: 0 auto;
     position: absolute;
@@ -219,11 +259,28 @@ html {
 
   .logo {
     width: 25%;
+    margin-right: 20%;
   }
+
+  .svg-wrapper {
+    height: 300px;
+    display: inline-block;
+
+    p {
+      margin: -65px;
+      color: $lightgrey;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px #fff;
+
+      &:hover {
+        color: $highlight;
+      }
+    }
+
+  
+  }
+
 }
-
-
-
-
 
 

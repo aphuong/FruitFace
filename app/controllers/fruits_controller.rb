@@ -1,6 +1,8 @@
 class FruitsController < ApplicationController
 
   def index
+    @gallery = true
+
     @fruits = Fruit.all
 
     respond_to do |format|

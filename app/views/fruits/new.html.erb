@@ -3,7 +3,6 @@
   <div class="header-container">
     <button type="button" class="help-btn">HELP</button>
     <%= link_to "FruitFace", root_path, class: "logo" %>
-    <button type="button" class="finish-btn">FINISHED</button>
     
     <section>
       <div class="shim"></div>
@@ -15,7 +14,6 @@
   <div class="preview-wrapper">
     <input type="color" class="color-picker" id="colorinput" value="#2B8B9D">
     <p class="color-picker-info">Select a color!</p>
-    <button type="button" class="reset-btn">RESET</button>
     <svg class="preview"></svg>
   </div>
 
@@ -120,13 +118,15 @@
     </div>
   </div>
   
+
+
   <div class="instructions">
-    <p>You can customize fruit-type, color, and more!</p>
+    <p>Customize fruit-type, color, and more!</p>
     <p>Click on the tabs above to explore the options.</p>
     <p>See what others have created:</p>
-    <%= link_to "View Gallery", "/fruits" %>
+    <div class="gallery-btn"><%= link_to "View Gallery", "/fruits" %></div>
   </div>
-
+  
 
 
 </div>
