@@ -17,8 +17,6 @@ body {
   }
 }
 
-
-
 a {
   text-decoration: none;
   color: $lightgrey;
@@ -47,7 +45,6 @@ a {
 .flex-direction-nav a {
   z-index: 1;
 }
-
 
 
 // fruits new
@@ -140,6 +137,10 @@ a {
   padding: 2%;
   border-radius: 4px;
   background: #ffffff;
+  font-family: $font-stack;
+  font-weight: lighter;
+  font-size: .7em;
+  text-align: left;
 }
 
 .color-picker {
@@ -242,11 +243,7 @@ a {
     left: 0;
     top: 12%;
     padding: 2%;
-    border-radius: 4px;
-    background: #ffffff;
-    font-family: $font-stack;
-    font-weight: lighter;
-    font-size: .7em;
+  
 
     ol {
       text-align: left;
