@@ -14,9 +14,6 @@
         wrapper = d3.select(".container").append("div").attr("class", "svg-wrapper")
         svg = wrapper.append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
         
-        // var colors = ["#CEE1D8", "#F6EEE0", "#FFFDA4", "#ACDFDC", "#BFDFB0", "#DFA88C", "#DADF8C", "#CAC9DA", "#DAB9C1", "#9CDAD8"];        
-        // var rand = colors[Math.floor(Math.random()*colors.length)];           
-
         $(wrapper[0]).append("<p>" + data.fruit.name + ", " + display_time + " ago" + "</p>").wrap("<a href=" + "/fruits/" + data.fruit.id + "/>");
 
         $.each(data.parts, function(key, value) {

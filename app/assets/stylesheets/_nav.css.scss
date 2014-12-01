@@ -19,6 +19,7 @@
 
     a {
       color: $lightgrey;
+      text-shadow: 1px 1px 2px #fff;
       font-family: $font-stack;
     }
   }
@@ -68,6 +69,7 @@ footer {
   display: none;
   z-index: 2;
   color: $lightgrey;
+  text-shadow: 1px 1px 2px #fff;
   font-family: $font-stack;
   font-size: .7em;
   left: 0;
@@ -118,10 +120,9 @@ footer {
 
       a {
         font-family: $font-fancy;
-        color: $lightgrey;
+        // color: $lightgrey;
         font-size: 1.5em;
         font-weight: bolder;
-        // margin-left: 1%;
       }
     }
 

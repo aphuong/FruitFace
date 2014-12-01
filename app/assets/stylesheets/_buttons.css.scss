@@ -5,12 +5,13 @@
 .gallery-btn,
 .build-btn {
   text-shadow: 1px 1px 2px #111;
-  background: #004050;
+  background: $button;
   border-radius: 4px;
   padding: 10px;
   margin-right: 4px;
-  border:1px solid darken(#004050, 10%);
-  box-shadow: 0 3px 0 0 darken(#004050, 5%), 0px 1px 0px darken(#004050, 10%);
+  border:1px solid darken($button, 10%);
+  color: $beige;
+  box-shadow: 0 3px 0 0 darken($button, 5%), 0px 1px 0px darken($button, 10%);
   
   a {
     color: $beige;
@@ -53,8 +54,8 @@
   padding: 3% 11%;
   font-weight: bolder;
   letter-spacing: 3px;
-  border: 1px solid darken(#004050, 10%);
-  box-shadow: 0 3px 0 0 darken(#004050, 5%), 0px 1px 0px darken(#004050, 10%);
+  border: 1px solid darken($button, 10%);
+  box-shadow: 0 3px 0 0 darken($button, 5%), 0px 1px 0px darken($button, 10%);
 
   &:hover {
     background: $highlight;
@@ -66,7 +67,7 @@
 .done-btn {
   text-shadow: 1px 1px 2px #111;
   display: none;
-  background: #004050;
+  background: $button;
   color: #ffffff;
   border-radius: 4px;
   border: none;
@@ -74,8 +75,8 @@
   left: 22px;
   top: 12px;
   z-index: 1;
-  border:1px solid darken(#004050, 10%);
-  box-shadow: 0 3px 0 0 darken(#004050, 5%), 0px 1px 0px darken(#004050, 10%);
+  border:1px solid darken($button, 10%);
+  box-shadow: 0 3px 0 0 darken($button, 5%), 0px 1px 0px darken($button, 10%);
 
   &:hover {
     background: $highlight;
@@ -90,8 +91,10 @@
   border: none;
   border-radius: 4px;
   color: #FFFFFF;
-  background-color: #004050;
+  background-color: $button;
   padding: 10px;
+  border:1px solid darken($button, 10%);
+  box-shadow: 0 3px 0 0 darken($button, 5%), 0px 1px 0px darken($button, 10%);
 }
       
 #my-button_pre.zeroclipboard-is-hover { 

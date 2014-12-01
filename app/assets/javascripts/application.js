@@ -242,24 +242,21 @@ $(document).ready(function(){
 
    
   //scroll animation, homepage
-  $("p").hide();
-  $("h2").hide();
-  $("h3").hide();
+  $(".description").hide();
+  $(".heading").hide();
 
-  //init scrolling event heandler
+  //scrolling event handler
   $(document).scroll(function(){
    
     var docScroll = $(document).scrollTop();
     var textContainer = $(".landing-text").offset().top -400;
     
     if(docScroll >= textContainer ) {
-      $("p").fadeIn(1000);
-      $("h2").fadeIn(1000);
-      $("h3").fadeIn(1000);
+      $(".description").fadeIn(1000);
+      $(".heading").fadeIn(1000);
     } else {
-      $("p").fadeOut(1000);
-      $("h2").fadeOut(1000);
-      $("h3").fadeOut(1000);
+      $(".description").fadeOut(1000);
+      $(".heading").fadeOut(1000);
     }
   });
 

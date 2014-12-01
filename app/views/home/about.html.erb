@@ -1,1 +1,46 @@
-<p>ABOUT this site</p>
+<div class="about-container">
+
+  <h2 class="about-header"><span>FruitFace</span> &amp; the Three E's</h2>
+  <div class="row">
+    <div class="col-4">
+      <h2>Entertainment</h2>
+      <div><i class="fa fa-smile-o"></i></div>
+      <p>This site is intended for all ages. Come on, I'm sure you have a few minutes during the day to have some fun!</p>
+    </div>
+    <div class="col-4">
+      <h2>Education</h2>
+      <div><i class="fa fa-file-code-o"></i></div>
+      <p>The second component of this site is it's educational purpose. Learning to code gave me the ability to turn silly ideas into a functional website. For any non-developers, I hope the code snippet will encourage you to explore programming!</p>
+    </div>
+    <div class="col-4">
+      <h2>Edible</h2>
+      <div><i class="fa fa-leaf"></i></div>
+      <p>Perhaps FruitFace will make its way through a <%= link_to "Foodini", "http://www.cnn.com/2014/11/06/tech/innovation/foodini-machine-print-food/" %> one day. In the meantime, hopefully some time spent here will remind you to consume your fruits!</p>
+    </div>  
+  </div>
+
+  <div class="tech-wrapper">
+    <p>This App was made possible by the following technologies:</p>
+
+    <ul>
+      <li>JavaScript/jQuery</li>
+      <li>Ruby on Rails</li>
+      <li>Bourbon (Mixin Library for Sass)</li>
+      <li><%= link_to "Prism.js (Syntax highlighter)", "http://prismjs.com/" %></li>
+      <li><%= link_to "Zeroclipboard (Provided ability to copy code to clipboard)", "http://zeroclipboard.org/" %></li>
+      <li><%= link_to "D3.js (Mainly used to append SVG elements to the DOM)", "http://d3js.org/" %></li>
+      <li>Adobe Illustrator (All fruits and parts were drawn in illustrator, files were saved as SVG, optimized for HTML)</li>
+    </ul>
+
+    <%= link_to "https://github.com/aphuong" do %>
+      <span>Visit the project on <i class="fa fa-github-alt"></i> | </span>
+    <% end %>
+    
+    <%= link_to "https://twitter.com/aphu420" do %>
+      <span>Would love to hear what you think, connect with me! <i class="fa fa-twitter"></i></span>
+    <% end %>
+    
+  </div>
+</div>
+
+

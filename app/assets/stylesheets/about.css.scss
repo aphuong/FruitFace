@@ -1,0 +1,58 @@
+.about-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+  // background: $beige;
+}
+
+.row {
+  width: 100%;
+}
+
+.col-4 {
+  width: 33.1%;
+  height: 400px;
+  padding: 5%;
+  display: inline-block;
+  vertical-align: top;
+  font-family: $font-stack;
+  font-weight: lighter;
+  font-size: .7em;
+  text-align: center;
+  // background: rgba(230, 241, 210, 0.4);
+  background: $beige;
+  box-shadow: 7px 7px 5px rgba(63, 59, 59, 0.27);
+
+
+  .fa {
+    font-size: 2em;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+.about-header {
+  font-family: $font-stack;
+  color: #fff;
+  text-shadow: 1px 1px 2px #111;  
+  font-size: 1em;
+  text-align: center;
+
+  span {
+    font-family: $font-fancy;
+    font-size: 2em;
+  }
+}
+
+.tech-wrapper {
+  padding: 20px;
+  margin-top: 20px;
+  font-family: $font-stack;
+  font-weight: lighter;
+  font-size: .7em;
+  background: $beige;
+  box-shadow: 7px 7px 5px rgba(63, 59, 59, 0.27);
+  margin-bottom: 30px;
+}
