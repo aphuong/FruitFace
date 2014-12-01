@@ -163,7 +163,7 @@ $(document).ready(function(){
 
     if (fruit_name.length == 0) {
       $(".save-content").append("<p class='validation-alert'>Please give your FruitFace a name.</p>");
-    } else if (fruit_name.length > 25) {
+    } else if (fruit_name.length > 15) {
       $(".save-content").append("<p class='validation-alert'>Sorry that name is too long, try again.</p>");
     } else {
       var fruit_params = {"name": fruit_name, "color": fruit_color};

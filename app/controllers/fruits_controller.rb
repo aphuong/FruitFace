@@ -1,5 +1,7 @@
 class FruitsController < ApplicationController
 
+  require 'obscenity/active_model'
+
   def index
     @gallery = true
 
@@ -30,15 +32,20 @@ class FruitsController < ApplicationController
 
   def create
     @fruit = Fruit.new(fruit_params)
-    parts_params.each do |k, v|
-      @fruit.parts << Part.create(identifier: v["identifier"])
-    end
 
-    if @fruit.save
-      respond_to do |format|
-        format.json{
-          render json: @fruit
-        }
+    # check fruit name for profanity
+    if @fruit.valid? 
+
+      parts_params.each do |k, v|
+        @fruit.parts << Part.create(identifier: v["identifier"])
+      end
+
+      if @fruit.save
+        respond_to do |format|
+          format.json{
+            render json: @fruit
+          }
+        end
       end
     end
   end

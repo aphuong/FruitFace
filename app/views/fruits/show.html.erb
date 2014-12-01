@@ -38,17 +38,16 @@
 </div> -->
 
 
-
-
-
 <script>
   var id = <%= @fruit.id %>
   console.log(id)
 
   $.getJSON("/fruits/" + id, function(data) {
 
-    group = d3.select(".fruit-view").append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>");
-      group.append("text").text("<%= @fruit.name %>").attr("x", 130).attr("y", 250).attr("class", "name-text");
+    wrapper = d3.select(".fruit-view").append("div").attr("class", "show-svg")
+    wrapper.append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>");
+        
+    $(".show-svg").append("<p class='name-text'> <%= @fruit.name %> </p>");
 
     $.each(data.parts, function(key, value) {
       this_fruit_part = value["identifier"];

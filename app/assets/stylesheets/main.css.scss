@@ -128,6 +128,7 @@ a {
 
 .help-content, .save-content {
   width: 85%;
+  text-align: center;
   z-index: 1;
   display: none;
   margin: 0 auto;
@@ -140,6 +141,9 @@ a {
   font-family: $font-stack;
   font-weight: lighter;
   font-size: .7em;
+}
+
+.help-content {
   text-align: left;
 }
 
@@ -243,6 +247,7 @@ a {
     left: 0;
     top: 12%;
     padding: 2%;
+    text-align: center;
   
 
     ol {

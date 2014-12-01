@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 gem 'bourbon'
 gem 'pry-rails'
 gem 'zeroclipboard-rails'
-
+gem 'obscenity'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
