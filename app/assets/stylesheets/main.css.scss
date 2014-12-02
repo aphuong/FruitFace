@@ -12,7 +12,8 @@ body {
   background-image: radial-gradient(circle farthest-corner at center bottom, $beige 0%, #5BA7B6 100%);
   min-height:100%;
 
-  &.gallery {
+  &.gallery,
+  &.about {
     background: $beige;
   }
 }

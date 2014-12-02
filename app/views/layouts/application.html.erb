@@ -16,7 +16,14 @@
     <body>
   <% end %>
 
+  <% if @about == true %>
+    <body class="about">
+  <% else %>
+    <body>
+  <% end %>
+
   <%= render partial: 'layouts/shared/nav' %>
+  <script src="http://platform.tumblr.com/v1/share.js"></script>
   
   <%= yield %>
 </body>
