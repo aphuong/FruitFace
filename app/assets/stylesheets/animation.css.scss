@@ -75,7 +75,7 @@
   @include animation(bounce 2s infinite);
 }
 
-.fruit-gallery:nth-of-type(1) {
+.fruit-gallery:nth-of-type(odd) {
   @include animation(bounce 2s infinite);
 }
 
@@ -84,11 +84,17 @@
 }
  
 
-// .sample-pear {
-//   stroke-dasharray: 1000;
-//   stroke-dashoffset: 1000;
-//   @include animation(dash 3s linear alternate infinite);
-// }
+.preview .body-round,
+.preview .body-slice,
+.preview .body-apple,
+.preview .body-strawberry,
+.preview .body-grape,
+.preview .body-pear, 
+.preview .body-oval {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  @include animation(dash 4s linear alternate);
+}
 
 
 
