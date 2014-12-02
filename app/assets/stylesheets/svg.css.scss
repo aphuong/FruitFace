@@ -134,7 +134,7 @@ svg {
 
 // Blush
 .blush {
-  fill: #EAACCE;
+  fill: rgba(203, 121, 163, 0.52);
 }
 
 //Hair-Leaf
@@ -188,6 +188,25 @@ svg {
 //Mouth-Open
 .mouth-open {
   fill: #FFFFFF;
+}
+
+// MouthTeeth
+.mouth-teeth {
+  stroke: #000000;
+  stroke-width: 0.5;
+  stroke-miterlimit:  10;
+  fill:  none;
+}
+
+.mouth-teeth1 {
+  stroke: #000000;
+  stroke-miterlimit:  10;
+  fill:  #FFFFFF;
+}
+
+.mouth-teeth2 {
+  stroke: #000000;
+  stroke-miterlimit:  10;
 }
 
 // glasses

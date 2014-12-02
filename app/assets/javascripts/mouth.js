@@ -37,3 +37,43 @@ window.mouthOpen = function(container){
     .attr("d", "M159.5 167.9c-3.2-4.3-4-4.9-10.2-4.9s-5.8 0-9.7 4.1c0 0 2.7 2.4 4.3 3c1.6 0.6 4.5 1.3 5.9 1.3 c1.3 0 4.5-0.5 6-1.1C157.2 169.7 159.5 167.9 159.5 167.9z")
     .attr("class", "mouth-open");
 };
+
+window.mouthTeeth = function(container){
+  group = d3.select(container).append("g").attr("data-part", "mouth").attr("data-name", "mouthTeeth");
+
+  group.append("path")
+    .attr("d", "M132.167 158.2")
+    .attr("class", "mouth-teeth");
+  group.append("path")
+    .attr("d", "M168.417 158.2")
+    .attr("class", "mouth-teeth");
+  group.append("path")
+    .attr("d", "M173.001 162.8")
+    .attr("class", "mouth-teeth1");
+  group.append("path")
+    .attr("d", "M134.667 154.5")
+    .attr("class", "mouth-teeth2");
+  group.append("ellipse")
+    .attr("cx", 151.7)
+    .attr("cy", 161.3)
+    .attr("rx", 19.2)
+    .attr("ry", 4.5)
+    .attr("class", "mouth-teeth2");
+  group.append("rect")
+    .attr("x", 145)
+    .attr("y", 157.1)
+    .attr("width", 5.3)
+    .attr("height", 5.3)
+    .attr("class", "mouth-teeth1");
+  group.append("rect")
+    .attr("x", 150.2)
+    .attr("y", 157.1)
+    .attr("width", 5.3)
+    .attr("height", 5.3)
+    .attr("class", "mouth-teeth1");
+};
+
+
+
+
+

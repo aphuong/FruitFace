@@ -22,35 +22,36 @@ $(document).ready(function(){
   hairDoubleLeaf(pear_container);
   eyesOpen(pear_container);
   freckles(pear_container);
-  mouthOpen(pear_container);
+  mouthTeeth(pear_container);
 
   strawberry_container = ".sample-strawberry"
   bodyStrawberry(strawberry_container);
   hairShaggy(strawberry_container);
   eyesOpen(strawberry_container);
   freckles(strawberry_container);
-  mouthSad(strawberry_container);
+  mouthOpen(strawberry_container);
+  roundGlasses(strawberry_container);
 
   grape_container = ".sample-grape"
   bodyGrape(grape_container);
   blush(grape_container);
   hairDoubleLeaf(grape_container);
   eyesClosed(grape_container);
-  roundGlasses(grape_container);
+  // roundGlasses(grape_container);
   mouthSad(grape_container);
 
   slice_container = ".sample-slice"
-  bodyPear(slice_container);
-  hairDoubleLeaf(slice_container);
-  eyesClosed(slice_container);
-  roundGlasses(slice_container);
-  mustache(slice_container);
+  bodySlice(slice_container);
+  hairPineapple(slice_container);
+  eyesBlack(slice_container);
+  // blush(slice_container);
+  mouthTeeth(slice_container);
 
   apple_container = ".sample-apple"
-  bodyStrawberry(apple_container);
+  bodyApple(apple_container);
   hairDoubleLeaf(apple_container);
-  eyesClosed(apple_container);
-  roundGlasses(apple_container);
+  eyesSurprise(apple_container);
+  // roundGlasses(apple_container);
   mustache(apple_container);
 
   // Function to append parts to svg
@@ -64,7 +65,7 @@ $(document).ready(function(){
   $(".parts").click(function(){
 
     part_name = $(this).children('g').data('part');
-    
+
     // Remove all similar parts from preview
     similar_parts = $(".preview [data-part=" + part_name + "]");
     similar_parts.remove();
@@ -82,7 +83,7 @@ $(document).ready(function(){
         });
 
         $('#colorinput').on('input', function() {
-          $('.preview .color-change').css('fill', $(this).val()); 
+          $('.preview .color-change').css('fill', $(this).val());
         });
       } else {
         console.log("not body");
@@ -92,13 +93,13 @@ $(document).ready(function(){
     // function to hide and show instructions/finish button
     if ($(".preview").contents().length != 0) {
       $(".instructions").html("<button type='button' class='finish-btn'>FINISHED</button>" + "<button type='button' class='reset-btn'>RESET</button>");
-     
+
       // show save content
       $(".finish-btn").click(function(){
         $(".shim").show();
         $(".save-content").show();
       });
-      
+
       // reset preview
       $(".reset-btn").click(function(e){
         $(".preview").empty();
@@ -127,9 +128,9 @@ $(document).ready(function(){
       return params;
     }
     var parts_params = toObject(saved_parts);
-    
+
     // Save fruit_params and parts_params as params
-    params = { 
+    params = {
       fruit_and_parts: {
         fruit: fruit_params,
         parts: parts_params
@@ -139,7 +140,7 @@ $(document).ready(function(){
     // send params to rails using jquery ajax request
     $.post( "/create", params, function(data) {
       $(".save-content").html("<h3>" + "SAVE WAS SUCCESFUL!" + "</h3>" + "<button type='button' class='code-redirect-btn'>" + "See the Code" + "</button>" + "<button type='button' class='gallery-redirect-btn'>" + "View in Gallery" + "</button>");
-    
+
       $(".gallery-redirect-btn").click(function(){
         location = "/fruits";
       });
@@ -158,7 +159,7 @@ $(document).ready(function(){
 
     // get color of fruit
     var fruit_color = $(".preview .color-change").css("fill");
-    
+
     // get name of fruit
     var fruit_name = $("#fruit_name").val();
 
@@ -172,8 +173,8 @@ $(document).ready(function(){
       post_create_fruit(fruit_params);
     }
   });
-  
- 
+
+
   // display flexslider
   $(".open-parts-slider").click(function(){
     flex_class = $(this).data("flexslider-class")
@@ -210,7 +211,7 @@ $(document).ready(function(){
 // nav display
   var closeShim = function(){
     $(".menu-shim").hide();
-    $(".close-menu").hide(); 
+    $(".close-menu").hide();
     $("#menu-list a").hide();
     $(".menu-logo").hide();
     $("footer").hide();
@@ -242,24 +243,26 @@ $(document).ready(function(){
 
 
 
-  //scroll animation, homepage
-  $(document).scroll(function(){
-   
-    var docScroll = $(document).scrollTop();
-    var textContainer = $(".landing-text-wrapper").offset().top -400;
-    
-    if(docScroll >= textContainer ) {
-      $(".col-6.left").show().addClass("slideLeft");
-      $(".col-6.right").show().addClass("slideRight");
-    } else {
-      $(".col-6.left").fadeOut(1000);
-      $(".col-6.right").fadeOut(1000);
-    }
-  });
+  if ($(".landing-text-wrapper").length > 0) {
 
+    //scroll animation, homepage
+    $(document).scroll(function(){
+
+      var docScroll = $(document).scrollTop();
+      var textContainer = $(".landing-text-wrapper").offset().top -400;
+
+      if(docScroll >= textContainer ) {
+        $(".col-6.left").show().addClass("slideLeft");
+        $(".col-6.right").show().addClass("slideRight");
+      } else {
+        $(".col-6.left").fadeOut(1000);
+        $(".col-6.right").fadeOut(1000);
+      }
+    });
+  }
 });
-  
-  
+
+
 
 
 
