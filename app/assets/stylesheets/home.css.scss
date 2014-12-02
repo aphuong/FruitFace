@@ -239,9 +239,6 @@
 
 
 
-
-
-
 @media screen and (min-width: $laptop) {
   .index-container {
     height: 630px;
@@ -406,7 +403,7 @@
   }
 
   .title-text {
-    vertical-align: 24px;
+    vertical-align: 8px;
     font-size: 2em;
   }
 
@@ -414,6 +411,51 @@
     width: 100%;
     position: relative;
     margin-top: 100px;
+  }
+
+  .fruit-shadow {
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 105px;
+    border-radius: 100%;
+    transition: .3s;
+    position: absolute;  
+  }
+
+  .fruit-shadow.orange {
+    top: 153px;
+    left: 400px;
+  }
+
+
+  .fruit-shadow.orange {
+    top: 153px;
+    left: 400px;
+  }
+
+  .fruit-shadow.pear {
+    bottom: 64px;
+    right: 433px;
+  }
+
+  .fruit-shadow.grape {
+    top: 178px;
+    right: 397px;
+  }
+
+  .fruit-shadow.slice {
+    top: 394px;
+    left: 161px;
+  }
+
+  .fruit-shadow.strawberry {
+    bottom: 213px;
+    right: 242px;
+  }
+
+  .fruit-shadow.apple {
+    bottom: 95px;
+    left: 416px;
   }
 
 }

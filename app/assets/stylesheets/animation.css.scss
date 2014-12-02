@@ -74,6 +74,10 @@
 .preview {
   @include animation(bounce 2s infinite);
 }
+
+.fruit-gallery:nth-of-type(1) {
+  @include animation(bounce 2s infinite);
+}
  
 
 // .sample-pear {

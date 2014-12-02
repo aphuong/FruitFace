@@ -15,7 +15,7 @@
         wrapper = d3.select(".container").append("div").attr("class", "svg-wrapper")
         svg = wrapper.append("svg").attr("width", 300).attr("height", 300).attr("class", "fruit-<%= fruit.id %> fruit-gallery");
         
-        $(wrapper[0]).append("<p>" + data.fruit.name + ", " + display_time + " ago" + "</p>").wrap("<a href=" + "/fruits/" + data.fruit.id + "/>");
+        $(wrapper[0]).append("<p>" + data.fruit.name + ", " + display_time + " ago" + "</p>").wrap("<a href=" + "/fruits/" + data.fruit.id + "/>").append("<div class='svg-shadow'></div>");
 
         $.each(data.parts, function(key, value) {
           this_fruit_part = value["identifier"];

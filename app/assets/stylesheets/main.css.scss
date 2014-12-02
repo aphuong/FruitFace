@@ -202,7 +202,6 @@ a {
 
 
 
-
 @media screen and (min-width: $laptop) {
  
   .fruit-gallery {
@@ -280,8 +279,15 @@ a {
         color: $highlight;
       }
     }
+  }
 
-  
+  .svg-shadow {
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 105px;
+    border-radius: 100%;
+    transition: .3s; 
+    margin-left: 100px;
   }
 
 }
