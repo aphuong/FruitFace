@@ -5,6 +5,11 @@
 
 <div class="fruit-view"></div>
 
+<div class="tweet-this">
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://enigmatic-thicket-6634.herokuapp.com/" data-text="I made a FruitFace!" data-via="aphu420" data-count="none" data-hashtags="fruitface">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
 <div class="code-wrapper page">
   <p class="code-title">View code snippet</p>
 
@@ -48,7 +53,7 @@
     wrapper.append("svg").attr("width", 300).attr("height", 300).attr("class", "show-fruit fruit-<%= @fruit.id %>");
         
     $(".show-svg").append("<p class='name-text'> <%= @fruit.name %> </p>");
-
+    
     $.each(data.parts, function(key, value) {
       this_fruit_part = value["identifier"];
 
