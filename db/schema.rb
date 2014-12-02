@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141124030535) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "fruit_parts", force: true do |t|
     t.integer  "fruit_id"
     t.integer  "part_id"
