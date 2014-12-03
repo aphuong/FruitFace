@@ -116,6 +116,8 @@
     height: 140px;
     overflow: hidden;
     transform: translate(60px, 160px);
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
   
 
     li {
@@ -129,7 +131,7 @@
       transform: translate(90px, 8px);
       @include animation(moveRightMobile 4s infinite);
       transform-origin: 50% 50%;
-     -webkit-transform-origin: 50% 50%;
+      -webkit-transform-origin: 50% 50%;
     }
   }
 }
