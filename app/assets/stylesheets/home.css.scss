@@ -72,6 +72,8 @@
   background: darken(#4b5d6f, 10);
   border-radius: 8px;
   transform: translate(-4px, 210px);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
 }
 
 .band-stand {
@@ -126,6 +128,8 @@
       background-color: orange;
       transform: translate(90px, 8px);
       @include animation(moveRightMobile 4s infinite);
+      transform-origin: 50% 50%;
+     -webkit-transform-origin: 50% 50%;
     }
   }
 }

@@ -37,21 +37,18 @@ $(document).ready(function(){
   blush(grape_container);
   hairDoubleLeaf(grape_container);
   eyesClosed(grape_container);
-  // roundGlasses(grape_container);
   mouthSad(grape_container);
 
   slice_container = ".sample-slice"
   bodySlice(slice_container);
   hairPineapple(slice_container);
   eyesBlack(slice_container);
-  // blush(slice_container);
   mouthTeeth(slice_container);
 
   apple_container = ".sample-apple"
   bodyApple(apple_container);
   hairDoubleLeaf(apple_container);
   eyesSurprise(apple_container);
-  // roundGlasses(apple_container);
   mustache(apple_container);
 
   // Function to append parts to svg

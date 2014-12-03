@@ -50,7 +50,7 @@
 
 .eyesBlack {
   @include animation(blink 4s infinite);
-  transform-origin: 50%;
+  // transform-origin: 50%;
 }
 
 .sample-pear {
@@ -63,7 +63,8 @@
 
 .freckles {
   @include animation(grow 2s infinite);
-  transform-origin: 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
 }
 
 .sample-slice,
